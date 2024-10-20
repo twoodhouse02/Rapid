@@ -1,0 +1,1492 @@
+{
+    "key": "group_6712ee4dc80fd",
+    "title": "Site Design fields",
+    "fields": [
+        {
+            "key": "field_6712ee5cf8481",
+            "label": "Colors",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_6712f74c1623c",
+            "label": "Background",
+            "name": "color_background",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#ffffff",
+            "enable_opacity": 1,
+            "return_format": "string",
+            "allow_in_bindings": 0
+        },
+        {
+            "key": "field_6712f784f5329",
+            "label": "Background (Inverse)",
+            "name": "color_background_inverse",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#303030",
+            "enable_opacity": 1,
+            "return_format": "string",
+            "allow_in_bindings": 0
+        },
+        {
+            "key": "field_6712f7b18cdf7",
+            "label": "Layer 1",
+            "name": "color_layer_1",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "Layers refer to content stacked on top of other content. For example, Layer 1 refers to the background color of cards against the general background of the website.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#ffffff",
+            "enable_opacity": 1,
+            "return_format": "string",
+            "allow_in_bindings": 0
+        },
+        {
+            "key": "field_6712f81d64170",
+            "label": "Layer 2",
+            "name": "color_layer_2",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "Layers refer to content stacked on top of other content. Layer 2 refers to the background color of a container on top of layer 1.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#F8F8F8",
+            "enable_opacity": 1,
+            "return_format": "string",
+            "allow_in_bindings": 0
+        },
+        {
+            "key": "field_6712f8a864171",
+            "label": "Layer 3",
+            "name": "color_layer_3",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "Layers refer to content stacked on top of other content. Layer 3 refers to the background color of a container on top of layer 2.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#EBEBEB",
+            "enable_opacity": 1,
+            "return_format": "string",
+            "allow_in_bindings": 0
+        },
+        {
+            "key": "field_6712eed78af01",
+            "label": "Brand Primary (Light BG)",
+            "name": "color_brand_primary_lightBG",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "Your primary brand color against light backgrounds.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#D11149",
+            "enable_opacity": 1,
+            "return_format": "string",
+            "allow_in_bindings": 0
+        },
+        {
+            "key": "field_6712ef0d8af02",
+            "label": "Brand Primary (Light)",
+            "name": "color_brand_primary_light",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#E6C229",
+            "enable_opacity": 1,
+            "return_format": "string",
+            "allow_in_bindings": 0
+        },
+        {
+            "key": "field_6712efee0fef2",
+            "label": "Brand Secondary",
+            "name": "color_brand_secondary",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#1A8FE3",
+            "enable_opacity": 1,
+            "return_format": "string",
+            "allow_in_bindings": 0
+        },
+        {
+            "key": "field_6712ef666e9a4",
+            "label": "Brand Tertiary",
+            "name": "color_brand_tertiary",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#F17105",
+            "enable_opacity": 1,
+            "return_format": "string",
+            "allow_in_bindings": 0
+        },
+        {
+            "key": "field_6712f0f2f5207",
+            "label": "Brand Quarternary",
+            "name": "color_brand_quarternary",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#012A36",
+            "enable_opacity": 1,
+            "return_format": "string",
+            "allow_in_bindings": 0
+        },
+        {
+            "key": "field_6712f111f5208",
+            "label": "Text Primary",
+            "name": "color_text_primary",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#000000",
+            "enable_opacity": 1,
+            "return_format": "string",
+            "allow_in_bindings": 0
+        },
+        {
+            "key": "field_6712f13f72622",
+            "label": "Text Primary (Inverse)",
+            "name": "color_text_primary_inverse",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#ffffff",
+            "enable_opacity": 1,
+            "return_format": "string",
+            "allow_in_bindings": 0
+        },
+        {
+            "key": "field_6712f17bb77b6",
+            "label": "Text Secondary",
+            "name": "color_text_secondary",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#6D6D6D",
+            "enable_opacity": 1,
+            "return_format": "string",
+            "allow_in_bindings": 0
+        },
+        {
+            "key": "field_6712f17bb77b5",
+            "label": "Text Secondary (Inverse)",
+            "name": "color_text_secondary_inverse",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#CBCBCB",
+            "enable_opacity": 1,
+            "return_format": "string",
+            "allow_in_bindings": 0
+        },
+        {
+            "key": "field_6712f2110353c",
+            "label": "Text Layer 2",
+            "name": "color_text_layer_2",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "This is the color of text within a layer 2 container",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#000000",
+            "enable_opacity": 1,
+            "return_format": "string",
+            "allow_in_bindings": 0
+        },
+        {
+            "key": "field_6712f2611a48b",
+            "label": "Text Layer 3",
+            "name": "color_text_layer_3",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "This is the color of text within a layer 3 container",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#000000",
+            "enable_opacity": 1,
+            "return_format": "string",
+            "allow_in_bindings": 0
+        },
+        {
+            "key": "field_6712f2bce9d35",
+            "label": "Button Text (Light theme)",
+            "name": "color_button_text_light",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "Color of the text within buttons. Light theme refers to buttons against a light background.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#ffffff",
+            "enable_opacity": 1,
+            "return_format": "string",
+            "allow_in_bindings": 0
+        },
+        {
+            "key": "field_6712f2d66fd8e",
+            "label": "Button Text (Dark theme)",
+            "name": "color_button_text_dark_theme",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "Color of the text within buttons. Dark theme refers to buttons against a dark background.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#0C66E4",
+            "enable_opacity": 1,
+            "return_format": "string",
+            "allow_in_bindings": 0
+        },
+        {
+            "key": "field_6712f6022268c",
+            "label": "Interactive",
+            "name": "color_interactive",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#0C66E4",
+            "enable_opacity": 1,
+            "return_format": "string",
+            "allow_in_bindings": 0
+        },
+        {
+            "key": "field_6712f668facf4",
+            "label": "Interactive (Secondary)",
+            "name": "color_interactive_secondary",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#0C66E410",
+            "enable_opacity": 1,
+            "return_format": "string",
+            "allow_in_bindings": 0
+        },
+        {
+            "key": "field_6712f640d5cf9",
+            "label": "Interactive (Inverse)",
+            "name": "color_interactive_inverse",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#ffffff",
+            "enable_opacity": 1,
+            "return_format": "string",
+            "allow_in_bindings": 0
+        },
+        {
+            "key": "field_6712f6ac76197",
+            "label": "Interactive (Secondary Inverse)",
+            "name": "color_interactive_secondary_inverse",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#FFFFFF05",
+            "enable_opacity": 1,
+            "return_format": "string",
+            "allow_in_bindings": 0
+        },
+        {
+            "key": "field_6712f9390d1f9",
+            "label": "Overlays (Dark)",
+            "name": "color_overlays_dark",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#00000090",
+            "enable_opacity": 1,
+            "return_format": "string",
+            "allow_in_bindings": 0
+        },
+        {
+            "key": "field_6712f975558fb",
+            "label": "Overlays (Light)",
+            "name": "color_overlays_light",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#ffffff80",
+            "enable_opacity": 1,
+            "return_format": "string",
+            "allow_in_bindings": 0
+        },
+        {
+            "key": "field_6712f9c462c13",
+            "label": "Status (Success)",
+            "name": "color_status_success",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#22A06B",
+            "enable_opacity": 1,
+            "return_format": "string",
+            "allow_in_bindings": 0
+        },
+        {
+            "key": "field_6712f9d462c14",
+            "label": "Status (Warning)",
+            "name": "color_status_warning",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#E56910",
+            "enable_opacity": 1,
+            "return_format": "string",
+            "allow_in_bindings": 0
+        },
+        {
+            "key": "field_6712f9e262c15",
+            "label": "Status (Error)",
+            "name": "color_status_error",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#E2483D",
+            "enable_opacity": 1,
+            "return_format": "string",
+            "allow_in_bindings": 0
+        },
+        {
+            "key": "field_6712f9f362c16",
+            "label": "Status (Info)",
+            "name": "color_status_info",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#0C66E4",
+            "enable_opacity": 1,
+            "return_format": "string",
+            "allow_in_bindings": 0
+        },
+        {
+            "key": "field_6712fa0562c17",
+            "label": "Status (Pending)",
+            "name": "color_status_pending",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#8270DB",
+            "enable_opacity": 1,
+            "return_format": "string",
+            "allow_in_bindings": 0
+        },
+        {
+            "key": "field_6712fa3e35d3c",
+            "label": "Border (Card)",
+            "name": "color_border_card",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#FFFFFF",
+            "enable_opacity": 1,
+            "return_format": "string",
+            "allow_in_bindings": 0
+        },
+        {
+            "key": "field_6712fa5935d3d",
+            "label": "Border (Button Primary Light)",
+            "name": "color_border_button_primary_light",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#FFFFFF",
+            "enable_opacity": 1,
+            "return_format": "string",
+            "allow_in_bindings": 0
+        },
+        {
+            "key": "field_6712fd3c7a082",
+            "label": "Border (Button Primary Dark)",
+            "name": "color_border_button_primary_dark",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#FFFFFF",
+            "enable_opacity": 1,
+            "return_format": "string",
+            "allow_in_bindings": 0
+        },
+        {
+            "key": "field_6712fb3c832ea",
+            "label": "Border (Button Secondary Light)",
+            "name": "color_border_button_secondary_light",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#0C66E410",
+            "enable_opacity": 1,
+            "return_format": "string",
+            "allow_in_bindings": 0
+        },
+        {
+            "key": "field_6712fd617a083",
+            "label": "Border (Button Secondary Dark)",
+            "name": "color_border_button_secondary_dark",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#ffffff10",
+            "enable_opacity": 1,
+            "return_format": "string",
+            "allow_in_bindings": 0
+        },
+        {
+            "key": "field_6712fcf0b0dcc",
+            "label": "Border (Button Hollow Light)",
+            "name": "color_border_button_hollow_light",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#0C66E4",
+            "enable_opacity": 1,
+            "return_format": "string",
+            "allow_in_bindings": 0
+        },
+        {
+            "key": "field_6712fd807a084",
+            "label": "Border (Button Hollow Dark)",
+            "name": "color_border_button_hollow_dark",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#ffffff",
+            "enable_opacity": 1,
+            "return_format": "string",
+            "allow_in_bindings": 0
+        },
+        {
+            "key": "field_6712fe644af10",
+            "label": "Shadow (Button Outside)",
+            "name": "color_shadow_button_outside",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#00000010",
+            "enable_opacity": 1,
+            "return_format": "string",
+            "allow_in_bindings": 0
+        },
+        {
+            "key": "field_6712fe944af11",
+            "label": "Shadow (Button Outside Inverse)",
+            "name": "color_shadow_button_outside_inverse",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#00000010",
+            "enable_opacity": 1,
+            "return_format": "string",
+            "allow_in_bindings": 0
+        },
+        {
+            "key": "field_6712ff674af12",
+            "label": "Shadow (Button Inside)",
+            "name": "color_shadow_button_inside",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "enable_opacity": 1,
+            "return_format": "string",
+            "allow_in_bindings": 0
+        },
+        {
+            "key": "field_6712ff804af13",
+            "label": "Shadow (Button Inside Inverse)",
+            "name": "color_shadow_button_inside_inverse",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "enable_opacity": 1,
+            "return_format": "string",
+            "allow_in_bindings": 0
+        },
+        {
+            "key": "field_6712ff964af14",
+            "label": "Shadow (Cards)",
+            "name": "color_shadow_cards",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "enable_opacity": 1,
+            "return_format": "string",
+            "allow_in_bindings": 0
+        },
+        {
+            "key": "field_6712ffeccee42",
+            "label": "Border widths",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_6713000562213",
+            "label": "Badge",
+            "name": "border_width_badge",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 1,
+            "min": "",
+            "max": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "step": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_6713003b62215",
+            "label": "Button Primary",
+            "name": "border_width_button_primary",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 0,
+            "min": "",
+            "max": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "step": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_6713004c62216",
+            "label": "Button Secondary",
+            "name": "border_width_button_secondary",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 1,
+            "min": "",
+            "max": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "step": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_6713006162217",
+            "label": "Button Hollow",
+            "name": "border_width_button_hollow",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 2,
+            "min": "",
+            "max": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "step": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_6713006f62218",
+            "label": "Card",
+            "name": "border_width_card",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 0,
+            "min": "",
+            "max": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "step": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_671300af2da4d",
+            "label": "Corners",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_671300c42da4e",
+            "label": "Button",
+            "name": "corner_radius_button",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 8,
+            "min": "",
+            "max": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "step": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_671300e62da4f",
+            "label": "Extra Small",
+            "name": "corner_radius_xsmall",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 2,
+            "min": "",
+            "max": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "step": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_671300f42da50",
+            "label": "Small",
+            "name": "corner_radius_small",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 4,
+            "min": "",
+            "max": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "step": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_6713010f2da51",
+            "label": "Regular",
+            "name": "corner_radius_regular",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 8,
+            "min": "",
+            "max": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "step": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_671301492da52",
+            "label": "Large",
+            "name": "corner_radius_large",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 16,
+            "min": "",
+            "max": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "step": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_671301562da53",
+            "label": "Extra Large",
+            "name": "corner_radius_xlarge",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 16,
+            "min": "",
+            "max": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "step": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_671314a825988",
+            "label": "Shadows",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_671314fb25989",
+            "label": "Button X Position (Outside)",
+            "name": "shadow_button_x_position_outside",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 0,
+            "min": "",
+            "max": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "step": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_67131aa93ae05",
+            "label": "Button Y Position (Outside)",
+            "name": "shadow_button_y_position_outside",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 0,
+            "min": "",
+            "max": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "step": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_67131ab93ae06",
+            "label": "Button Blur (Outside)",
+            "name": "shadow_button_blur_outside",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 0,
+            "min": "",
+            "max": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "step": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_67131b6a3ae07",
+            "label": "Button Spread (Outside)",
+            "name": "shadow_button_spread_outside",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 0,
+            "min": "",
+            "max": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "step": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_67131eafca8de",
+            "label": "Button X Position (Inside)",
+            "name": "shadow_button_x_position_inside",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 0,
+            "min": "",
+            "max": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "step": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_67131e90ca8dd",
+            "label": "Button Y Position (Inside)",
+            "name": "shadow_button_y_position_inside",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 0,
+            "min": "",
+            "max": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "step": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_67131ec3ca8df",
+            "label": "Button Blur (Inside)",
+            "name": "shadow_button_blur_inside",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 0,
+            "min": "",
+            "max": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "step": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_67131ed9ca8e0",
+            "label": "Button Spread (Inside)",
+            "name": "shadow_button_spread_inside",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 0,
+            "min": "",
+            "max": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "step": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_67131f17bb3e9",
+            "label": "Card X Position",
+            "name": "shadow_card_x_position_outside",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": -1,
+            "min": "",
+            "max": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "step": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_67131f30bb3ea",
+            "label": "Card Y Position",
+            "name": "shadow_card_y_position_outside",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 2,
+            "min": "",
+            "max": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "step": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_67131f44bb3eb",
+            "label": "Card Blur",
+            "name": "shadow_card_blur_outside",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 4,
+            "min": "",
+            "max": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "step": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_67131f5bbb3ec",
+            "label": "Card Spread",
+            "name": "shadow_card_spread_outside",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 0,
+            "min": "",
+            "max": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "step": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_6713bd713d125",
+            "label": "Typography Sizing",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_671511d19711f",
+            "label": "Looking to change fonts?",
+            "name": "",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "This section is to only adjust the scale of your typography between your titles, headings, paragraphs, and buttons. If you would like to change the overall font of your website, Wordpress requires you to do that in a different section. Please visit: \r\n\r\nAppearance > Editor > Styles > Typography",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_67151353492c9",
+            "label": "Typography scale",
+            "name": "typography_scale",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "High Contrast: More pronounced difference between headings and body text.<br\/>\r\nMedium Contrast: Balanced differences. <br\/>\r\nLow Contrast: Subtle differences between font sizes.<br\/><br\/>\r\n\r\nFor example, with High contrast, a paragraph font size of 16 pixels would result in a title\/heading size of 120px where with Low contrast, the title\/heading size would be 47px.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "high_contast": "High contrast",
+                "medium_contast": "Medium contrast",
+                "low_contast": "Low contrast"
+            },
+            "default_value": "medium_contast",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_67151448d3faa",
+            "label": "Paragraph base font size",
+            "name": "base_font_size",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "This is the base font size of paragraphs within your website. The entire typography scale will be based on this number. Increasing or decreasing this number will affect the size of all the fonts in your website relative to this font size.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 16,
+            "min": "",
+            "max": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "step": "",
+            "prepend": "",
+            "append": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "site-design"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1729435580
+}
