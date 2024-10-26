@@ -1433,9 +1433,9 @@
                 "id": ""
             },
             "choices": {
-                "high_contast": "High contrast",
-                "medium_contast": "Medium contrast",
-                "low_contast": "Low contrast"
+                "high": "High contrast",
+                "medium": "Medium contrast",
+                "low": "Low contrast"
             },
             "default_value": "medium_contast",
             "return_format": "value",
@@ -1445,29 +1445,6 @@
             "ui": 0,
             "ajax": 0,
             "placeholder": ""
-        },
-        {
-            "key": "field_67151448d3faa",
-            "label": "Paragraph base font size",
-            "name": "base_font_size",
-            "aria-label": "",
-            "type": "number",
-            "instructions": "This is the base font size of paragraphs within your website. The entire typography scale will be based on this number. Increasing or decreasing this number will affect the size of all the fonts in your website relative to this font size.",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": 16,
-            "min": "",
-            "max": "",
-            "allow_in_bindings": 0,
-            "placeholder": "",
-            "step": "",
-            "prepend": "",
-            "append": ""
         }
     ],
     "location": [
@@ -1488,5 +1465,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1729435580
+    "modified": 1729951636
 }
