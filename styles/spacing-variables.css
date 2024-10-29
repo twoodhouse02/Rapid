@@ -1,0 +1,16 @@
+:root {
+  --theme-spacing-micro: 0.25rem; /* 4px */
+  --theme-spacing-xxxs: 0.5rem; /* 8px */
+  --theme-spacing-xxs: 0.625rem; /* 10px */
+  --theme-spacing-xs: 0.8125rem; /* 13px */
+  --theme-spacing-small: 1rem; /* 16px */
+  --theme-spacing-medium: 1.25rem; /* 20px */
+  --theme-spacing-large: 1.5625rem; /* 25px */
+  --theme-spacing-xl: 1.9375rem; /* 31px */
+  --theme-spacing-xxl: 2.4375rem; /* 39px */
+  --theme-spacing-xxxl: 3.0625rem; /* 49px */
+  --theme-spacing-display: 3.8125rem; /* 61px */
+  --theme-spacing-display-xl: 4.75rem; /* 76px */
+  --theme-spacing-display-xxl: 5.9375rem; /* 95px */
+  --theme-spacing-display-xxxl: 7.4375rem; /* 119px */
+}
