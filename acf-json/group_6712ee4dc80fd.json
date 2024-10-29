@@ -327,7 +327,7 @@
         {
             "key": "field_6712f2bce9d35",
             "label": "Button Text (Light theme)",
-            "name": "color_button_text_light",
+            "name": "color_button_text_light_theme",
             "aria-label": "",
             "type": "color_picker",
             "instructions": "Color of the text within buttons. Light theme refers to buttons against a light background.",
@@ -801,7 +801,7 @@
         },
         {
             "key": "field_6712ffeccee42",
-            "label": "Border widths",
+            "label": "Borders",
             "name": "",
             "aria-label": "",
             "type": "tab",
@@ -839,6 +839,35 @@
             "append": ""
         },
         {
+            "key": "field_67203d7e0f49c",
+            "label": "Badge Border Style",
+            "name": "border_style_badge",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "solid": "Solid",
+                "dotted": "Dotted",
+                "dashed": "Dashed",
+                "inset": "Inset"
+            },
+            "default_value": "solid",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 1,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
             "key": "field_6713003b62215",
             "label": "Button Primary",
             "name": "border_width_button_primary",
@@ -858,6 +887,35 @@
             "placeholder": "",
             "prepend": "",
             "append": ""
+        },
+        {
+            "key": "field_67203dbf6c3a4",
+            "label": "Button Primary Border Style",
+            "name": "border_style_button_primary",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "solid": "Solid",
+                "dotted": "Dotted",
+                "dashed": "Dashed",
+                "inset": "Inset"
+            },
+            "default_value": "solid",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 1,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
         },
         {
             "key": "field_6713004c62216",
@@ -881,6 +939,35 @@
             "append": ""
         },
         {
+            "key": "field_67203dd56c3a5",
+            "label": "Button Secondary Border Style",
+            "name": "border_style_button_secondary",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "solid": "Solid",
+                "dotted": "Dotted",
+                "dashed": "Dashed",
+                "inset": "Inset"
+            },
+            "default_value": "solid",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 1,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
             "key": "field_6713006162217",
             "label": "Button Hollow",
             "name": "border_width_button_hollow",
@@ -902,6 +989,35 @@
             "append": ""
         },
         {
+            "key": "field_67203de46c3a6",
+            "label": "Hollow Button Border Style",
+            "name": "border_style_button_hollow",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "solid": "Solid",
+                "dotted": "Dotted",
+                "dashed": "Dashed",
+                "inset": "Inset"
+            },
+            "default_value": "solid",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 1,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
             "key": "field_6713006f62218",
             "label": "Card",
             "name": "border_width_card",
@@ -921,6 +1037,35 @@
             "placeholder": "",
             "prepend": "",
             "append": ""
+        },
+        {
+            "key": "field_67203dfe6c3a7",
+            "label": "Card Border Style",
+            "name": "border_style_card",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "solid": "Solid",
+                "dotted": "Dotted",
+                "dashed": "Dashed",
+                "inset": "Inset"
+            },
+            "default_value": "solid",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 1,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
         },
         {
             "key": "field_671300af2da4d",
@@ -1419,5 +1564,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1730079297
+    "modified": 1730166703
 }
