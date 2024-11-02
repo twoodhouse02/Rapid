@@ -30,36 +30,38 @@
         {
           "name": "Card",
           "slug": "card",
-          "shadow": "var(--theme-shadow_card_x_position_outside, -1px) var(--theme-shadow_card_y_position_outside, 2px) var(--theme-shadow_card_blur_outside, 4px) var(--theme-shadow_card_spread_outside, 0px) var(--theme-color_shadow_cards);"
+          "shadow": "var(--theme-shadow_card_x_position_outside, -1px) var(--theme-shadow_card_y_position_outside, 2px) var(--theme-shadow_card_blur_outside, 4px) var(--theme-shadow_card_spread_outside, 0px) var(--theme-color-shadow_cards);"
         },
         {
           "name": "Button",
           "slug": "button",
-          "shadow": "var(--theme-shadow_button_x_position_outside, 0px) var(--theme-shadow_button_y_position_outside, 0px) var(--theme-shadow_button_blur_outside, 0px) var(--theme-shadow_button_spread_outside, 0px) var(--theme-color_shadow_button_outside, theme-color_shadow_button_outside), var(--theme-shadow_button_x_position_inside, 0px) var(--theme-shadow_button_y_position_inside, 0px) var(--theme-shadow_button_blur_inside, 0px) var(--theme-shadow_button_spread_inside, 0px) var(--theme-color_shadow_button_inside) inset;"
+          "shadow": "var(--theme-shadow_button_x_position_outside, 0px) var(--theme-shadow_button_y_position_outside, 0px) var(--theme-shadow_button_blur_outside, 0px) var(--theme-shadow_button_spread_outside, 0px) var(--theme-color-shadow_button_outside, theme-color-shadow_button_outside), var(--theme-shadow_button_x_position_inside, 0px) var(--theme-shadow_button_y_position_inside, 0px) var(--theme-shadow_button_blur_inside, 0px) var(--theme-shadow_button_spread_inside, 0px) var(--theme-color-shadow_button_inside) inset;"
         },
         {
           "name": "Button (Inverse)",
           "slug": "button_inverse",
-          "shadow": "var(--theme-shadow_button_x_position_outside, 0px) var(--theme-shadow_button_y_position_outside, 0px) var(--theme-shadow_button_blur_outside, 0px) var(--theme-shadow_button_spread_outside, 0px) var(--theme-color_shadow_button_outside, theme-color_shadow_button_outside_inverse), var(--theme-shadow_button_x_position_inside, 0px) var(--theme-shadow_button_y_position_inside, 0px) var(--theme-shadow_button_blur_inside, 0px) var(--theme-shadow_button_spread_inside, 0px) var(--theme-color_shadow_button_inside) inset;"
+          "shadow": "var(--theme-shadow_button_x_position_outside, 0px) var(--theme-shadow_button_y_position_outside, 0px) var(--theme-shadow_button_blur_outside, 0px) var(--theme-shadow_button_spread_outside, 0px) var(--theme-color-shadow_button_outside, theme-color-shadow_button_outside_inverse), var(--theme-shadow_button_x_position_inside, 0px) var(--theme-shadow_button_y_position_inside, 0px) var(--theme-shadow_button_blur_inside, 0px) var(--theme-shadow_button_spread_inside, 0px) var(--theme-color-shadow_button_inside) inset;"
         }
       ]
     }
   },
   "styles": {
     "color": {
-      "background": "var(--theme-color_background)",
-      "text": "var(--theme-color_text_primary)"
+      "background": "var(--theme-color-background)",
+      "text": "var(--theme-color-text_primary)"
     },
+
     "elements": {
       "button": {
         "color": {
-          "text": "var(--theme-color_button_text_light_theme)",
-          "background": "var(--theme-color_interactive)"
+          "text": "var(--theme-color-button_text)",
+          "background": "var(--theme-color-interactive)",
+          "gradient": "linear-gradient(90deg,rgba(0,0,0,0) 0%,rgba(0,0,0,0) 100%)"
         },
         "border": {
           "radius": "var(--theme-corner_radius_button)",
           "width": "var(--theme-border_width_button_primary)",
-          "color": "var(--theme-color_border_button_primary_light)",
+          "color": "var(--theme-color-border_button_primary_light)",
           "style": "var(--theme-border_style_button_primary)"
         },
         "shadow": "var:preset|shadow|button",
@@ -73,6 +75,46 @@
         },
         "typography": {
           "fontSize": "var(--theme-font-size-standard)"
+        },
+        ":hover": {
+          "color": {
+            "text": "var(--theme-color-button_text)",
+            "background": "var(--theme-color-interactive)",
+            "gradient": "linear-gradient(90deg,rgba(0,0,0,.20) 0%,rgba(0,0,0,.20) 100%)"
+          }
+        }
+      }
+    },
+    "blocks": {
+      "core/button": {
+        "variations": {
+          "outline": {
+            "border": {
+              "color": "var(--theme-color-interactive)",
+              "width": "var(--theme-border_width_button_hollow)",
+              "style": "var(--theme-border_style_button_hollow)",
+              "radius": "var(--theme-corner_radius_button)"
+            },
+            "color": {
+              "text": "var(--theme-color-interactive)"
+            },
+            "typography": {
+              "fontSize": "var(--theme-font-size-standard)"
+            },
+            "spacing": {
+              "padding": {
+                "top": "var(--theme-spacing-xs)",
+                "bottom": "var(--theme-spacing-xs)",
+                "left": "var(--theme-spacing-small)",
+                "right": "var(--theme-spacing-small)"
+              }
+            }
+          }
+        }
+      },
+      "core/paragraph": {
+        "color": {
+          "text": "var(--theme-color-text_primary)"
         }
       }
     }
