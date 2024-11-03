@@ -1,4 +1,6 @@
 {
+  "name": "rapid",
+  "version": "0.0.1",
   "devDependencies": {
     "@wordpress/scripts": "^30.4.0"
   },
