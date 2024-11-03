@@ -6,7 +6,26 @@
     "color": {
       "background": true,
       "link": true,
-      "text": true
+      "text": true,
+
+      "custom": true,
+      "palette": [
+        {
+          "name": "Brand, primary",
+          "slug": "brand_primary",
+          "color": "var(--theme-color-brand_primary)"
+        },
+        {
+          "name": "Brand, secondary",
+          "slug": "brand_secondary",
+          "color": "var(--theme-color-brand_secondary)"
+        },
+        {
+          "name": "Brand, tertiary",
+          "slug": "brand_tertiary",
+          "color": "var(--theme-color-brand_tertiary)"
+        }
+      ]
     },
     "layout": {
       "contentSize": "1200px",
@@ -141,7 +160,8 @@
         "color": {
           "text": "var(--theme-color-text_primary)"
         }
-      }
+      },
+      "core/quot": {}
     }
   },
   "templateParts": [
