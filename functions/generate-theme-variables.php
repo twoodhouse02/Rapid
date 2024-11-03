@@ -19,9 +19,9 @@ function generate_theme_variables() {
         // Typography Scale Logic
         $contrast_level = $acf_options['typography_scale'] ?? 'medium';
         $ratios = [
-            'high' => 1.414,
-            'medium' => 1.333,
-            'low' => 1.2,
+            'high' => 1.33,
+            'medium' => 1.2, // Minor third
+            'low' => 1.125,
         ];
         $scale_ratio = $ratios[$contrast_level];
 
