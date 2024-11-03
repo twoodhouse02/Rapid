@@ -219,6 +219,26 @@
             "color": "var(--theme-color-brand_secondary)"
           }
         }
+      },
+      "core/list": {
+        "spacing": {
+          "padding": {
+            "top": "var(--theme-spacing-l)",
+            "bottom": "var(--theme-spacing-l)",
+            "left": "var(--theme-spacing-xxxl)",
+            "right": "var(--theme-spacing-l)"
+          }
+        }
+      },
+      "core/list-item": {
+        "spacing": {
+          "margin": {
+            "bottom": "var(--theme-spacing-s)"
+          },
+          "padding": {
+            "left": "var(--theme-spacing-xxs)"
+          }
+        }
       }
     }
   },
