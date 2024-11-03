@@ -73,6 +73,31 @@ add_filter('body_class', function($classes) {
     return $classes;
 });
 
+// Register custom block category: 
+function custom_block_category( $categories ) {
+    $custom_block = array(
+        'slug'  => 'rapid-theme',
+        'title' => __( 'Rapid theme blocks', 'rapid' ),
+    );
+
+    $categories_sorted = array();
+    $categories_sorted[0] = $custom_block;
+
+    foreach ($categories as $category) {
+        $categories_sorted[] = $category;
+    }
+
+    return $categories_sorted;
+}
+add_filter( 'block_categories_all', 'custom_block_category', 10, 2);
+
+
+// Register custom blocks: 
+
+function multiblock_register_blocks() {
+	register_block_type( __DIR__ . '/build/blocks/ordered-list' );
+}
+add_action( 'init', 'multiblock_register_blocks' );
 
 
 
