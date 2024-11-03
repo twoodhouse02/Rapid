@@ -35,11 +35,35 @@
       "units": ["%", "px", "em", "rem", "vh", "vw"]
     },
     "typography": {
+      "fluid": false,
+      "defaultFontSizes": false,
       "fontFamilies": [
         {
           "fontFamily": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif",
           "name": "System Font",
           "slug": "system-font"
+        }
+      ],
+      "fontSizes": [
+        {
+          "name": "Extra Small",
+          "slug": "xs",
+          "size": "var(--theme-font-size-xs)"
+        },
+        {
+          "name": "Small",
+          "slug": "sm",
+          "size": "var(--theme-font-size-s)"
+        },
+        {
+          "name": "Standard",
+          "slug": "standard",
+          "size": "var(--theme-font-size-standard)"
+        },
+        {
+          "name": "Large",
+          "slug": "l",
+          "size": "var(--theme-font-size-l)"
         }
       ]
     },
