@@ -24,6 +24,16 @@
           "name": "Brand, tertiary",
           "slug": "brand_tertiary",
           "color": "var(--theme-color-brand_tertiary)"
+        },
+        {
+          "name": "Text, primary",
+          "slug": "text_primary",
+          "color": "var(--theme-color-text_primary)"
+        },
+        {
+          "name": "Text, secondary",
+          "slug": "text_secondary",
+          "color": "var(--theme-color-text_secondary)"
         }
       ]
     },
@@ -112,8 +122,8 @@
           "padding": {
             "top": "var(--theme-spacing-xs)",
             "bottom": "var(--theme-spacing-xs)",
-            "left": "var(--theme-spacing-small)",
-            "right": "var(--theme-spacing-small)"
+            "left": "var(--theme-spacing-s)",
+            "right": "var(--theme-spacing-s)"
           }
         },
         "typography": {
@@ -173,8 +183,8 @@
               "padding": {
                 "top": "var(--theme-spacing-xs)",
                 "bottom": "var(--theme-spacing-xs)",
-                "left": "var(--theme-spacing-small)",
-                "right": "var(--theme-spacing-small)"
+                "left": "var(--theme-spacing-s)",
+                "right": "var(--theme-spacing-s)"
               }
             }
           }
@@ -185,7 +195,30 @@
           "text": "var(--theme-color-text_primary)"
         }
       },
-      "core/quot": {}
+      "core/quote": {
+        "color": {
+          "background": "var(--theme-color-layer_1)"
+        },
+        "spacing": {
+          "margin": {
+            "left": "0",
+            "right": "0"
+          },
+          "padding": {
+            "top": "var(--theme-spacing-l)",
+            "bottom": "var(--theme-spacing-l)",
+            "left": "var(--theme-spacing-xl)",
+            "right": "var(--theme-spacing-xl)"
+          }
+        },
+        "border": {
+          "left": {
+            "style": "solid",
+            "width": "3px",
+            "color": "var(--theme-color-brand_secondary)"
+          }
+        }
+      }
     }
   },
   "templateParts": [
