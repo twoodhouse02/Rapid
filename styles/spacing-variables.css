@@ -3,9 +3,9 @@
   --theme-spacing-xxxs: 0.5rem; /* 8px */
   --theme-spacing-xxs: 0.625rem; /* 10px */
   --theme-spacing-xs: 0.8125rem; /* 13px */
-  --theme-spacing-small: 1rem; /* 16px */
-  --theme-spacing-medium: 1.25rem; /* 20px */
-  --theme-spacing-large: 1.5625rem; /* 25px */
+  --theme-spacing-s: 1rem; /* 16px */
+  --theme-spacing-m: 1.25rem; /* 20px */
+  --theme-spacing-l: 1.5625rem; /* 25px */
   --theme-spacing-xl: 1.9375rem; /* 31px */
   --theme-spacing-xxl: 2.4375rem; /* 39px */
   --theme-spacing-xxxl: 3.0625rem; /* 49px */
