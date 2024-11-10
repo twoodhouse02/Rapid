@@ -52,7 +52,7 @@ export default function Edit({ attributes, setAttributes }) {
         </div>
       ))}
 
-      <Button variant="primary" onClick={addItem}>
+      <Button variant="primary" className="add-item-button" onClick={addItem}>
         {__("Add List Item", "ordered-list")}
       </Button>
     </div>

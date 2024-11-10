@@ -34,5 +34,8 @@
   border: 1px solid var(--theme-color-layer_2);
   border-radius: var(--theme-corner_radius_xlarge);
 }
+.wp-block-rapid-ordered-list .add-item-button {
+  margin-top: 30px;
+}
 
 /*# sourceMappingURL=style-index.css.map*/

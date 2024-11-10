@@ -82,6 +82,7 @@ function Edit({
       })]
     }, index)), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.Button, {
       variant: "primary",
+      className: "add-item-button",
       onClick: addItem,
       children: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)("Add List Item", "ordered-list")
     })]
@@ -206,7 +207,7 @@ module.exports = window["wp"]["i18n"];
   \********************************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"rapid/ordered-list","version":"0.1.0","title":"Ordered List","category":"rapid-theme","icon":"editor-ol","description":"A dynamic block for displaying a customizable ordered list.","example":{},"supports":{"html":false},"attributes":{"items":{"type":"array","default":[]}},"textdomain":"ordered-list","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","render":"file:./render.php"}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"rapid/ordered-list","version":"0.1.0","title":"Ordered List","category":"rapid-theme","icon":"editor-ol","description":"A dynamic block for displaying a customizable ordered list.","example":{"attributes":{"items":["This is item 1","This is item 2","This is item 3"]}},"supports":{"html":false},"attributes":{"items":{"type":"array","default":[]}},"textdomain":"ordered-list","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","render":"file:./render.php"}');
 
 /***/ })
 

@@ -7,7 +7,15 @@
   "category": "rapid-theme",
   "icon": "editor-ol",
   "description": "A dynamic block for displaying a customizable ordered list.",
-  "example": {},
+  "example": {
+    "attributes": {
+      "items": [
+        "This is item 1",
+        "This is item 2",
+        "This is item 3"
+      ]
+    }
+  },
   "supports": {
     "html": false
   },
