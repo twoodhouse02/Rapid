@@ -7,8 +7,30 @@
  *
  * Replace them with your own styles or remove the file completely.
  */
-.wp-block-create-block-ordered-list {
-  background-color: #21759b;
-  color: #fff;
-  padding: 2px;
+.wp-block-rapid-ordered-list {
+  counter-reset: li;
+  padding: var(--theme-spacing-l);
+}
+.wp-block-rapid-ordered-list .item-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-right: 40px;
+  position: relative;
+  margin-bottom: var(--theme-spacing-s);
+}
+.wp-block-rapid-ordered-list .item-wrapper::before {
+  content: counter(li);
+  counter-increment: li;
+  position: absolute;
+  display: flex;
+  color: var(--theme-color-text_primary);
+  background-color: var(--theme-color-layer_1);
+  right: 0;
+  height: 30px;
+  width: 30px;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--theme-color-layer_2);
+  border-radius: var(--theme-corner_radius_xlarge);
 }

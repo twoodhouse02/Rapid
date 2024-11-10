@@ -1,19 +1,25 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 3,
-  "name": "create-block/ordered-list",
+  "name": "rapid/ordered-list",
   "version": "0.1.0",
   "title": "Ordered List",
   "category": "rapid-theme",
   "icon": "editor-ol",
-  "description": "Example block scaffolded with Create Block tool.",
+  "description": "A dynamic block for displaying a customizable ordered list.",
   "example": {},
   "supports": {
     "html": false
+  },
+  "attributes": {
+    "items": {
+      "type": "array",
+      "default": []
+    }
   },
   "textdomain": "ordered-list",
   "editorScript": "file:./index.js",
   "editorStyle": "file:./index.css",
   "style": "file:./style-index.css",
-  "viewScript": "file:./view.js"
+  "render": "file:./render.php"
 }
