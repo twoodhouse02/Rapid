@@ -15,6 +15,7 @@
   background-color: var(--theme-color-layer_1);
   padding: var(--theme-spacing-xl) var(--theme-spacing-xl) 0 var(--theme-spacing-xl);
   border-radius: var(--theme-corner_radius_regular);
+  border: 1px solid var(--theme-color_border_cards);
   box-shadow: var(--wp--preset--shadow--card);
   box-sizing: border-box;
 }
@@ -38,6 +39,11 @@
 .wp-block-rapid-list-card.two-column .block-editor-block-list__layout {
   flex-direction: row;
   flex-wrap: wrap;
+}
+.wp-block-rapid-list-card.simple {
+  background-color: transparent;
+  box-shadow: none;
+  border: none;
 }
 @media (max-width: 480px) {
   .wp-block-rapid-list-card.two-column .list-items,

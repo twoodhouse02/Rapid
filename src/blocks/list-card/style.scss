@@ -14,6 +14,7 @@
   padding: var(--theme-spacing-xl) var(--theme-spacing-xl) 0
     var(--theme-spacing-xl);
   border-radius: var(--theme-corner_radius_regular);
+  border: 1px solid var(--theme-color_border_cards);
   box-shadow: var(--wp--preset--shadow--card);
   box-sizing: border-box;
 
@@ -43,6 +44,13 @@
       flex-wrap: wrap;
     }
   }
+
+  &.simple {
+    background-color: transparent;
+    box-shadow: none;
+    border: none;
+  }
+
   @media (max-width: 480px) {
     &.two-column {
       .list-items,

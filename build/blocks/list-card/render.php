@@ -5,13 +5,20 @@
  * @package Rapid
  */
 $layout = isset($attributes["layout"]) ? $attributes["layout"] : "default"; // Get the layout attribute
+$style = isset($attributes["style"]) ? $attributes["style"] : "default"; // Get the layout attribute
 $title = isset($attributes["title"]) ? $attributes["title"] : "Default Title";
 $subtitle = isset($attributes["subtitle"])
     ? $attributes["subtitle"]
     : "Default Subtitle";
 
-// Dynamically add the `stacked` class if the layout is set to "stacked"
-$additional_classes = $layout === "two-column" ? "two-column" : "";
+// Dynamically add classes based on attributes
+$additional_classes = "";
+if ($layout === "two-column") {
+    $additional_classes .= "two-column ";
+}
+if ($style === "simple") {
+    $additional_classes .= "simple";
+}
 ?>
 
 <div <?php echo get_block_wrapper_attributes([

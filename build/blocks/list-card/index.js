@@ -30,11 +30,12 @@ function Edit({
 }) {
   const {
     layout,
+    style,
     title,
     subtitle
   } = attributes;
   const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.useBlockProps)({
-    className: layout === "two-column" ? "two-column" : ""
+    className: `${layout} ${style}`
   });
   const innerBlockTemplate = [["rapid/list-line-item", {
     label: "List item",
@@ -44,8 +45,8 @@ function Edit({
     content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
   }]];
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.Fragment, {
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.InspectorControls, {
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelBody, {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.InspectorControls, {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelBody, {
         title: "Layout",
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.RadioControl, {
           label: "Choose Layout",
@@ -61,7 +62,23 @@ function Edit({
             layout: value
           })
         })
-      })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelBody, {
+        title: "Style",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.SelectControl, {
+          label: "Choose container style",
+          selected: style,
+          options: [{
+            label: "Card",
+            value: "default"
+          }, {
+            label: "Simple",
+            value: "simple"
+          }],
+          onChange: value => setAttributes({
+            style: value
+          })
+        })
+      })]
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
       ...blockProps,
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
@@ -222,7 +239,7 @@ module.exports = window["wp"]["i18n"];
   \*****************************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"rapid/list-card","version":"0.1.0","title":"List Card","category":"rapid-theme","icon":"list-view","description":"A dynamic block for displaying a styled unordered list inside of a card","example":{},"attributes":{"layout":{"type":"string","default":"default"},"title":{"type":"string","default":"Card title"},"subtitle":{"type":"string","default":"Card subtitle"}},"supports":{"html":true},"textdomain":"list-card","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","render":"file:./render.php"}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"rapid/list-card","version":"0.1.0","title":"List Card","category":"rapid-theme","icon":"list-view","description":"A dynamic block for displaying a styled unordered list inside of a card","example":{},"attributes":{"layout":{"type":"string","default":"default"},"style":{"type":"string","default":"card"},"title":{"type":"string","default":"Card title"},"subtitle":{"type":"string","default":"Card subtitle"}},"supports":{"html":true},"textdomain":"list-card","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","render":"file:./render.php"}');
 
 /***/ })
 
