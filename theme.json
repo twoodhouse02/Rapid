@@ -83,17 +83,17 @@
         {
           "name": "Card",
           "slug": "card",
-          "shadow": "var(--theme-shadow_card_x_position_outside, -1px) var(--theme-shadow_card_y_position_outside, 2px) var(--theme-shadow_card_blur_outside, 4px) var(--theme-shadow_card_spread_outside, 0px) var(--theme-color-shadow_cards);"
+          "shadow": "var(--theme-shadow_card_x_position_outside, -1px) var(--theme-shadow_card_y_position_outside, 2px) var(--theme-shadow_card_blur_outside, 4px) var(--theme-shadow_card_spread_outside, 0px) var(--theme-color_shadow_cards);"
         },
         {
           "name": "Button",
           "slug": "button",
-          "shadow": "var(--theme-shadow_button_x_position_outside, 0px) var(--theme-shadow_button_y_position_outside, 0px) var(--theme-shadow_button_blur_outside, 0px) var(--theme-shadow_button_spread_outside, 0px) var(--theme-color-shadow_button_outside, theme-color-shadow_button_outside), var(--theme-shadow_button_x_position_inside, 0px) var(--theme-shadow_button_y_position_inside, 0px) var(--theme-shadow_button_blur_inside, 0px) var(--theme-shadow_button_spread_inside, 0px) var(--theme-color-shadow_button_inside) inset;"
+          "shadow": "var(--theme-shadow_button_x_position_outside, 0px) var(--theme-shadow_button_y_position_outside, 0px) var(--theme-shadow_button_blur_outside, 0px) var(--theme-shadow_button_spread_outside, 0px) var(--theme-color_shadow_button_outside, theme-color_shadow_button_outside), var(--theme-shadow_button_x_position_inside, 0px) var(--theme-shadow_button_y_position_inside, 0px) var(--theme-shadow_button_blur_inside, 0px) var(--theme-shadow_button_spread_inside, 0px) var(--theme-color_shadow_button_inside) inset;"
         },
         {
           "name": "Button (Inverse)",
           "slug": "button_inverse",
-          "shadow": "var(--theme-shadow_button_x_position_outside, 0px) var(--theme-shadow_button_y_position_outside, 0px) var(--theme-shadow_button_blur_outside, 0px) var(--theme-shadow_button_spread_outside, 0px) var(--theme-color-shadow_button_outside, theme-color-shadow_button_outside_inverse), var(--theme-shadow_button_x_position_inside, 0px) var(--theme-shadow_button_y_position_inside, 0px) var(--theme-shadow_button_blur_inside, 0px) var(--theme-shadow_button_spread_inside, 0px) var(--theme-color-shadow_button_inside) inset;"
+          "shadow": "var(--theme-shadow_button_x_position_outside, 0px) var(--theme-shadow_button_y_position_outside, 0px) var(--theme-shadow_button_blur_outside, 0px) var(--theme-shadow_button_spread_outside, 0px) var(--theme-color_shadow_button_outside, theme-color_shadow_button_outside_inverse), var(--theme-shadow_button_x_position_inside, 0px) var(--theme-shadow_button_y_position_inside, 0px) var(--theme-shadow_button_blur_inside, 0px) var(--theme-shadow_button_spread_inside, 0px) var(--theme-color_shadow_button_inside) inset;"
         }
       ]
     }
