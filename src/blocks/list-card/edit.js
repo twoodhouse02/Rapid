@@ -8,7 +8,7 @@ import { __ } from "@wordpress/i18n";
 import { PanelBody, RadioControl } from "@wordpress/components";
 
 export default function Edit({ attributes, setAttributes }) {
-  const { layout, listTitle, listSubtitle } = attributes;
+  const { layout, title, subtitle } = attributes;
   const blockProps = useBlockProps({
     className: layout === "two-column" ? "two-column" : "",
   });
@@ -48,16 +48,16 @@ export default function Edit({ attributes, setAttributes }) {
         <div className="list-title">
           <RichText
             tagName="h5"
-            value={listTitle}
-            onChange={(value) => setAttributes({ listTitle: value })}
+            value={title}
+            onChange={(value) => setAttributes({ title: value })}
             placeholder={__("Card title", "rapid")}
           />
 
           <RichText
             tagName="p"
             className="secondary"
-            value={listSubtitle}
-            onChange={(value) => setAttributes({ listSubtitle: value })}
+            value={subtitle}
+            onChange={(value) => setAttributes({ subtitle: value })}
             placeholder={__("Card subtitle", "rapid")}
           />
         </div>

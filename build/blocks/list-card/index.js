@@ -30,8 +30,8 @@ function Edit({
 }) {
   const {
     layout,
-    listTitle,
-    listSubtitle
+    title,
+    subtitle
   } = attributes;
   const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.useBlockProps)({
     className: layout === "two-column" ? "two-column" : ""
@@ -68,17 +68,17 @@ function Edit({
         className: "list-title",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.RichText, {
           tagName: "h5",
-          value: listTitle,
+          value: title,
           onChange: value => setAttributes({
-            listTitle: value
+            title: value
           }),
           placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)("Card title", "rapid")
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.RichText, {
           tagName: "p",
           className: "secondary",
-          value: listSubtitle,
+          value: subtitle,
           onChange: value => setAttributes({
-            listSubtitle: value
+            subtitle: value
           }),
           placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)("Card subtitle", "rapid")
         })]
@@ -222,7 +222,7 @@ module.exports = window["wp"]["i18n"];
   \*****************************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"rapid/list-card","version":"0.1.0","title":"List Card","category":"rapid-theme","icon":"list-view","description":"A dynamic block for displaying a styled unordered list inside of a card","example":{},"attributes":{"layout":{"type":"string","default":"default"},"listTitle":{"type":"string","default":"Card title"},"listSubtitle":{"type":"string","default":"Card subtitle"}},"supports":{"html":true},"textdomain":"list-card","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","render":"file:./render.php"}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"rapid/list-card","version":"0.1.0","title":"List Card","category":"rapid-theme","icon":"list-view","description":"A dynamic block for displaying a styled unordered list inside of a card","example":{},"attributes":{"layout":{"type":"string","default":"default"},"title":{"type":"string","default":"Card title"},"subtitle":{"type":"string","default":"Card subtitle"}},"supports":{"html":true},"textdomain":"list-card","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","render":"file:./render.php"}');
 
 /***/ })
 
