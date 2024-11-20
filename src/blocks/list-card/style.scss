@@ -1,0 +1,35 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.wp-block-rapid-list-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--theme-spacing-xl);
+  align-items: flex-start;
+  background-color: var(--theme-color-layer_1);
+  padding: var(--theme-spacing-xl) var(--theme-spacing-xl) 0
+    var(--theme-spacing-xl);
+  border-radius: var(--theme-corner_radius_regular);
+  box-shadow: var(--wp--preset--shadow--card);
+
+  .list-title {
+    h5,
+    p {
+      margin: 0;
+    }
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--theme-spacing-xxxs);
+  }
+
+  .list-items {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+}

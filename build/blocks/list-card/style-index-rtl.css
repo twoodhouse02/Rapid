@@ -1,0 +1,33 @@
+/*!********************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/blocks/list-card/style.scss ***!
+  \********************************************************************************************************************************************************************************************************************************************************/
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.wp-block-rapid-list-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--theme-spacing-xl);
+  align-items: flex-start;
+  background-color: var(--theme-color-layer_1);
+  padding: var(--theme-spacing-xl) var(--theme-spacing-xl) 0 var(--theme-spacing-xl);
+  border-radius: var(--theme-corner_radius_regular);
+  box-shadow: var(--wp--preset--shadow--card);
+}
+.wp-block-rapid-list-card .list-title {
+  display: flex;
+  flex-direction: column;
+  gap: var(--theme-spacing-xxxs);
+}
+.wp-block-rapid-list-card .list-title h5,
+.wp-block-rapid-list-card .list-title p {
+  margin: 0;
+}
+.wp-block-rapid-list-card .list-items {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
