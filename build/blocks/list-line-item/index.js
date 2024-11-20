@@ -185,7 +185,7 @@ module.exports = window["wp"]["i18n"];
   \**********************************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"rapid/list-line-item","version":"0.1.0","title":"List Line Item","category":"rapid-theme","parent":["rapid/list-card"],"icon":"editor-ul","description":"Example block scaffolded with Create Block tool.","attributes":{"label":{"type":"string","default":"List Item Label"},"content":{"type":"string","default":"List Item Content"}},"example":{},"supports":{"html":true},"textdomain":"list-line-item","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","render":"file:./render.php"}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"rapid/list-line-item","version":"0.1.0","title":"List Line Item","category":"rapid-theme","parent":["rapid/list-card"],"icon":"editor-ul","description":"Example block scaffolded with Create Block tool.","attributes":{"label":{"type":"string","default":"List item label"},"content":{"type":"string","default":"List item content"}},"example":{"attributes":{"label":"List item","content":"Lorem ipsum dolor sit amet, consectetur adipiscing elit."}},"supports":{"html":true},"textdomain":"list-line-item","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","render":"file:./render.php"}');
 
 /***/ })
 

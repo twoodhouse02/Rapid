@@ -15,6 +15,7 @@
     var(--theme-spacing-xl);
   border-radius: var(--theme-corner_radius_regular);
   box-shadow: var(--wp--preset--shadow--card);
+  box-sizing: border-box;
 
   .list-title {
     h5,
@@ -27,9 +28,19 @@
     gap: var(--theme-spacing-xxxs);
   }
 
-  .list-items {
+  .list-items,
+  .block-editor-block-list__layout {
     display: flex;
     flex-direction: column;
+    flex-wrap: nowrap;
     width: 100%;
+  }
+
+  &.two-column {
+    .list-items,
+    .block-editor-block-list__layout {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
   }
 }

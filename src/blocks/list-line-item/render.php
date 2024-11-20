@@ -4,7 +4,6 @@
  *
  * @package Rapid
  */
-
 $label = isset($attributes["label"]) ? $attributes["label"] : "Default Label";
 $content = isset($attributes["content"])
     ? $attributes["content"]

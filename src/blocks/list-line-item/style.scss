@@ -12,6 +12,7 @@
   flex-direction: row;
   gap: var(--theme-spacing-xxs);
   border-top: 1px solid var(--theme-color-layer_3);
+  box-sizing: border-box;
 
   .label,
   .content {
@@ -28,5 +29,24 @@
 
   .content {
     width: 70%;
+  }
+}
+
+.two-column .wp-block-rapid-list-line-item {
+  width: 50%;
+  flex-direction: column;
+  padding: var(--theme-spacing-xl) var(--theme-spacing-s);
+
+  &:nth-child(odd) {
+    padding-left: 0;
+  }
+
+  &:nth-child(even) {
+    padding-right: 0;
+  }
+
+  .label,
+  .content {
+    width: 100%;
   }
 }

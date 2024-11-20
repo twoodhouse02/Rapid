@@ -23,6 +23,7 @@ import { useBlockProps, RichText } from "@wordpress/block-editor";
  */
 export default function Edit({ attributes, setAttributes }) {
   const { label, content } = attributes;
+
   return (
     <div {...useBlockProps()}>
       <div className="label">

@@ -13,14 +13,19 @@
   "attributes": {
     "label": {
       "type": "string",
-      "default": "List Item Label"
+      "default": "List item label"
     },
     "content": {
       "type": "string",
-      "default": "List Item Content"
+      "default": "List item content"
     }
   },
-  "example": {},
+  "example": {
+    "attributes": {
+      "label": "List item",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    }
+  },
   "supports": {
     "html": true
   },

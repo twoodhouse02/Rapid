@@ -9,6 +9,10 @@
   "description": "A dynamic block for displaying a styled unordered list inside of a card",
   "example": {},
   "attributes": {
+    "layout": {
+      "type": "string",
+      "default": "default"
+    },
     "listTitle": {
       "type": "string",
       "default": "Card title"

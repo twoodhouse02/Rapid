@@ -16,6 +16,7 @@
   padding: var(--theme-spacing-xl) var(--theme-spacing-xl) 0 var(--theme-spacing-xl);
   border-radius: var(--theme-corner_radius_regular);
   box-shadow: var(--wp--preset--shadow--card);
+  box-sizing: border-box;
 }
 .wp-block-rapid-list-card .list-title {
   display: flex;
@@ -26,8 +27,15 @@
 .wp-block-rapid-list-card .list-title p {
   margin: 0;
 }
-.wp-block-rapid-list-card .list-items {
+.wp-block-rapid-list-card .list-items,
+.wp-block-rapid-list-card .block-editor-block-list__layout {
   display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
   width: 100%;
+}
+.wp-block-rapid-list-card.two-column .list-items,
+.wp-block-rapid-list-card.two-column .block-editor-block-list__layout {
+  flex-direction: row;
+  flex-wrap: wrap;
 }
