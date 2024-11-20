@@ -1,0 +1,33 @@
+.theme-type-display {
+  font-size: var(--theme-font-size-display);
+  font-weight: 800;
+  letter-spacing: -2.85px;
+}
+
+h1 {
+  font-size: var(--theme-font-size-h1);
+  font-weight: 700;
+  letter-spacing: -2.28px;
+}
+
+h2 {
+  font-size: var(--theme-font-size-h2);
+  font-weight: 700;
+  letter-spacing: -1.83px;
+}
+
+h3 {
+  font-size: var(--theme-font-size-h3);
+  font-weight: 700;
+  letter-spacing: -0.49px;
+}
+
+h4 {
+  font-size: var(--theme-font-size-h4);
+  font-weight: 700;
+}
+
+h5 {
+  font-size: var(--theme-font-size-h5);
+  font-weight: 500;
+}

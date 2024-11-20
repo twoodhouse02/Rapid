@@ -37,6 +37,14 @@ function enqueue_theme_assets() {
         array(), 
         THEME_VERSION
     );
+
+        // Enqueue the generated CSS file with versioning for both the front end and the editor
+        wp_enqueue_style(
+            'typography', 
+            get_template_directory_uri() . '/styles/typography.css', 
+            array(), 
+            THEME_VERSION
+        );
 }
 add_action('wp_enqueue_scripts', 'enqueue_theme_assets');
 
@@ -44,6 +52,7 @@ add_action('wp_enqueue_scripts', 'enqueue_theme_assets');
 function enqueue_theme_editor_assets() {
     add_editor_style('styles/spacing-variables.css');
     add_editor_style('styles/admin-theme-variables.css');
+    add_editor_style('styles/typography.css');
 }
 add_action('after_setup_theme', 'enqueue_theme_editor_assets');
 
@@ -96,6 +105,8 @@ add_filter( 'block_categories_all', 'custom_block_category', 10, 2);
 
 function multiblock_register_blocks() {
 	register_block_type( __DIR__ . '/build/blocks/ordered-list' );
+    register_block_type( __DIR__ . '/build/blocks/list-card' );
+    register_block_type( __DIR__ . '/build/blocks/list-line-item' );
 }
 add_action( 'init', 'multiblock_register_blocks' );
 
