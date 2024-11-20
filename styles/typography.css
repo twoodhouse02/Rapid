@@ -31,3 +31,7 @@ h5 {
   font-size: var(--theme-font-size-h5);
   font-weight: 500;
 }
+
+.secondary {
+  color: var(--theme-color-text_secondary);
+}
