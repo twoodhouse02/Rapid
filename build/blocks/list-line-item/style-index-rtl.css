@@ -46,3 +46,9 @@
 .two-column .wp-block-rapid-list-line-item .content {
   width: 100%;
 }
+@media (max-width: 480px) {
+  .two-column .wp-block-rapid-list-line-item {
+    width: 100%;
+    padding: var(--theme-spacing-xl) 0;
+  }
+}

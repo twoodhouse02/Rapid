@@ -39,3 +39,10 @@
   flex-direction: row;
   flex-wrap: wrap;
 }
+@media (max-width: 480px) {
+  .wp-block-rapid-list-card.two-column .list-items,
+  .wp-block-rapid-list-card.two-column .block-editor-block-list__layout {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+}

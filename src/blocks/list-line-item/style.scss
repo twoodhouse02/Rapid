@@ -49,4 +49,9 @@
   .content {
     width: 100%;
   }
+
+  @media (max-width: 480px) {
+    width: 100%;
+    padding: var(--theme-spacing-xl) 0;
+  }
 }
