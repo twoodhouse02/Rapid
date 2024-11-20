@@ -103,6 +103,14 @@
       "background": "var(--theme-color-background)",
       "text": "var(--theme-color-text_primary)"
     },
+    "spacing": {
+      "padding": {
+        "top": "0",
+        "bottom": "0",
+        "left": "2rem",
+        "right": "2rem"
+      }
+    },
 
     "elements": {
       "button": {
