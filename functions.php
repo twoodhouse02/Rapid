@@ -5,6 +5,9 @@ if (!defined("THEME_VERSION")) {
     define("THEME_VERSION", $theme->Version); //gets version in style.css
 }
 
+// Include the function to enqueue the icon files into the theme front and back end
+require_once get_template_directory() . "/functions/enqueue-icons.php";
+
 // Include the function to generate the CSS variables file
 require_once get_template_directory() .
     "/functions/generate-theme-variables.php";

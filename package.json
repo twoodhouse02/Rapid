@@ -14,5 +14,8 @@
     "plugins": [
       "@prettier/plugin-php"
     ]
+  },
+  "dependencies": {
+    "ionicons": "^7.4.0"
   }
 }
