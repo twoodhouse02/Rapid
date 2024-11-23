@@ -18,6 +18,14 @@
     "content": {
       "type": "string",
       "default": "List item content"
+    },
+    "allowIcon": {
+      "type": "boolean",
+      "default": false
+    },
+    "iconName": {
+      "type": "string",
+      "default": "add-outline"
     }
   },
   "example": {

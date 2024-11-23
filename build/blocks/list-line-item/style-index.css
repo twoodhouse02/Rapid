@@ -11,6 +11,7 @@
   padding: var(--theme-spacing-xl) 0;
   width: 100%;
   display: flex;
+  align-items: center;
   flex-direction: row;
   gap: var(--theme-spacing-xxs);
   border-top: 1px solid var(--theme-color-layer_3);
@@ -30,11 +31,24 @@
 .wp-block-rapid-list-line-item .content {
   width: 70%;
 }
+.wp-block-rapid-list-line-item ion-icon {
+  color: var(--theme-color-brand_primary);
+  font-size: 24px;
+}
+.wp-block-rapid-list-line-item .content-wrapper {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
 
 .two-column .wp-block-rapid-list-line-item {
   width: 50%;
-  flex-direction: column;
+  flex-direction: row;
   padding: var(--theme-spacing-xl) var(--theme-spacing-s);
+  align-items: flex-start;
+}
+.two-column .wp-block-rapid-list-line-item ion-icon {
+  padding-top: 6px;
 }
 .two-column .wp-block-rapid-list-line-item:nth-child(odd) {
   padding-left: 0;
@@ -45,6 +59,9 @@
 .two-column .wp-block-rapid-list-line-item .label,
 .two-column .wp-block-rapid-list-line-item .content {
   width: 100%;
+}
+.two-column .wp-block-rapid-list-line-item .content-wrapper {
+  flex-direction: column;
 }
 @media (max-width: 480px) {
   .two-column .wp-block-rapid-list-line-item {

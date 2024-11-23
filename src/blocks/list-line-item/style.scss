@@ -9,6 +9,7 @@
   padding: var(--theme-spacing-xl) 0;
   width: 100%;
   display: flex;
+  align-items: center;
   flex-direction: row;
   gap: var(--theme-spacing-xxs);
   border-top: 1px solid var(--theme-color-layer_3);
@@ -30,12 +31,28 @@
   .content {
     width: 70%;
   }
+
+  ion-icon {
+    color: var(--theme-color-brand_primary);
+    font-size: 24px;
+  }
+
+  .content-wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
 }
 
 .two-column .wp-block-rapid-list-line-item {
   width: 50%;
-  flex-direction: column;
+  flex-direction: row;
   padding: var(--theme-spacing-xl) var(--theme-spacing-s);
+  align-items: flex-start;
+
+  ion-icon {
+    padding-top: 6px;
+  }
 
   &:nth-child(odd) {
     padding-left: 0;
@@ -48,6 +65,10 @@
   .label,
   .content {
     width: 100%;
+  }
+
+  .content-wrapper {
+    flex-direction: column;
   }
 
   @media (max-width: 480px) {
