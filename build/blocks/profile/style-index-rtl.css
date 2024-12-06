@@ -7,8 +7,59 @@
  *
  * Replace them with your own styles or remove the file completely.
  */
-.wp-block-create-block-profile {
-  background-color: #21759b;
-  color: #fff;
-  padding: 2px;
+.wp-block-rapid-profile {
+  display: flex;
+  gap: var(--theme-spacing-s);
+}
+.wp-block-rapid-profile .profile-image {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+.wp-block-rapid-profile .profile-image img {
+  height: 100px;
+  width: 100px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: var(--theme-corner_radius_regular);
+}
+.wp-block-rapid-profile .profile-image img.full {
+  border-radius: 100%;
+}
+.wp-block-rapid-profile .profile-content p {
+  margin: 0;
+}
+.wp-block-rapid-profile .name {
+  font-size: var(--theme-font-size-l);
+}
+.wp-block-rapid-profile .title {
+  font-size: var(--theme-font-size-standard);
+  color: var(--theme-color-brand_secondary);
+}
+.wp-block-rapid-profile .bio {
+  font-size: var(--theme-font-size-s);
+  color: var(--theme-color-text_secondary);
+}
+.wp-block-rapid-profile.small .profile-image img {
+  height: 50px;
+  width: 50px;
+}
+.wp-block-rapid-profile.medium .profile-image img {
+  height: 100px;
+  width: 100px;
+}
+.wp-block-rapid-profile.large .profile-image img {
+  height: 150px;
+  width: 150px;
+}
+.wp-block-rapid-profile.vertical {
+  flex-direction: column;
+  align-items: center;
+}
+.wp-block-rapid-profile.vertical p {
+  text-align: center;
+}
+.wp-block-rapid-profile.horizontal {
+  flex-direction: row;
+  align-items: start;
 }

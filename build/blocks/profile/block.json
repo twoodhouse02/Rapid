@@ -7,6 +7,44 @@
   "category": "rapid-theme",
   "icon": "admin-users",
   "description": "A dynamic block for displaying a short bio and profile image",
+  "attributes": {
+    "layout": {
+      "type": "string",
+      "default": "horizontal"
+    },
+    "size": {
+      "type": "string",
+      "default": "small"
+    },
+    "imageURL": {
+      "type": "string",
+      "default": "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    },
+    "imageRadius": {
+      "type": "string",
+      "default": "full"
+    },
+    "name": {
+      "type": "string",
+      "default": "Write name here..."
+    },
+    "displayTitle": {
+      "type": "boolean",
+      "default": true
+    },
+    "title": {
+      "type": "string",
+      "default": "Title"
+    },
+    "displayBio": {
+      "type": "boolean",
+      "default": true
+    },
+    "bio": {
+      "type": "string",
+      "default": "Write bio here..."
+    }
+  },
   "example": {},
   "supports": {
     "html": false

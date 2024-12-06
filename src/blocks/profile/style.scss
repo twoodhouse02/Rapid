@@ -5,8 +5,83 @@
  * Replace them with your own styles or remove the file completely.
  */
 
-.wp-block-create-block-profile {
-	background-color: #21759b;
-	color: #fff;
-	padding: 2px;
+.wp-block-rapid-profile {
+  display: flex;
+  gap: var(--theme-spacing-s);
+
+  .profile-image {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    img {
+      height: 100px;
+      width: 100px;
+      object-fit: cover;
+      border-radius: var(--theme-corner_radius_regular);
+
+      &.full {
+        border-radius: 100%;
+      }
+    }
+  }
+
+  .profile-content {
+    p {
+      margin: 0;
+    }
+  }
+
+  .name {
+    font-size: var(--theme-font-size-l);
+  }
+
+  .title {
+    font-size: var(--theme-font-size-standard);
+    color: var(--theme-color-brand_secondary);
+  }
+
+  .bio {
+    font-size: var(--theme-font-size-s);
+    color: var(--theme-color-text_secondary);
+  }
+
+  &.small {
+    .profile-image {
+      img {
+        height: 50px;
+        width: 50px;
+      }
+    }
+  }
+
+  &.medium {
+    .profile-image {
+      img {
+        height: 100px;
+        width: 100px;
+      }
+    }
+  }
+
+  &.large {
+    .profile-image {
+      img {
+        height: 150px;
+        width: 150px;
+      }
+    }
+  }
+
+  &.vertical {
+    flex-direction: column;
+    align-items: center;
+    & p {
+      text-align: center;
+    }
+  }
+
+  &.horizontal {
+    flex-direction: row;
+    align-items: start;
+  }
 }
