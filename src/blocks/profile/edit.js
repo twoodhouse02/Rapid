@@ -16,7 +16,6 @@ import {
   ToggleControl,
   Button,
 } from "@wordpress/components";
-import ionicons from "../../../assets/ionicons/ionicons.json";
 
 /**
  * The edit function describes the structure of your block in the context of the
