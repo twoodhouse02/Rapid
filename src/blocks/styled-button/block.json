@@ -1,0 +1,61 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "rapid/styled-button",
+  "version": "0.1.0",
+  "title": "Styled Button",
+  "category": "rapid-theme",
+  "icon": "button",
+  "description": "A button with more advanced style controls than the default Wordpress buttons",
+  "attributes": {
+    "url": {
+      "type": "string",
+      "default": ""
+    },
+    "opensInNewTab": {
+      "type": "boolean",
+      "default": false
+    },
+    "label": {
+      "type": "string",
+      "default": "Button"
+    },
+    "variant": {
+      "type": "string",
+      "default": "primary"
+    },
+    "size": {
+      "type": "string",
+      "default": "default"
+    },
+    "display": {
+      "type": "string",
+      "default": "inline"
+    },
+    "displayIconLeft": {
+      "type": "boolean",
+      "default": false
+    },
+    "iconLeftName": {
+      "type": "string",
+      "default": "add-outline"
+    },
+    "displayIconRight": {
+      "type": "boolean",
+      "default": false
+    },
+    "iconRightName": {
+      "type": "string",
+      "default": "add-outline"
+    }
+  },
+  "example": {},
+  "supports": {
+    "html": false
+  },
+  "textdomain": "styled-button",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}
