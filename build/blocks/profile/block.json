@@ -45,7 +45,12 @@
       "default": "Write bio here..."
     }
   },
-  "example": {},
+  "example": {
+    "attributes": {
+      "name": "Sarah Smith",
+      "title": "Executive Design Officer"
+    }
+  },
   "supports": {
     "html": false
   },
