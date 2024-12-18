@@ -12,6 +12,10 @@ require_once get_template_directory() . "/functions/enqueue-icons.php";
 require_once get_template_directory() .
     "/functions/generate-theme-variables.php";
 
+// Include the function to generate CSS variables from overrides in the editor
+require_once get_template_directory() .
+    "/functions/extract-editor-variables.php";
+
 // Hook to generate the CSS variables on theme setup
 function theme_setup_generate_variables()
 {
@@ -111,6 +115,7 @@ add_filter("block_categories_all", "custom_block_category", 10, 2);
 
 function multiblock_register_blocks()
 {
+    register_block_type(__DIR__ . "/build/blocks/hero");
     register_block_type(__DIR__ . "/build/blocks/styled-button");
     register_block_type(__DIR__ . "/build/blocks/ordered-list");
     register_block_type(__DIR__ . "/build/blocks/list-card");
