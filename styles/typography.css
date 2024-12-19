@@ -35,3 +35,10 @@ h5 {
 .secondary {
   color: var(--theme-color-text_secondary);
 }
+
+.eyebrow {
+  font-size: var(--theme-font-size-standard);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-family: var(--theme-font-family-caption);
+}
