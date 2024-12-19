@@ -130,7 +130,8 @@
           }
         },
         "typography": {
-          "fontSize": "var(--theme-font-size-standard)"
+          "fontSize": "var(--theme-font-size-standard)",
+          "lineHeight": "1.2"
         },
         ":hover": {
           "color": {
@@ -180,7 +181,8 @@
               "text": "var(--theme-color-interactive)"
             },
             "typography": {
-              "fontSize": "var(--theme-font-size-standard)"
+              "fontSize": "var(--theme-font-size-standard)",
+              "lineHeight": "1"
             },
             "spacing": {
               "padding": {
