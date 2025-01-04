@@ -143,27 +143,47 @@
       },
       "h1": {
         "typography": {
-          "fontSize": "var(--theme-font-size-h1)"
+          "fontSize": "var(--theme-font-size-h1)",
+          "lineHeight": "1.2"
+        },
+        "color": {
+          "text": "var(--theme-color-text_primary)"
         }
       },
       "h2": {
         "typography": {
-          "fontSize": "var(--theme-font-size-h2)"
+          "fontSize": "var(--theme-font-size-h2)",
+          "lineHeight": "1.2"
+        },
+        "color": {
+          "text": "var(--theme-color-text_primary)"
         }
       },
       "h3": {
         "typography": {
-          "fontSize": "var(--theme-font-size-h3)"
+          "fontSize": "var(--theme-font-size-h3)",
+          "lineHeight": "1.3"
+        },
+        "color": {
+          "text": "var(--theme-color-text_primary)"
         }
       },
       "h4": {
         "typography": {
-          "fontSize": "var(--theme-font-size-h4)"
+          "fontSize": "var(--theme-font-size-h4)",
+          "lineHeight": "1.4"
+        },
+        "color": {
+          "text": "var(--theme-color-text_primary)"
         }
       },
       "h5": {
         "typography": {
-          "fontSize": "var(--theme-font-size-h5)"
+          "fontSize": "var(--theme-font-size-h5)",
+          "lineHeight": "1.5"
+        },
+        "color": {
+          "text": "var(--theme-color-text_primary)"
         }
       }
     },
