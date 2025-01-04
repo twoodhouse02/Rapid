@@ -186,6 +186,13 @@ export default function Edit({ attributes, setAttributes }) {
           />
         </PanelBody>
         <PanelBody title="Icons">
+          <p>
+            Refer to the{" "}
+            <a href="https://ionic.io/ionicons" target="_blank">
+              ionicons library
+            </a>{" "}
+            for available icons
+          </p>
           <ToggleControl
             __nextHasNoMarginBottom
             label="Display left icon"
