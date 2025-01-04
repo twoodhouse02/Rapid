@@ -1,0 +1,196 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.wp-block-rapid-hero {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  box-sizing: border-box;
+
+  .hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: var(--theme-corner_radius_xlarge);
+    z-index: 0;
+  }
+
+  &.alignfull .hero-background {
+    border-radius: 0;
+  }
+
+  &.background-image {
+    padding: var(--theme-spacing-display-xxxl);
+  }
+
+  &.full-width-faded-bottom {
+    .hero-background {
+      --mask: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 1) 0,
+          rgba(0, 0, 0, 1) 40%,
+          rgba(0, 0, 0, 0) 100%
+        )
+        100% 50% / 100% 100% repeat-x;
+      -webkit-mask: var(--mask);
+      mask: var(--mask);
+    }
+  }
+
+  &.full-width-slanted-bottom {
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 150px;
+      z-index: 1;
+      background: var(--theme-color-background);
+      clip-path: polygon(100% 100%, 0% 100%, 100% 40%);
+    }
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2; // Place above background
+    gap: var(--theme-spacing-xl);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    max-width: var(--wp--style--global--content-size);
+    padding: var(--theme-spacing-xxl) 0;
+    box-sizing: border-box;
+
+    & .eyebrow {
+      color: var(--theme-color-brand_primary);
+    }
+
+    & .title-area {
+      display: flex;
+      flex-direction: column;
+    }
+
+    p,
+    h2 {
+      margin: 0;
+    }
+
+    p.description {
+      font-size: var(--theme-font-size-l);
+    }
+
+    .cta-buttons {
+      .block-editor-block-list__layout {
+        display: flex;
+        gap: var(--theme-spacing-m);
+      }
+    }
+  }
+
+  &.text-align-center,
+  &.text-align-center .hero-content {
+    align-items: center;
+    .title-area {
+      align-items: center;
+    }
+    p {
+      text-align: center;
+    }
+  }
+
+  &.text-align-left,
+  &.text-align-left .hero-content {
+    align-items: flex-start;
+    .title-area {
+      align-items: flex-start;
+    }
+    p {
+      text-align: left;
+    }
+  }
+
+  &.text-align-right,
+  &.text-align-right .hero-content {
+    align-items: flex-end;
+    .title-area {
+      align-items: flex-end;
+    }
+    p {
+      text-align: right;
+    }
+  }
+
+  &.split {
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: var(--theme-color-layer_1);
+    border-radius: var(--theme-corner_radius_regular);
+    overflow: hidden;
+
+    &.split-content-33 {
+      grid-template-columns: 2fr 1fr;
+    }
+
+    &.split-content-50 {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    &.split-content-75 {
+      grid-template-columns: 1fr 3fr;
+    }
+
+    &.split-image-right {
+      & .hero-content {
+        order: -1;
+      }
+      &.split-content-33 {
+        grid-template-columns: 1fr 2fr;
+      }
+
+      &.split-content-50 {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      &.split-content-75 {
+        grid-template-columns: 3fr 1fr;
+      }
+    }
+    &.alignfull {
+      border-radius: 0;
+    }
+
+    .hero-background {
+      position: static;
+      border-radius: 0;
+    }
+
+    .hero-content {
+      align-items: flex-start;
+      padding: var(--theme-spacing-display-xl);
+      .title-area {
+        align-items: flex-start;
+      }
+      p {
+        text-align: left;
+      }
+    }
+
+    @media (max-width: 678px) {
+      grid-template-columns: 1fr !important;
+      grid-template-rows: 1fr 3fr !important;
+    }
+  }
+}
