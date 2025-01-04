@@ -1,0 +1,28 @@
+/* Wide alignment */
+
+@media (min-width: 1450px) {
+  .entry-content .alignwide {
+    width: var(
+      --wp--style--global--wide-size,
+      1400px
+    ); /* Use the wide size variable */
+    margin-left: calc(
+      (100% - var(--wp--style--global--wide-size, 1400px)) / 2
+    ); /* Center align */
+    margin-right: calc(
+      (100% - var(--wp--style--global--wide-size, 1400px)) / 2
+    ); /* Center align */
+  }
+}
+
+/* Full alignment */
+.entry-content .alignfull {
+  width: 100vw; /* Full viewport width */
+  margin-left: calc(50% - 50vw); /* Center align */
+  margin-right: calc(50% - 50vw); /* Center align */
+  max-width: 100vw;
+}
+
+.alignfull img {
+  width: 100vw;
+}
