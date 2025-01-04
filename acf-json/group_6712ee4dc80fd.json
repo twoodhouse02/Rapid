@@ -823,7 +823,7 @@
                         "class": "",
                         "id": ""
                     },
-                    "default_value": "#0C66E410",
+                    "default_value": "rgba(12, 102, 228, .10)",
                     "enable_opacity": 1,
                     "return_format": "string",
                     "allow_in_bindings": 0
@@ -842,7 +842,7 @@
                         "class": "",
                         "id": ""
                     },
-                    "default_value": "#FFFFFF05",
+                    "default_value": "rgba(255,255,255,.05)",
                     "enable_opacity": 1,
                     "return_format": "string",
                     "allow_in_bindings": 0
@@ -991,7 +991,7 @@
                         "class": "",
                         "id": ""
                     },
-                    "default_value": "#0C66E410",
+                    "default_value": "rgba(12, 102, 228, .10)",
                     "enable_opacity": 1,
                     "return_format": "string",
                     "allow_in_bindings": 0
@@ -1010,7 +1010,7 @@
                         "class": "",
                         "id": ""
                     },
-                    "default_value": "#ffffff10",
+                    "default_value": "rgba(255,255,255,.1)",
                     "enable_opacity": 1,
                     "return_format": "string",
                     "allow_in_bindings": 0
@@ -2083,5 +2083,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1735958876
+    "modified": 1736002852
 }
