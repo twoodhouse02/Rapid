@@ -45,7 +45,7 @@ export default function Edit({ attributes, setAttributes }) {
         <PanelBody title="Style">
           <SelectControl
             label="Choose container style"
-            selected={style}
+            value={style}
             options={[
               { label: "Card", value: "default" },
               { label: "Simple", value: "simple" },
