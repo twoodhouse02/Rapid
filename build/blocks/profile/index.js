@@ -81,7 +81,7 @@ function Edit({
           })
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.SelectControl, {
           label: "Layout",
-          selected: layout,
+          value: layout,
           options: [{
             label: "Horizontal",
             value: "horizontal"
@@ -94,7 +94,7 @@ function Edit({
           })
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.SelectControl, {
           label: "Size",
-          selected: size,
+          value: size,
           options: [{
             label: "Small",
             value: "small"
@@ -110,7 +110,7 @@ function Edit({
           })
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.SelectControl, {
           label: "Image Radius",
-          selected: imageRadius,
+          value: imageRadius,
           options: [{
             label: "Full",
             value: "full"

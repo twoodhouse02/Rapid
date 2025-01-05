@@ -64,7 +64,7 @@ export default function Edit({ attributes, setAttributes }) {
           />
           <SelectControl
             label="Layout"
-            selected={layout}
+            value={layout}
             options={[
               { label: "Horizontal", value: "horizontal" },
               { label: "Vertical", value: "vertical" },
@@ -73,7 +73,7 @@ export default function Edit({ attributes, setAttributes }) {
           />
           <SelectControl
             label="Size"
-            selected={size}
+            value={size}
             options={[
               { label: "Small", value: "small" },
               { label: "Medium", value: "medium" },
@@ -83,7 +83,7 @@ export default function Edit({ attributes, setAttributes }) {
           />
           <SelectControl
             label="Image Radius"
-            selected={imageRadius}
+            value={imageRadius}
             options={[
               { label: "Full", value: "full" },
               { label: "Regular", value: "regular" },
