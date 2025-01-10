@@ -49,6 +49,7 @@ function Edit({
     className: `${variant} ${size} ${display}`
   });
   const [isLinkPopoverOpen, setIsLinkPopoverOpen] = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_3__.useState)(false);
+  const [isIconPopoverOpen, setIsIconPopoverOpen] = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_3__.useState)(false);
   const handleUpdateLink = newLink => {
     setAttributes({
       url: newLink.url || "",
@@ -144,6 +145,12 @@ function Edit({
           label: "Select a variant",
           onToggle: () => {}
         })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.ToolbarGroup, {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.ToolbarButton, {
+          icon: "star-solid",
+          label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)("Button icons", "rapid"),
+          onClick: () => setIsIconPopoverOpen(true)
+        })
       }), isLinkPopoverOpen && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Popover, {
         position: "bottom center",
         onClose: () => setIsLinkPopoverOpen(false),
@@ -158,9 +165,73 @@ function Edit({
             title: "Open in new tab"
           }]
         })
+      }), isIconPopoverOpen && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Popover, {
+        position: "bottom center",
+        onClose: () => setIsIconPopoverOpen(false),
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+          style: {
+            minWidth: "250px",
+            padding: "16px"
+          },
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("p", {
+            style: {
+              marginTop: 0
+            },
+            children: ["Refer to the", " ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("a", {
+              href: "https://ionic.io/ionicons",
+              target: "_blank",
+              children: "ionicons library"
+            }), " ", "for available icons"]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.ToggleControl, {
+            label: "Display left icon",
+            checked: displayIconLeft,
+            onChange: () => setAttributes({
+              displayIconLeft: !displayIconLeft
+            })
+          }), displayIconLeft && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+            style: {
+              marginBottom: "24px"
+            },
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.SelectControl, {
+              label: "Select left icon",
+              value: iconLeftName,
+              options: [{
+                label: "Select an icon",
+                value: ""
+              }, ..._assets_ionicons_ionicons_json__WEBPACK_IMPORTED_MODULE_4__.icons.map(icon => ({
+                label: icon.name,
+                // Display name of the icon
+                value: icon.name // Unique value for the icon
+              }))],
+              onChange: value => setAttributes({
+                iconLeftName: value
+              })
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.ToggleControl, {
+            label: "Display right icon",
+            checked: displayIconRight,
+            onChange: () => setAttributes({
+              displayIconRight: !displayIconRight
+            })
+          }), displayIconRight && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.SelectControl, {
+            label: "Select left icon",
+            value: iconRightName,
+            options: [{
+              label: "Select an icon",
+              value: ""
+            }, ..._assets_ionicons_ionicons_json__WEBPACK_IMPORTED_MODULE_4__.icons.map(icon => ({
+              label: icon.name,
+              // Display name of the icon
+              value: icon.name // Unique value for the icon
+            }))],
+            onChange: value => setAttributes({
+              iconRightName: value
+            })
+          })]
+        })
       })]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.InspectorControls, {
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelBody, {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.InspectorControls, {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelBody, {
         title: "Style",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.SelectControl, {
           label: "Size",
@@ -192,58 +263,7 @@ function Edit({
             display: value
           })
         })]
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelBody, {
-        title: "Icons",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("p", {
-          children: ["Refer to the", " ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("a", {
-            href: "https://ionic.io/ionicons",
-            target: "_blank",
-            children: "ionicons library"
-          }), " ", "for available icons"]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.ToggleControl, {
-          __nextHasNoMarginBottom: true,
-          label: "Display left icon",
-          checked: displayIconLeft,
-          onChange: () => setAttributes({
-            displayIconLeft: !displayIconLeft
-          })
-        }), displayIconLeft && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.SelectControl, {
-          label: "Select left icon",
-          value: iconLeftName,
-          options: [{
-            label: "Select an icon",
-            value: ""
-          }, ..._assets_ionicons_ionicons_json__WEBPACK_IMPORTED_MODULE_4__.icons.map(icon => ({
-            label: icon.name,
-            // Display name of the icon
-            value: icon.name // Unique value for the icon
-          }))],
-          onChange: value => setAttributes({
-            iconLeftName: value
-          })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.ToggleControl, {
-          __nextHasNoMarginBottom: true,
-          label: "Display right icon",
-          checked: displayIconRight,
-          onChange: () => setAttributes({
-            displayIconRight: !displayIconRight
-          })
-        }), displayIconRight && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.SelectControl, {
-          label: "Select left icon",
-          value: iconRightName,
-          options: [{
-            label: "Select an icon",
-            value: ""
-          }, ..._assets_ionicons_ionicons_json__WEBPACK_IMPORTED_MODULE_4__.icons.map(icon => ({
-            label: icon.name,
-            // Display name of the icon
-            value: icon.name // Unique value for the icon
-          }))],
-          onChange: value => setAttributes({
-            iconRightName: value
-          })
-        })]
-      })]
+      })
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("a", {
       ...blockProps,
       children: [displayIconLeft && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("ion-icon", {

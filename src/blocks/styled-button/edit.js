@@ -38,6 +38,7 @@ export default function Edit({ attributes, setAttributes }) {
   });
 
   const [isLinkPopoverOpen, setIsLinkPopoverOpen] = useState(false);
+  const [isIconPopoverOpen, setIsIconPopoverOpen] = useState(false);
 
   const handleUpdateLink = (newLink) => {
     setAttributes({
@@ -144,6 +145,14 @@ export default function Edit({ attributes, setAttributes }) {
             onToggle={() => {}}
           />
         </ToolbarGroup>
+
+        <ToolbarGroup>
+          <ToolbarButton
+            icon="star-solid"
+            label={__("Button icons", "rapid")}
+            onClick={() => setIsIconPopoverOpen(true)}
+          />
+        </ToolbarGroup>
         {isLinkPopoverOpen && (
           <Popover
             position="bottom center"
@@ -159,6 +168,68 @@ export default function Edit({ attributes, setAttributes }) {
                 },
               ]}
             />
+          </Popover>
+        )}
+        {isIconPopoverOpen && (
+          <Popover
+            position="bottom center"
+            onClose={() => setIsIconPopoverOpen(false)}
+          >
+            <div style={{ minWidth: "250px", padding: "16px" }}>
+              <p style={{ marginTop: 0 }}>
+                Refer to the{" "}
+                <a href="https://ionic.io/ionicons" target="_blank">
+                  ionicons library
+                </a>{" "}
+                for available icons
+              </p>
+              <ToggleControl
+                label="Display left icon"
+                checked={displayIconLeft}
+                onChange={() =>
+                  setAttributes({ displayIconLeft: !displayIconLeft })
+                }
+              />
+              {displayIconLeft && (
+                <div style={{ marginBottom: "24px" }}>
+                  <SelectControl
+                    label="Select left icon"
+                    value={iconLeftName}
+                    options={[
+                      { label: "Select an icon", value: "" },
+                      ...ionicons.icons.map((icon) => ({
+                        label: icon.name, // Display name of the icon
+                        value: icon.name, // Unique value for the icon
+                      })),
+                    ]}
+                    onChange={(value) => setAttributes({ iconLeftName: value })}
+                  />
+                </div>
+              )}
+
+              <ToggleControl
+                label="Display right icon"
+                checked={displayIconRight}
+                onChange={() =>
+                  setAttributes({ displayIconRight: !displayIconRight })
+                }
+              />
+
+              {displayIconRight && (
+                <SelectControl
+                  label="Select left icon"
+                  value={iconRightName}
+                  options={[
+                    { label: "Select an icon", value: "" },
+                    ...ionicons.icons.map((icon) => ({
+                      label: icon.name, // Display name of the icon
+                      value: icon.name, // Unique value for the icon
+                    })),
+                  ]}
+                  onChange={(value) => setAttributes({ iconRightName: value })}
+                />
+              )}
+            </div>
           </Popover>
         )}
       </BlockControls>
@@ -184,61 +255,6 @@ export default function Edit({ attributes, setAttributes }) {
             ]}
             onChange={(value) => setAttributes({ display: value })}
           />
-        </PanelBody>
-        <PanelBody title="Icons">
-          <p>
-            Refer to the{" "}
-            <a href="https://ionic.io/ionicons" target="_blank">
-              ionicons library
-            </a>{" "}
-            for available icons
-          </p>
-          <ToggleControl
-            __nextHasNoMarginBottom
-            label="Display left icon"
-            checked={displayIconLeft}
-            onChange={() =>
-              setAttributes({ displayIconLeft: !displayIconLeft })
-            }
-          />
-          {displayIconLeft && (
-            <SelectControl
-              label="Select left icon"
-              value={iconLeftName}
-              options={[
-                { label: "Select an icon", value: "" },
-                ...ionicons.icons.map((icon) => ({
-                  label: icon.name, // Display name of the icon
-                  value: icon.name, // Unique value for the icon
-                })),
-              ]}
-              onChange={(value) => setAttributes({ iconLeftName: value })}
-            />
-          )}
-
-          <ToggleControl
-            __nextHasNoMarginBottom
-            label="Display right icon"
-            checked={displayIconRight}
-            onChange={() =>
-              setAttributes({ displayIconRight: !displayIconRight })
-            }
-          />
-
-          {displayIconRight && (
-            <SelectControl
-              label="Select left icon"
-              value={iconRightName}
-              options={[
-                { label: "Select an icon", value: "" },
-                ...ionicons.icons.map((icon) => ({
-                  label: icon.name, // Display name of the icon
-                  value: icon.name, // Unique value for the icon
-                })),
-              ]}
-              onChange={(value) => setAttributes({ iconRightName: value })}
-            />
-          )}
         </PanelBody>
       </InspectorControls>
       <a {...blockProps}>
