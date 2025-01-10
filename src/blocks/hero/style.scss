@@ -104,6 +104,7 @@
     align-items: center;
     .title-area {
       align-items: center;
+      text-align: center;
     }
     p {
       text-align: center;
@@ -115,6 +116,7 @@
     align-items: flex-start;
     .title-area {
       align-items: flex-start;
+      text-align: left;
     }
     p {
       text-align: left;
@@ -126,6 +128,7 @@
     align-items: flex-end;
     .title-area {
       align-items: flex-end;
+      text-align: right;
     }
     p {
       text-align: right;
@@ -182,6 +185,7 @@
       padding: var(--theme-spacing-display-xl);
       .title-area {
         align-items: flex-start;
+        text-align: left;
       }
       p {
         text-align: left;
