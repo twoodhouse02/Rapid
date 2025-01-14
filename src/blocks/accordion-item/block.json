@@ -1,0 +1,30 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "rapid/accordion-item",
+  "version": "0.1.0",
+  "title": "Accordion Item",
+  "category": "rapid-theme",
+  "parent": ["rapid/accordion"],
+  "icon": "excerpt-view",
+  "description": "A dynamic block that displays content in a collapsible container.",
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "Accordion title..."
+    },
+    "iconType": {
+      "type": "string",
+      "default": "chevron-down-outline"
+    }
+  },
+  "example": {},
+  "supports": {
+    "html": false
+  },
+  "textdomain": "accordion-item",
+  "editorScript": "file:./index.js",
+  "script": "file:./view.js",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

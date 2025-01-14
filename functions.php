@@ -124,11 +124,13 @@ add_filter("block_categories_all", "custom_block_category", 10, 2);
 
 function multiblock_register_blocks()
 {
+    register_block_type(__DIR__ . "/build/blocks/accordion");
+    register_block_type(__DIR__ . "/build/blocks/accordion-item");
     register_block_type(__DIR__ . "/build/blocks/hero");
-    register_block_type(__DIR__ . "/build/blocks/styled-button");
-    register_block_type(__DIR__ . "/build/blocks/ordered-list");
     register_block_type(__DIR__ . "/build/blocks/list-card");
     register_block_type(__DIR__ . "/build/blocks/list-line-item");
+    register_block_type(__DIR__ . "/build/blocks/ordered-list");
     register_block_type(__DIR__ . "/build/blocks/profile");
+    register_block_type(__DIR__ . "/build/blocks/styled-button");
 }
 add_action("init", "multiblock_register_blocks");

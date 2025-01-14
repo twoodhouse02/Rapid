@@ -1,0 +1,97 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.wp-block-rapid-accordion-item {
+  .accordion-title {
+    display: flex;
+    align-items: center;
+    padding: var(--theme-spacing-m) var(--theme-spacing-l);
+    gap: var(--theme-spacing-xxxs);
+    cursor: pointer;
+
+    p {
+      margin: 0;
+      font-size: var(--theme-font-size-l);
+    }
+  }
+
+  .accordion-content {
+    color: var(--theme-color-text);
+    padding: 0 var(--theme-spacing-l);
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.3s ease;
+
+    & > p,
+    & > div {
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  ion-icon {
+    font-size: 24px;
+    color: var(--theme-color-interactive);
+    transition: 0.3s ease;
+  }
+
+  &.is-open {
+    .accordion-content {
+      max-height: 100vh;
+      padding: var(--theme-spacing-l);
+    }
+
+    &.add-outline {
+      ion-icon {
+        transform: rotate(45deg);
+      }
+    }
+    &.chevron-down-outline {
+      ion-icon {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
+
+.card .wp-block-rapid-accordion-item {
+  .accordion-title {
+    background-color: var(--theme-color-layer_1);
+    border: var(--theme-border_width_card) solid var(--theme-color_border_cards);
+    border-radius: var(--theme-corner_radius_regular);
+  }
+
+  .accordion-content {
+    background-color: var(--theme-color-layer_2);
+    color: var(--theme-color-text_layer_2);
+    border-radius: 0 0 var(--theme-corner_radius_regular)
+      var(--theme-corner_radius_regular);
+  }
+
+  &.is-open {
+    .accordion-title {
+      border-radius: var(--theme-corner_radius_regular)
+        var(--theme-corner_radius_regular) 0 0;
+    }
+  }
+}
+
+.simple .wp-block-rapid-accordion-item {
+  .accordion-title {
+    border-top: 1px solid var(--theme-color-text_secondary);
+  }
+
+  &.is-open {
+    .accordion-content {
+      padding: var(--theme-spacing-s) var(--theme-spacing-l);
+    }
+  }
+
+  &:last-child .accordion-content {
+    border-bottom: 1px solid var(--theme-color-text_secondary);
+  }
+}
