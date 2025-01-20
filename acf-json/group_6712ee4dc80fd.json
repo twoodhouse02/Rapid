@@ -1218,7 +1218,7 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "#00000010",
+            "default_value": "rgba(0,0,0,0.1)",
             "enable_opacity": 1,
             "return_format": "string",
             "allow_in_bindings": 0
@@ -2083,5 +2083,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1736014023
+    "modified": 1737387369
 }
