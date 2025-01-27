@@ -132,5 +132,7 @@ function multiblock_register_blocks()
     register_block_type(__DIR__ . "/build/blocks/ordered-list");
     register_block_type(__DIR__ . "/build/blocks/profile");
     register_block_type(__DIR__ . "/build/blocks/styled-button");
+    register_block_type(__DIR__ . "/build/blocks/styled-buttons");
+    register_block_type(__DIR__ . "/build/blocks/card");
 }
 add_action("init", "multiblock_register_blocks");
