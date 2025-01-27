@@ -16,6 +16,7 @@
     ]
   },
   "dependencies": {
+    "@wordpress/icons": "^10.16.0",
     "ionicons": "^7.4.0"
   }
 }
