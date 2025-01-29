@@ -1,0 +1,91 @@
+/*!***************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/blocks/card/style.scss ***!
+  \***************************************************************************************************************************************************************************************************************************************************/
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.wp-block-rapid-card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--theme-color-layer_1);
+  border-radius: var(--theme-corner_radius_large);
+  box-shadow: var(--theme-shadow_card_x_position_outside) var(--theme-shadow_card_y_position_outside) var(--theme-shadow_card_blur_outside) var(--theme-shadow_card_spread_outside) var(--theme-color_shadow_cards);
+}
+.wp-block-rapid-card .card-content {
+  display: flex;
+  flex-direction: column;
+}
+.wp-block-rapid-card .card-image img {
+  width: 100%;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-top-right-radius: var(--theme-corner_radius_large);
+  border-top-left-radius: var(--theme-corner_radius_large);
+}
+.wp-block-rapid-card .eyebrow {
+  color: var(--theme-color-brand_primary);
+}
+.wp-block-rapid-card .body {
+  padding: var(--theme-spacing-xl);
+}
+.wp-block-rapid-card h1,
+.wp-block-rapid-card h2,
+.wp-block-rapid-card h3,
+.wp-block-rapid-card h4,
+.wp-block-rapid-card h5,
+.wp-block-rapid-card h6,
+.wp-block-rapid-card .eyebrow {
+  margin: 0;
+}
+.wp-block-rapid-card.with-header .card-image img {
+  border-radius: 0;
+}
+.wp-block-rapid-card.with-header .header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--theme-spacing-xxs);
+  box-sizing: border-box;
+  margin: 0;
+  width: 100%;
+  background-color: var(--theme-color-layer_2);
+  padding: var(--theme-spacing-xxs) var(--theme-spacing-xl);
+  color: var(--theme-color-text_layer_2);
+  border-top-right-radius: var(--theme-corner_radius_large);
+  border-top-left-radius: var(--theme-corner_radius_large);
+}
+.wp-block-rapid-card.with-header .header p {
+  margin: 0;
+  color: var(--theme-color-text_layer_2);
+}
+.wp-block-rapid-card.horizontal .card-content {
+  flex-direction: row;
+  padding: var(--theme-spacing-xl);
+}
+.wp-block-rapid-card.horizontal .card-content .card-image img {
+  height: 100%;
+  width: 200px;
+  border-radius: var(--theme-corner_radius_large);
+}
+.wp-block-rapid-card.overlap-image .card-content {
+  flex-direction: row;
+}
+.wp-block-rapid-card.overlap-image .card-image img {
+  height: 100%;
+  width: 250px;
+  border-radius: 0 var(--theme-corner_radius_large) var(--theme-corner_radius_large) 0;
+}
+.wp-block-rapid-card.overlap-image .body-content {
+  margin-right: -150px;
+  background-color: var(--theme-color-layer_1);
+  padding: var(--theme-spacing-xl);
+  border-radius: var(--theme-corner_radius_regular);
+}
+.wp-block-rapid-card.overlap-image.with-header .card-image img {
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
