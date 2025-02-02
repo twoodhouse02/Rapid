@@ -1,0 +1,38 @@
+/*!*****************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/blocks/metric/style.scss ***!
+  \*****************************************************************************************************************************************************************************************************************************************************/
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.wp-block-rapid-metric {
+  display: flex;
+  flex-direction: column;
+}
+.wp-block-rapid-metric .metric {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  gap: var(--theme-spacing-micro);
+}
+.wp-block-rapid-metric .unit {
+  font-size: var(--theme-font-size-l);
+  color: var(--theme-color-text_secondary);
+}
+.wp-block-rapid-metric .upper-label {
+  color: var(--theme-color-text_secondary);
+  font-size: var(--theme-font-size-standard);
+}
+.wp-block-rapid-metric h1,
+.wp-block-rapid-metric h2,
+.wp-block-rapid-metric h3,
+.wp-block-rapid-metric h4,
+.wp-block-rapid-metric h5,
+.wp-block-rapid-metric h6,
+.wp-block-rapid-metric p {
+  margin: 0;
+}
+
+/*# sourceMappingURL=style-index.css.map*/

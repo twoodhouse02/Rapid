@@ -1,0 +1,44 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "rapid/metric",
+  "version": "0.1.0",
+  "title": "Metric",
+  "category": "rapid-theme",
+  "icon": "smiley",
+  "description": "A simple block for displaying data in a metric style format.",
+  "attributes": {
+    "metric": {
+      "type": "string",
+      "default": "##"
+    },
+    "displayUnit": {
+      "type": "boolean",
+      "default": true
+    },
+    "unit": {
+      "type": "string",
+      "default": "unit"
+    },
+    "displayUpperLabel": {
+      "type": "boolean",
+      "default": true
+    },
+    "upperLabel": {
+      "type": "string",
+      "default": "Label"
+    },
+    "size": {
+      "type": "number",
+      "default": 3
+    }
+  },
+  "example": {},
+  "supports": {
+    "html": false
+  },
+  "textdomain": "metric",
+  "editorScript": "file:./index.js",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}
