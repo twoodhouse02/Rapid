@@ -12,6 +12,9 @@
   flex-direction: column;
   background-color: var(--theme-color-layer_1);
   border-radius: var(--theme-corner_radius_large);
+  border-width: var(--theme-border_width_card);
+  border-style: var(--theme-border_style_card);
+  border-color: var(--theme-color_border_cards);
   box-shadow: var(--theme-shadow_card_x_position_outside) var(--theme-shadow_card_y_position_outside) var(--theme-shadow_card_blur_outside) var(--theme-shadow_card_spread_outside) var(--theme-color_shadow_cards);
 }
 .wp-block-rapid-card .card-content {
