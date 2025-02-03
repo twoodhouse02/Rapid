@@ -31,6 +31,14 @@
     "size": {
       "type": "number",
       "default": 3
+    },
+    "displayIcon": {
+      "type": "boolean",
+      "default": true
+    },
+    "iconName": {
+      "type": "string",
+      "default": "cube-outline"
     }
   },
   "example": {},

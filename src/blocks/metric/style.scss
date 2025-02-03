@@ -26,6 +26,12 @@
     font-size: var(--theme-font-size-standard);
   }
 
+  ion-icon {
+    font-size: 24px;
+    margin-bottom: var(--theme-spacing-micro);
+    color: var(--theme-color-brand_primary);
+  }
+
   h1,
   h2,
   h3,
@@ -34,5 +40,11 @@
   h6,
   p {
     margin: 0;
+  }
+}
+
+.theme-dark .wp-block-rapid-metric {
+  ion-icon {
+    color: var(--theme-color-text_primary);
   }
 }

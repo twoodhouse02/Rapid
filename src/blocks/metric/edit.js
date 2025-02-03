@@ -22,7 +22,10 @@ import {
   ToggleControl,
   ToolbarGroup,
   DropdownMenu,
+  SelectControl,
 } from "@wordpress/components";
+
+import ionicons from "../../../assets/ionicons/ionicons.json";
 
 /**
  * The edit function describes the structure of your block in the context of the
@@ -33,8 +36,16 @@ import {
  * @return {Element} Element to render.
  */
 export default function Edit({ attributes, setAttributes }) {
-  const { metric, displayUnit, unit, size, displayUpperLabel, upperLabel } =
-    attributes;
+  const {
+    metric,
+    displayUnit,
+    unit,
+    size,
+    displayUpperLabel,
+    upperLabel,
+    displayIcon,
+    iconName,
+  } = attributes;
   const TagName = "h" + size;
   return (
     <>
@@ -54,6 +65,39 @@ export default function Edit({ attributes, setAttributes }) {
             checked={displayUnit}
             onChange={() => setAttributes({ displayUnit: !displayUnit })}
           />
+          <ToggleControl
+            __nextHasNoMarginBottom
+            label="Display icon"
+            checked={displayIcon}
+            onChange={() => setAttributes({ displayIcon: !displayIcon })}
+          />
+
+          {displayIcon && (
+            <>
+              <p style={{ marginTop: 0, minWidth: "200px" }}>
+                Refer to the{" "}
+                <a href="https://ionic.io/ionicons" target="_blank">
+                  ionicons library
+                </a>{" "}
+                for available icons
+              </p>
+
+              <div style={{ marginBottom: "24px" }}>
+                <SelectControl
+                  label="Select icon"
+                  value={iconName}
+                  options={[
+                    { label: "Select an icon", value: "" },
+                    ...ionicons.icons.map((icon) => ({
+                      label: icon.name, // Display name of the icon
+                      value: icon.name, // Unique value for the icon
+                    })),
+                  ]}
+                  onChange={(value) => setAttributes({ iconName: value })}
+                />
+              </div>
+            </>
+          )}
         </PanelBody>
       </InspectorControls>
       <BlockControls>
@@ -90,6 +134,7 @@ export default function Edit({ attributes, setAttributes }) {
         </ToolbarGroup>
       </BlockControls>
       <div {...useBlockProps()}>
+        {displayIcon && <ion-icon name={iconName}></ion-icon>}
         {displayUpperLabel && (
           <RichText
             tagName="p"
