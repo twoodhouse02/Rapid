@@ -13,7 +13,7 @@ $eyebrowText = $attributes["eyebrowText"];
 $custom_classes = implode(" ", [$variant]);
 
 // Check if align attribute exists and is equal to "full" and add the full-width class
-if (isset($displayHeader)) {
+if ($displayHeader) {
     $custom_classes .= " with-header";
 }
 
