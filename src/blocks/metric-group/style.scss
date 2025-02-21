@@ -1,0 +1,99 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.wp-block-rapid-metric-group {
+  .wp-block-rapid-metric {
+    padding: var(--theme-spacing-xl) var(--theme-spacing-l);
+  }
+
+  &.horizontal,
+  &.editor-horizontal
+    .block-editor-inner-blocks
+    .block-editor-block-list__layout {
+    display: flex;
+    flex-direction: row;
+
+    .wp-block-rapid-metric {
+      border-right: 1px solid var(--theme-color-layer_3);
+      flex-grow: 1;
+
+      &:last-child {
+        border-right: none;
+      }
+    }
+
+    .block-editor-inner-blocks,
+    .block-editor-block-list__layout {
+      width: 100%;
+    }
+  }
+
+  &.vertical,
+  &.editor-vertical
+    .block-editor-inner-blocks
+    .block-editor-block-list__layout {
+    display: flex;
+    flex-direction: column;
+
+    .wp-block-rapid-metric {
+      border-bottom: 1px solid var(--theme-color-layer_3);
+      flex-grow: 1;
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+  &.grid,
+  &.editor-grid .block-editor-inner-blocks .block-editor-block-list__layout {
+    --gap: var(--theme-spacing-s);
+    --line-offset: calc(var(--gap) / 2);
+    --line-thickness: 1px;
+    display: grid;
+    grid-template-columns: repeat(var(--columns), 1fr);
+    overflow: hidden;
+
+    .wp-block-rapid-metric {
+      flex-grow: 1;
+      position: relative;
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        background-color: var(--theme-color-layer_3);
+        z-index: 1;
+      }
+
+      &::after {
+        inline-size: 100vw;
+        block-size: var(--line-thickness);
+        inset-inline-start: 0;
+        inset-block-start: calc(var(--line-offset) * -1);
+      }
+
+      &::before {
+        inline-size: var(--line-thickness);
+        block-size: 100vh;
+        inset-block-start: 0;
+        inset-inline-start: calc(var(--line-offset) * -1);
+      }
+    }
+  }
+
+  &.card {
+    background-color: var(--theme-color-layer_1);
+    border-radius: var(--theme-corner_radius_regular);
+    border-width: var(--theme-border_width_card);
+    border-style: var(--theme-border_style_card);
+    border-color: var(--theme-color_border_cards);
+    box-shadow: var(--theme-shadow_card_x_position_outside)
+      var(--theme-shadow_card_y_position_outside)
+      var(--theme-shadow_card_blur_outside)
+      var(--theme-shadow_card_spread_outside) var(--theme-color_shadow_cards);
+  }
+}

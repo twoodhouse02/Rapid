@@ -1,0 +1,44 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "rapid/metric-group",
+  "version": "0.1.0",
+  "title": "Metric Group",
+  "category": "rapid-theme",
+  "icon": "grid-view",
+  "description": "Example block scaffolded with Create Block tool.",
+  "attributes": {
+    "variant": {
+      "type": "string",
+      "default": "card"
+    },
+    "layout": {
+      "type": "string",
+      "default": "horizontal"
+    },
+    "columns": {
+      "type": "number",
+      "default": 2
+    },
+    "theme": {
+      "type": "string",
+      "default": "light"
+    },
+    "backgroundColor": {
+      "type": "string",
+      "default": "var(--theme-color-layer_1)"
+    }
+  },
+  "example": {},
+  "supports": {
+    "html": false,
+    "color": {
+      "background": true,
+      "text": false
+    }
+  },
+  "textdomain": "metric-group",
+  "editorScript": "file:./index.js",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

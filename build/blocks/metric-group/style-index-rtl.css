@@ -1,0 +1,77 @@
+/*!***********************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/blocks/metric-group/style.scss ***!
+  \***********************************************************************************************************************************************************************************************************************************************************/
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.wp-block-rapid-metric-group .wp-block-rapid-metric {
+  padding: var(--theme-spacing-xl) var(--theme-spacing-l);
+}
+.wp-block-rapid-metric-group.horizontal, .wp-block-rapid-metric-group.editor-horizontal .block-editor-inner-blocks .block-editor-block-list__layout {
+  display: flex;
+  flex-direction: row;
+}
+.wp-block-rapid-metric-group.horizontal .wp-block-rapid-metric, .wp-block-rapid-metric-group.editor-horizontal .block-editor-inner-blocks .block-editor-block-list__layout .wp-block-rapid-metric {
+  border-left: 1px solid var(--theme-color-layer_3);
+  flex-grow: 1;
+}
+.wp-block-rapid-metric-group.horizontal .wp-block-rapid-metric:last-child, .wp-block-rapid-metric-group.editor-horizontal .block-editor-inner-blocks .block-editor-block-list__layout .wp-block-rapid-metric:last-child {
+  border-left: none;
+}
+.wp-block-rapid-metric-group.horizontal .block-editor-inner-blocks,
+.wp-block-rapid-metric-group.horizontal .block-editor-block-list__layout, .wp-block-rapid-metric-group.editor-horizontal .block-editor-inner-blocks .block-editor-block-list__layout .block-editor-inner-blocks,
+.wp-block-rapid-metric-group.editor-horizontal .block-editor-inner-blocks .block-editor-block-list__layout .block-editor-block-list__layout {
+  width: 100%;
+}
+.wp-block-rapid-metric-group.vertical, .wp-block-rapid-metric-group.editor-vertical .block-editor-inner-blocks .block-editor-block-list__layout {
+  display: flex;
+  flex-direction: column;
+}
+.wp-block-rapid-metric-group.vertical .wp-block-rapid-metric, .wp-block-rapid-metric-group.editor-vertical .block-editor-inner-blocks .block-editor-block-list__layout .wp-block-rapid-metric {
+  border-bottom: 1px solid var(--theme-color-layer_3);
+  flex-grow: 1;
+}
+.wp-block-rapid-metric-group.vertical .wp-block-rapid-metric:last-child, .wp-block-rapid-metric-group.editor-vertical .block-editor-inner-blocks .block-editor-block-list__layout .wp-block-rapid-metric:last-child {
+  border-bottom: none;
+}
+.wp-block-rapid-metric-group.grid, .wp-block-rapid-metric-group.editor-grid .block-editor-inner-blocks .block-editor-block-list__layout {
+  --gap: var(--theme-spacing-s);
+  --line-offset: calc(var(--gap) / 2);
+  --line-thickness: 1px;
+  display: grid;
+  grid-template-columns: repeat(var(--columns), 1fr);
+  overflow: hidden;
+}
+.wp-block-rapid-metric-group.grid .wp-block-rapid-metric, .wp-block-rapid-metric-group.editor-grid .block-editor-inner-blocks .block-editor-block-list__layout .wp-block-rapid-metric {
+  flex-grow: 1;
+  position: relative;
+}
+.wp-block-rapid-metric-group.grid .wp-block-rapid-metric::before, .wp-block-rapid-metric-group.grid .wp-block-rapid-metric::after, .wp-block-rapid-metric-group.editor-grid .block-editor-inner-blocks .block-editor-block-list__layout .wp-block-rapid-metric::before, .wp-block-rapid-metric-group.editor-grid .block-editor-inner-blocks .block-editor-block-list__layout .wp-block-rapid-metric::after {
+  content: "";
+  position: absolute;
+  background-color: var(--theme-color-layer_3);
+  z-index: 1;
+}
+.wp-block-rapid-metric-group.grid .wp-block-rapid-metric::after, .wp-block-rapid-metric-group.editor-grid .block-editor-inner-blocks .block-editor-block-list__layout .wp-block-rapid-metric::after {
+  inline-size: 100vw;
+  block-size: var(--line-thickness);
+  inset-inline-start: 0;
+  inset-block-start: calc(var(--line-offset) * -1);
+}
+.wp-block-rapid-metric-group.grid .wp-block-rapid-metric::before, .wp-block-rapid-metric-group.editor-grid .block-editor-inner-blocks .block-editor-block-list__layout .wp-block-rapid-metric::before {
+  inline-size: var(--line-thickness);
+  block-size: 100vh;
+  inset-block-start: 0;
+  inset-inline-start: calc(var(--line-offset) * -1);
+}
+.wp-block-rapid-metric-group.card {
+  background-color: var(--theme-color-layer_1);
+  border-radius: var(--theme-corner_radius_regular);
+  border-width: var(--theme-border_width_card);
+  border-style: var(--theme-border_style_card);
+  border-color: var(--theme-color_border_cards);
+  box-shadow: var(--theme-shadow_card_x_position_outside) var(--theme-shadow_card_y_position_outside) var(--theme-shadow_card_blur_outside) var(--theme-shadow_card_spread_outside) var(--theme-color_shadow_cards);
+}
