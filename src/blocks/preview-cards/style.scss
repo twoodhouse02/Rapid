@@ -1,0 +1,207 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.wp-block-rapid-preview-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--theme-spacing-s);
+
+  .preview-card {
+    display: flex;
+    text-decoration: none;
+    position: relative;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    background-color: var(--theme-color-layer_1);
+    border: var(--theme-border_width_card) solid var(--theme-color_border_cards);
+    border-radius: var(--theme-corner_radius_regular);
+  }
+
+  .preview-card {
+    transition: 0.2s ease all;
+    .author {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      gap: var(--theme-spacing-s);
+      padding-top: var(--theme-spacing-xxs);
+
+      .profile-img {
+        border-radius: 50%;
+      }
+
+      .author-name {
+        margin: 0;
+      }
+    }
+
+    .card-content {
+      padding: var(--theme-spacing-l);
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+
+      .card-body {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        justify-content: space-between;
+        gap: var(--theme-spacing-s);
+        margin-top: var(--theme-spacing-s);
+
+        .excerpt {
+          margin: 0;
+        }
+      }
+    }
+
+    .featured-image img {
+      border-radius: var(--theme-corner_radius_regular)
+        var(--theme-corner_radius_regular) 0 0;
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card-header {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: var(--theme-spacing-micro);
+
+      .post-meta {
+        display: flex;
+        justify-content: space-between;
+        gap: var(--theme-spacing-micro);
+        .eyebrow {
+          color: var(--theme-color-brand_primary);
+          font-size: var(--theme-font-size-s);
+        }
+        .post-date {
+          font-size: var(--theme-font-size-s);
+          color: var(--theme-color-text_secondary);
+          margin: 0;
+        }
+      }
+
+      .title {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        p,
+        .post-title {
+          margin: 0;
+        }
+      }
+    }
+
+    &:hover {
+      box-shadow: 0px 10px 20px 5px var(--theme-color_shadow_cards);
+    }
+
+    &.scale-out:hover {
+      transform: scale(1.02);
+    }
+    &.scale-in:hover {
+      transform: scale(0.98);
+    }
+    &.push-up:hover {
+      transform: translateY(-10px);
+    }
+
+    // VARIANT: PADDED
+    &.padded {
+      .featured-image {
+        padding: var(--theme-spacing-m);
+        padding-bottom: 0;
+
+        img {
+          border-radius: var(--theme-corner_radius_regular);
+        }
+      }
+    }
+    // VARIANT: BACKGROUND IMAGE
+    &.image-background {
+      height: 425px;
+
+      .author {
+        border-top: none;
+      }
+
+      .featured-image {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+
+        .image-overlay {
+          background-color: var(--theme-color-overlays);
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          border-radius: var(--theme-corner_radius_regular);
+        }
+
+        img {
+          height: 100%;
+          border-radius: var(--theme-corner_radius_regular);
+        }
+      }
+
+      .card-content {
+        z-index: 5;
+      }
+    }
+    // LAYOUT: HORIZONTAL
+    &.horizontal {
+      flex-direction: row;
+
+      .featured-image {
+        img {
+          height: 100%;
+          width: 125px;
+          border-radius: var(--theme-corner_radius_regular) 0 0
+            var(--theme-corner_radius_regular);
+        }
+      }
+
+      .card-content {
+        padding: var(--theme-spacing-s);
+        .post-title {
+          font-size: var(--theme-font-size-l);
+        }
+        .excerpt {
+          font-size: var(--theme-font-size-s);
+        }
+
+        .author {
+          padding-top: var(--theme-spacing-micro);
+        }
+      }
+      // VARIANT: PADDED
+      &.padded {
+        .featured-image {
+          padding: var(--theme-spacing-s);
+          img {
+            border-radius: var(--theme-corner_radius_regular);
+          }
+        }
+      }
+      // VARIANT: BACKGROUND IMAGE
+      &.image-background {
+        height: auto;
+        .featured-image {
+          img {
+            width: 100%;
+            border-radius: var(--theme-corner_radius_regular);
+          }
+        }
+      }
+    }
+  }
+}
