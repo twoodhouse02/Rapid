@@ -463,7 +463,7 @@ export default function Edit({ attributes, setAttributes }) {
         {/* Image Content */}
         {imageVariant && (
           <div
-            className={`hero-background theme-${theme}`}
+            className={`hero-background theme-${theme} img-bg-position-${imagePosition}`}
             style={{
               backgroundImage:
                 imageURL && variant === "background-image"
@@ -471,7 +471,6 @@ export default function Edit({ attributes, setAttributes }) {
                   : imageURL
                     ? `url(${imageURL})`
                     : "",
-              backgroundPosition: imagePosition,
               backgroundAttachment: imageScroll,
             }}
           >
