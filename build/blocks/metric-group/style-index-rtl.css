@@ -56,16 +56,16 @@
   z-index: 1;
 }
 .wp-block-rapid-metric-group.grid .wp-block-rapid-metric::after, .wp-block-rapid-metric-group.editor-grid .block-editor-inner-blocks .block-editor-block-list__layout .wp-block-rapid-metric::after {
-  inline-size: 100vw;
-  block-size: var(--line-thickness);
-  inset-inline-start: 0;
-  inset-block-start: calc(var(--line-offset) * -1);
+  width: 100vw;
+  height: var(--line-thickness);
+  right: 0;
+  top: calc(var(--line-offset) * -1);
 }
 .wp-block-rapid-metric-group.grid .wp-block-rapid-metric::before, .wp-block-rapid-metric-group.editor-grid .block-editor-inner-blocks .block-editor-block-list__layout .wp-block-rapid-metric::before {
-  inline-size: var(--line-thickness);
-  block-size: 100vh;
-  inset-block-start: 0;
-  inset-inline-start: calc(var(--line-offset) * -1);
+  width: var(--line-thickness);
+  height: 100vh;
+  top: 0;
+  right: calc(var(--line-offset) * -1);
 }
 .wp-block-rapid-metric-group.card {
   background-color: var(--theme-color-layer_1);

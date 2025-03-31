@@ -15,6 +15,7 @@
   border-color: var(--theme-color-button_borders_primary);
   border-style: solid;
   padding: var(--theme-spacing-xs) var(--theme-spacing-s);
+  -webkit-text-decoration: none;
   text-decoration: none;
   box-shadow: var(--wp--preset--shadow--button);
   font-size: var(--theme-font-size-standard);
@@ -61,7 +62,6 @@
     justify-content: center;
   }
 }
-
 .theme-dark .wp-block-rapid-styled-button:not(.primary):hover,
 .wp-block-rapid-styled-button.theme-dark:not(.primary):hover {
   background: linear-gradient(90deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.2) 100%);

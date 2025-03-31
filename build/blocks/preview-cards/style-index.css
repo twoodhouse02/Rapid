@@ -10,10 +10,12 @@
 .wp-block-rapid-preview-cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-gap: var(--theme-spacing-s);
   gap: var(--theme-spacing-s);
 }
 .wp-block-rapid-preview-cards .preview-card {
   display: flex;
+  -webkit-text-decoration: none;
   text-decoration: none;
   position: relative;
   flex-direction: column;
