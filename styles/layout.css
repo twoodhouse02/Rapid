@@ -26,3 +26,18 @@
 .alignfull img {
   width: 100vw;
 }
+
+.img-bg-position-center,
+.img-bg-position-center img {
+  background-position: center;
+}
+
+.img-bg-position-top,
+.img-bg-position-top img {
+  background-position: top;
+}
+
+.img-bg-position-bottom,
+.img-bg-position-bottom img {
+  background-position: bottom;
+}
