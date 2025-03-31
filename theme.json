@@ -185,6 +185,16 @@
         "color": {
           "text": "var(--theme-color-text_primary)"
         }
+      },
+      "h6": {
+        "typography": {
+          "fontSize": "var(--theme-font-size-l)",
+          "lineHeight": "1.5",
+          "fontWeight": 400
+        },
+        "color": {
+          "text": "var(--theme-color-text_primary)"
+        }
       }
     },
     "blocks": {
