@@ -13,7 +13,6 @@
   flex-direction: column;
   width: 100%;
 }
-
 .card.wp-block-rapid-accordion,
 .card.wp-block-rapid-accordion > .block-editor-inner-blocks > .block-editor-block-list__layout:first-of-type {
   gap: var(--theme-spacing-xxxs);

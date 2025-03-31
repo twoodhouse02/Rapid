@@ -44,7 +44,6 @@
 .wp-block-rapid-accordion-item.is-open.chevron-down-outline ion-icon {
   transform: rotate(-180deg);
 }
-
 .card .wp-block-rapid-accordion-item .accordion-title {
   background-color: var(--theme-color-layer_1);
   border: var(--theme-border_width_card) solid var(--theme-color_border_cards);
@@ -58,7 +57,6 @@
 .card .wp-block-rapid-accordion-item.is-open .accordion-title {
   border-radius: var(--theme-corner_radius_regular) var(--theme-corner_radius_regular) 0 0;
 }
-
 .simple .wp-block-rapid-accordion-item .accordion-title {
   border-top: 1px solid var(--theme-color-text_secondary);
 }
