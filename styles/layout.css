@@ -41,3 +41,25 @@
 .img-bg-position-bottom img {
   background-position: bottom;
 }
+
+/* Flex helper classes */
+
+.flex-justify-center {
+  justify-content: center;
+}
+.flex-justify-start {
+  justify-content: start;
+}
+.flex-justify-end {
+  justify-content: end;
+}
+
+.flex-align-center {
+  align-items: center;
+}
+.flex-align-start {
+  align-items: start;
+}
+.flex-align-end {
+  align-items: end;
+}
