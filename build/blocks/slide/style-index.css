@@ -1,0 +1,41 @@
+/*!****************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/blocks/slide/style.scss ***!
+  \****************************************************************************************************************************************************************************************************************************************************/
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.wp-block-rapid-slide.slide-wrapper,
+.wp-block-rapid-slide .slide-wrapper {
+  display: flex;
+  height: 100%;
+  min-height: 300px;
+  width: 100%;
+  background-size: cover;
+  position: relative;
+}
+.wp-block-rapid-slide.slide-wrapper .slide-content,
+.wp-block-rapid-slide .slide-wrapper .slide-content {
+  flex-direction: column;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  padding: var(--theme-spacing-display-xxl);
+  box-sizing: border-box;
+}
+.wp-block-rapid-slide.slide-wrapper .slide-content .wp-block-heading,
+.wp-block-rapid-slide .slide-wrapper .slide-content .wp-block-heading {
+  margin: var(--theme-spacing-s) 0;
+}
+.wp-block-rapid-slide.slide-wrapper .slide-content.overlay,
+.wp-block-rapid-slide .slide-wrapper .slide-content.overlay {
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+.wp-block-rapid-slide:not(.wp-block-rapid-slide.theme-disabled) .overlay {
+  background-color: var(--theme-color-overlays);
+}
+
+/*# sourceMappingURL=style-index.css.map*/

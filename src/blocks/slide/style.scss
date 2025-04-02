@@ -1,0 +1,41 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.wp-block-rapid-slide {
+  &.slide-wrapper,
+  .slide-wrapper {
+    display: flex;
+    height: 100%;
+    min-height: 300px;
+    width: 100%;
+    background-size: cover;
+    position: relative;
+
+    .slide-content {
+      flex-direction: column;
+      display: flex;
+      height: 100%;
+      width: 100%;
+      padding: var(--theme-spacing-display-xxl);
+      box-sizing: border-box;
+
+      .wp-block-heading {
+        margin: var(--theme-spacing-s) 0;
+      }
+
+      &.overlay {
+        backdrop-filter: blur(10px);
+      }
+    }
+  }
+
+  &:not(&.theme-disabled) {
+    & .overlay {
+      background-color: var(--theme-color-overlays);
+    }
+  }
+}

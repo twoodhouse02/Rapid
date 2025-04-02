@@ -1,0 +1,50 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "rapid/slider",
+  "version": "0.1.0",
+  "title": "slider",
+  "category": "rapid-theme",
+  "icon": "slides",
+  "description": "A slideshow block with configurable slides and content",
+  "attributes": {
+    "autoplay": {
+      "type": "boolean",
+      "default": true
+    },
+    "loop": {
+      "type": "boolean",
+      "default": true
+    },
+    "displayArrows": {
+      "type": "boolean",
+      "default": true
+    },
+    "displayPagination": {
+      "type": "boolean",
+      "default": true
+    },
+    "effect": {
+      "type": "string",
+      "default": "slide"
+    },
+    "height": {
+      "type": "string",
+      "default": "500px"
+    }
+  },
+  "example": {},
+  "supports": {
+    "html": false,
+    "align": [
+      "wide",
+      "full"
+    ]
+  },
+  "textdomain": "slider",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php",
+  "viewScript": "file:./view.js"
+}

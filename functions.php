@@ -129,6 +129,8 @@ function multiblock_register_blocks()
     register_block_type(__DIR__ . "/build/blocks/hero");
     register_block_type(__DIR__ . "/build/blocks/metric");
     register_block_type(__DIR__ . "/build/blocks/metric-group");
+    register_block_type(__DIR__ . "/build/blocks/slide");
+    register_block_type(__DIR__ . "/build/blocks/slider");
     register_block_type(__DIR__ . "/build/blocks/list-card");
     register_block_type(__DIR__ . "/build/blocks/list-line-item");
     register_block_type(__DIR__ . "/build/blocks/ordered-list");

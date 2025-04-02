@@ -1,0 +1,48 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "rapid/slide",
+  "version": "0.1.0",
+  "title": "Slide",
+  "category": "rapid-theme",
+  "icon": "cover-image",
+  "parent": [
+    "rapid/slider"
+  ],
+  "description": "Individual slide for slider.",
+  "attributes": {
+    "imageURL": {
+      "type": "string",
+      "default": "https://images.pexels.com/photos/2325447/pexels-photo-2325447.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    },
+    "imagePosition": {
+      "type": "string",
+      "default": "center"
+    },
+    "textAlignment": {
+      "type": "string",
+      "default": "end"
+    },
+    "contentOverlay": {
+      "type": "boolean",
+      "default": false
+    },
+    "contentWidth": {
+      "type": "string",
+      "default": "100%"
+    },
+    "theme": {
+      "type": "string",
+      "default": "dark"
+    }
+  },
+  "example": {},
+  "supports": {
+    "html": false
+  },
+  "textdomain": "slide",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

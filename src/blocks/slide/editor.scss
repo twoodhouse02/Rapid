@@ -1,0 +1,16 @@
+.wp-block-rapid-slide {
+  .slide-modal {
+    position: absolute;
+    z-index: 1000;
+  }
+
+  .slide-selector {
+    height: 250px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    border-radius: 8px;
+  }
+}
