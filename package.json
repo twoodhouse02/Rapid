@@ -21,6 +21,7 @@
   "dependencies": {
     "@wordpress/icons": "^10.16.0",
     "ionicons": "^7.4.0",
+    "motion": "^12.6.3",
     "react-modal": "^3.16.3",
     "swiper": "^11.2.5"
   }
