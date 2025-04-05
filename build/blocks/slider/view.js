@@ -10580,7 +10580,6 @@ document.querySelectorAll(".swiper").forEach(slider => {
   const effect = slider.dataset.effect || "slide";
   const displayArrows = slider.dataset.arrows === "true";
   const displayPagination = slider.dataset.pagination === "true";
-  console.log("AUTO: ", autoplay);
 
   // Build the Swiper configuration object
   const swiperOptions = {
@@ -10614,7 +10613,6 @@ document.querySelectorAll(".swiper").forEach(slider => {
       };
     }
   }
-  console.log(swiperOptions);
 
   // Initialize Swiper on the current slider element
   new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"](slider, swiperOptions);
