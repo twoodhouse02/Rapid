@@ -1,5 +1,6 @@
 <?php
 // Extract the block's attributes when this file is included.
+$animated = $attributes["animated"];
 $align = isset($attributes["align"]) ? $attributes["align"] : null;
 $variant = $attributes["variant"];
 $fullWidthVariant = $attributes["fullWidthVariant"];
@@ -59,20 +60,23 @@ $wrapper_attributes = get_block_wrapper_attributes([
     </div>
     <?php endif; ?>
 
-    <div class="hero-content <?php echo "theme-" . $theme; ?>">
+    <div class="hero-content <?php if (
+        $animated
+    ): ?>animated<?php endif; ?> <?php echo "theme-" . $theme; ?>">
         <div class="title-area">
             <?php if ($displayEyebrow): ?>
             <p class="eyebrow"><?php echo esc_html($eyebrowText); ?></p>
             <?php endif; ?>
             <h2 class="hero-text"><?php echo esc_html($heroText); ?></h2>
         </div>
-        <p class="description"><?php echo esc_html($descriptionText); ?></p>
-        <?php if ($displayCTAs): ?>
-        <span class="cta-buttons">
+        <div>
+            <p class="description"><?php echo esc_html($descriptionText); ?></p>
+        </div>
+        <?php if ($displayCTAs): ?> <div class="cta-buttons">
             <div class="block-editor-block-list__layout">
                 <?php echo $content; ?>
             </div>
-        </span>
+        </div>
         <?php endif; ?>
     </div>
 </div>

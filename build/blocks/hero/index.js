@@ -44,7 +44,8 @@ function Edit({
     imagePosition,
     splitPosition,
     splitContentSize,
-    imageScroll
+    imageScroll,
+    animated
   } = attributes;
   const innerBlockTemplate = [["rapid/styled-button", {
     label: "Primary action",
@@ -329,6 +330,13 @@ function Edit({
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelBody, {
         title: "Advanced Display Settings",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.ToggleControl, {
+          __nextHasNoMarginBottom: true,
+          label: "Animated text",
+          checked: animated,
+          onChange: () => setAttributes({
+            animated: !animated
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.ToggleControl, {
           __nextHasNoMarginBottom: true,
           label: "Display Eyebrow",
           checked: displayEyebrow,
@@ -634,7 +642,7 @@ module.exports = window["wp"]["i18n"];
   \************************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"rapid/hero","version":"0.1.0","title":"Hero","category":"rapid-theme","icon":"align-full-width","attributes":{"variant":{"type":"string","default":"simple"},"fullWidthVariant":{"type":"string","default":"simple"},"height":{"type":"string","default":"auto"},"alignText":{"type":"string","default":"center"},"heroText":{"type":"string","default":"Hero text here..."},"descriptionText":{"type":"string","default":"Hero description here..."},"eyebrowText":{"type":"string","default":"Eyebrow text here..."},"displayCTAs":{"type":"boolean","default":true},"displayEyebrow":{"type":"boolean","default":true},"theme":{"type":"string","default":"light"},"imageURL":{"type":"string","default":"https://images.pexels.com/photos/1366919/pexels-photo-1366919.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"},"imagePosition":{"type":"string","default":"center"},"splitPosition":{"type":"string","default":"left"},"splitContentSize":{"type":"string","default":"50"},"imageScroll":{"type":"string","default":"scroll"}},"example":{},"supports":{"html":false,"align":["wide","full"]},"textdomain":"list-card","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","render":"file:./render.php"}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"rapid/hero","version":"0.1.0","title":"Hero","category":"rapid-theme","icon":"align-full-width","attributes":{"variant":{"type":"string","default":"simple"},"fullWidthVariant":{"type":"string","default":"simple"},"height":{"type":"string","default":"auto"},"alignText":{"type":"string","default":"center"},"heroText":{"type":"string","default":"Hero text here..."},"descriptionText":{"type":"string","default":"Hero description here..."},"eyebrowText":{"type":"string","default":"Eyebrow text here..."},"displayCTAs":{"type":"boolean","default":true},"displayEyebrow":{"type":"boolean","default":true},"theme":{"type":"string","default":"light"},"imageURL":{"type":"string","default":"https://images.pexels.com/photos/1366919/pexels-photo-1366919.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"},"imagePosition":{"type":"string","default":"center"},"splitPosition":{"type":"string","default":"left"},"splitContentSize":{"type":"string","default":"50"},"imageScroll":{"type":"string","default":"scroll"},"animated":{"type":"boolean","default":true}},"example":{},"supports":{"html":false,"align":["wide","full"]},"textdomain":"list-card","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","render":"file:./render.php","viewScript":"file:./view.js"}');
 
 /***/ })
 

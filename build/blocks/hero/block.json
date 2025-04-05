@@ -66,6 +66,10 @@
     "imageScroll": {
       "type": "string",
       "default": "scroll"
+    },
+    "animated": {
+      "type": "boolean",
+      "default": true
     }
   },
   "example": {},
@@ -80,5 +84,6 @@
   "editorScript": "file:./index.js",
   "editorStyle": "file:./index.css",
   "style": "file:./style-index.css",
-  "render": "file:./render.php"
+  "render": "file:./render.php",
+  "viewScript": "file:./view.js"
 }

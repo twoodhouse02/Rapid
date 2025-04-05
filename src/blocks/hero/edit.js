@@ -36,6 +36,7 @@ export default function Edit({ attributes, setAttributes }) {
     splitPosition,
     splitContentSize,
     imageScroll,
+    animated,
   } = attributes;
 
   const innerBlockTemplate = [
@@ -371,6 +372,12 @@ export default function Edit({ attributes, setAttributes }) {
       </BlockControls>
       <InspectorControls>
         <PanelBody title="Advanced Display Settings">
+          <ToggleControl
+            __nextHasNoMarginBottom
+            label="Animated text"
+            checked={animated}
+            onChange={() => setAttributes({ animated: !animated })}
+          />
           <ToggleControl
             __nextHasNoMarginBottom
             label="Display Eyebrow"

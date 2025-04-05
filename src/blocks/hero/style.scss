@@ -12,6 +12,11 @@
   box-sizing: border-box;
   box-sizing: border-box;
 
+  .animated > div {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
   .hero-background {
     position: absolute;
     top: 0;
