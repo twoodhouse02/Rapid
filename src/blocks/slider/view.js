@@ -9,8 +9,6 @@ document.querySelectorAll(".swiper").forEach((slider) => {
   const displayArrows = slider.dataset.arrows === "true";
   const displayPagination = slider.dataset.pagination === "true";
 
-  console.log("AUTO: ", autoplay);
-
   // Build the Swiper configuration object
   const swiperOptions = {
     autoplay: autoplay ? { delay: 3000 } : false,
@@ -41,8 +39,6 @@ document.querySelectorAll(".swiper").forEach((slider) => {
       };
     }
   }
-
-  console.log(swiperOptions);
 
   // Initialize Swiper on the current slider element
   new Swiper(slider, swiperOptions);
