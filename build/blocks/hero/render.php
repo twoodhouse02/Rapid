@@ -19,11 +19,7 @@ $splitPosition = $attributes["splitPosition"];
 $splitContentSize = $attributes["splitContentSize"];
 
 // Build custom class names
-$custom_classes = implode(" ", [
-    $variant,
-    "text-align-" . $alignText,
-    "img-bg-position-" . $imagePosition,
-]);
+$custom_classes = implode(" ", [$variant, "text-align-" . $alignText]);
 
 // Check if align attribute exists and is equal to "full" and add the full-width class
 if (isset($align) && $align === "full") {
@@ -52,7 +48,10 @@ $wrapper_attributes = get_block_wrapper_attributes([
 
     <?php if ($variant === "background-image" || $variant === "split"): ?>
     <div class="hero-background <?php echo "theme-" .
-        $theme; ?> " style="background-image:<?php if (
+        $theme .
+        " " .
+        "img-bg-position-" .
+        $imagePosition; ?> " style="background-image:<?php if (
      $variant === "background-image"
  ): ?>linear-gradient(90deg, var(--theme-color-overlays), var(--theme-color-overlays)),<?php endif; ?> url(<?php echo esc_html(
      $imageURL
