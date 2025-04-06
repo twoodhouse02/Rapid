@@ -15,5 +15,5 @@ inView(
       },
     );
   },
-  { margin: "-300px -300px 0px 0px" },
+  { margin: "-300px 0px -200px 0px" },
 );

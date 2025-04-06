@@ -9400,7 +9400,7 @@ __webpack_require__.r(__webpack_exports__);
     stiffness: 100
   });
 }, {
-  margin: "-300px -300px 0px 0px"
+  margin: "-300px 0px -200px 0px"
 });
 })();
 
