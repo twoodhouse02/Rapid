@@ -71,7 +71,8 @@ function Edit({
     order = QUERY_DEFAULTS.order,
     orderBy = QUERY_DEFAULTS.orderBy,
     hoverEffect,
-    selectedCategories = QUERY_DEFAULTS.selectedCategories
+    selectedCategories = QUERY_DEFAULTS.selectedCategories,
+    animated
   } = attributes;
 
   // Fetch all categories
@@ -161,6 +162,13 @@ function Edit({
           }],
           onChange: value => setAttributes({
             hoverEffect: value
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.ToggleControl, {
+          __nextHasNoMarginBottom: true,
+          label: "Animated card reveal",
+          checked: animated,
+          onChange: () => setAttributes({
+            animated: !animated
           })
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.ToggleControl, {
           __nextHasNoMarginBottom: true,
@@ -436,7 +444,7 @@ module.exports = window["wp"]["primitives"];
   \*********************************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"rapid/preview-cards","version":"0.1.0","title":"Preview Cards","category":"rapid-theme","description":"A preview of blog content provided in a card with image and text.","attributes":{"layout":{"type":"string","default":"vertical"},"variant":{"type":"string","default":"basic"},"numberOfCards":{"type":"number","default":3},"order":{"type":"string","default":"desc"},"orderBy":{"type":"string","default":"date"},"selectedCategories":{"type":"array","default":[]},"displayAuthor":{"type":"boolean","default":true},"displayCategories":{"type":"boolean","default":true},"hoverEffect":{"type":"string","default":"scale-out"}},"example":{},"supports":{"html":false},"textdomain":"preview-cards","editorScript":"file:./index.js","style":"file:./style-index.css","render":"file:./render.php"}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"rapid/preview-cards","version":"0.1.0","title":"Preview Cards","category":"rapid-theme","description":"A preview of blog content provided in a card with image and text.","attributes":{"layout":{"type":"string","default":"vertical"},"variant":{"type":"string","default":"basic"},"numberOfCards":{"type":"number","default":3},"order":{"type":"string","default":"desc"},"orderBy":{"type":"string","default":"date"},"selectedCategories":{"type":"array","default":[]},"displayAuthor":{"type":"boolean","default":true},"displayCategories":{"type":"boolean","default":true},"hoverEffect":{"type":"string","default":"scale-out"},"animated":{"type":"boolean","default":true}},"example":{},"supports":{"html":false},"textdomain":"preview-cards","editorScript":"file:./index.js","style":"file:./style-index.css","render":"file:./render.php","viewScript":"file:./view.js"}');
 
 /***/ })
 

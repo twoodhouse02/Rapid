@@ -1,6 +1,7 @@
 <?php
 // Extract the block's attributes when this file is included.
 
+$animated = $attributes["animated"];
 $layout = $attributes["layout"];
 $displayAuthor = $attributes["displayAuthor"];
 $displayCategories = $attributes["displayCategories"];
@@ -16,7 +17,13 @@ $titleLength = $layout === "vertical" ? 40 : 30;
 $excerptLength = 100;
 
 // Determine additional classes for the wrapper.
-$extra_classes = $variant === "image-background" ? "theme-dark" : "";
+$extra_classes = "";
+if ($variant === "image-background") {
+    $extra_classes .= " theme-dark";
+}
+if ($animated) {
+    $extra_classes .= " animated-preview-cards";
+}
 
 // Build query arguments for WP_Query.
 $args = [
@@ -91,59 +98,63 @@ $query = new WP_Query($args);
     // Determine title tag based on layout.
     $title_tag = $layout === "vertical" ? "h5" : "p";
     ?>
-    <a class="preview-card <?php echo esc_attr(
-        $hoverEffect . " " . $variant . " " . $layout
-    ); ?>" href="<?php echo esc_url($permalink); ?>">
-        <?php if ($featured_image): ?>
-        <div class="featured-image">
-            <?php if ($variant === "image-background"): ?>
-            <div class="image-overlay"></div>
-            <?php endif; ?>
-            <img src="<?php echo esc_url(
-                $featured_image
-            ); ?>" alt="<?php echo esc_attr($title); ?>">
-        </div>
-        <?php endif; ?>
-        <div class="card-content">
-            <div class="card-header">
-                <div class="title">
-                    <div class="post-meta">
-                        <?php if (
-                            $displayCategories &&
-                            !empty($category_names)
-                        ): ?>
-                        <p class="post-categories eyebrow"><?php echo esc_html(
-                            implode(", ", $category_names)
-                        ); ?>
-                        </p>
-                        <?php endif; ?>
-                        <p class="post-date"><?php echo esc_html($date); ?></p>
-                    </div>
-                    <<?php echo $title_tag; ?> class="post-title">
-                        <?php echo esc_html($title); ?>
-                    </<?php echo $title_tag; ?>>
-                </div>
+    <span class="preview-card-wrapper ">
+        <a class=" preview-card <?php echo esc_attr(
+            $hoverEffect . " " . $variant . " " . $layout
+        ); ?>" href="<?php echo esc_url($permalink); ?>">
+            <?php if ($featured_image): ?>
+            <div class="featured-image">
+                <?php if ($variant === "image-background"): ?>
+                <div class="image-overlay"></div>
+                <?php endif; ?>
+                <img src="<?php echo esc_url(
+                    $featured_image
+                ); ?>" alt="<?php echo esc_attr($title); ?>">
             </div>
-            <div class="card-body">
-                <p class="excerpt"><?php echo esc_html($excerpt); ?></p>
-                <?php if ($displayAuthor): ?>
-                <div class="author">
-                    <?php if ($author_avatar): ?>
-                    <img class="profile-img" src="<?php echo esc_url(
-                        $author_avatar
-                    ); ?>" alt="<?php esc_attr_e(
+            <?php endif; ?>
+            <div class="card-content">
+                <div class="card-header">
+                    <div class="title">
+                        <div class="post-meta">
+                            <?php if (
+                                $displayCategories &&
+                                !empty($category_names)
+                            ): ?>
+                            <p class="post-categories eyebrow"><?php echo esc_html(
+                                implode(", ", $category_names)
+                            ); ?>
+                            </p>
+                            <?php endif; ?>
+                            <p class="post-date"><?php echo esc_html(
+                                $date
+                            ); ?></p>
+                        </div>
+                        <<?php echo $title_tag; ?> class="post-title">
+                            <?php echo esc_html($title); ?>
+                        </<?php echo $title_tag; ?>>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <p class="excerpt"><?php echo esc_html($excerpt); ?></p>
+                    <?php if ($displayAuthor): ?>
+                    <div class="author">
+                        <?php if ($author_avatar): ?>
+                        <img class="profile-img" src="<?php echo esc_url(
+                            $author_avatar
+                        ); ?>" alt="<?php esc_attr_e(
     "Author profile",
     "preview-cards"
 ); ?>">
+                        <?php endif; ?>
+                        <p class="author-name"><?php echo esc_html(
+                            $author_name
+                        ); ?></p>
+                    </div>
                     <?php endif; ?>
-                    <p class="author-name"><?php echo esc_html(
-                        $author_name
-                    ); ?></p>
                 </div>
-                <?php endif; ?>
             </div>
-        </div>
-    </a>
+        </a>
+    </span>
     <?php
     endwhile;
     wp_reset_postdata();

@@ -42,6 +42,10 @@
     "hoverEffect": {
       "type": "string",
       "default": "scale-out"
+    },
+    "animated": {
+      "type": "boolean",
+      "default": true
     }
   },
   "example": {},
@@ -51,5 +55,6 @@
   "textdomain": "preview-cards",
   "editorScript": "file:./index.js",
   "style": "file:./style-index.css",
-  "render": "file:./render.php"
+  "render": "file:./render.php",
+  "viewScript": "file:./view.js"
 }

@@ -19,6 +19,7 @@ export default function Edit({ attributes, setAttributes }) {
     orderBy = QUERY_DEFAULTS.orderBy,
     hoverEffect,
     selectedCategories = QUERY_DEFAULTS.selectedCategories,
+    animated,
   } = attributes;
 
   // Fetch all categories
@@ -104,6 +105,12 @@ export default function Edit({ attributes, setAttributes }) {
               { label: "None", value: "" },
             ]}
             onChange={(value) => setAttributes({ hoverEffect: value })}
+          />
+          <ToggleControl
+            __nextHasNoMarginBottom
+            label="Animated card reveal"
+            checked={animated}
+            onChange={() => setAttributes({ animated: !animated })}
           />
           <ToggleControl
             __nextHasNoMarginBottom

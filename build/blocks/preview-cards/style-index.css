@@ -13,6 +13,10 @@
   grid-gap: var(--theme-spacing-s);
   gap: var(--theme-spacing-s);
 }
+.wp-block-rapid-preview-cards.animated-preview-cards .preview-card-wrapper {
+  opacity: 0;
+  transform: translateY(50px);
+}
 .wp-block-rapid-preview-cards .preview-card {
   display: flex;
   -webkit-text-decoration: none;
@@ -20,12 +24,10 @@
   position: relative;
   flex-direction: column;
   width: 100%;
-  height: auto;
+  height: 100%;
   background-color: var(--theme-color-layer_1);
   border: var(--theme-border_width_card) solid var(--theme-color_border_cards);
   border-radius: var(--theme-corner_radius_regular);
-}
-.wp-block-rapid-preview-cards .preview-card {
   transition: 0.2s ease all;
 }
 .wp-block-rapid-preview-cards .preview-card .author {
