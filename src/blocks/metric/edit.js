@@ -45,6 +45,7 @@ export default function Edit({ attributes, setAttributes }) {
     upperLabel,
     displayIcon,
     iconName,
+    animated,
   } = attributes;
   const TagName = "h" + size;
   return (
@@ -70,6 +71,13 @@ export default function Edit({ attributes, setAttributes }) {
             label="Display icon"
             checked={displayIcon}
             onChange={() => setAttributes({ displayIcon: !displayIcon })}
+          />
+          <ToggleControl
+            __nextHasNoMarginBottom
+            label="Animated"
+            help="Animated text is only supported for numbers"
+            checked={animated}
+            onChange={() => setAttributes({ animated: !animated })}
           />
 
           {displayIcon && (

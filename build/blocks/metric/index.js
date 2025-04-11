@@ -90,7 +90,8 @@ function Edit({
     displayUpperLabel,
     upperLabel,
     displayIcon,
-    iconName
+    iconName,
+    animated
   } = attributes;
   const TagName = "h" + size;
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.Fragment, {
@@ -117,6 +118,14 @@ function Edit({
           checked: displayIcon,
           onChange: () => setAttributes({
             displayIcon: !displayIcon
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.ToggleControl, {
+          __nextHasNoMarginBottom: true,
+          label: "Animated",
+          help: "Animated text is only supported for numbers",
+          checked: animated,
+          onChange: () => setAttributes({
+            animated: !animated
           })
         }), displayIcon && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.Fragment, {
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("p", {
@@ -364,7 +373,7 @@ module.exports = /*#__PURE__*/JSON.parse('{"name":"ionicons","version":"7.4.0","
   \**************************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"rapid/metric","version":"0.1.0","title":"Metric","category":"rapid-theme","icon":"smiley","description":"A simple block for displaying data in a metric style format.","attributes":{"metric":{"type":"string","default":"##"},"displayUnit":{"type":"boolean","default":true},"unit":{"type":"string","default":"unit"},"displayUpperLabel":{"type":"boolean","default":true},"upperLabel":{"type":"string","default":"Label"},"size":{"type":"number","default":3},"displayIcon":{"type":"boolean","default":true},"iconName":{"type":"string","default":"cube-outline"}},"example":{},"supports":{"html":false},"textdomain":"metric","editorScript":"file:./index.js","style":"file:./style-index.css","render":"file:./render.php"}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"rapid/metric","version":"0.1.0","title":"Metric","category":"rapid-theme","icon":"smiley","description":"A simple block for displaying data in a metric style format.","attributes":{"metric":{"type":"string","default":"##"},"displayUnit":{"type":"boolean","default":true},"unit":{"type":"string","default":"unit"},"displayUpperLabel":{"type":"boolean","default":true},"upperLabel":{"type":"string","default":"Label"},"size":{"type":"number","default":3},"displayIcon":{"type":"boolean","default":true},"iconName":{"type":"string","default":"cube-outline"},"animated":{"type":"boolean","default":true}},"example":{},"supports":{"html":false},"textdomain":"metric","editorScript":"file:./index.js","style":"file:./style-index.css","render":"file:./render.php","viewScript":"file:./view.js"}');
 
 /***/ })
 
