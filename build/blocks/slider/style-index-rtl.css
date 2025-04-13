@@ -781,7 +781,7 @@ button.swiper-pagination-bullet {
   overflow: hidden;
 }
 .wp-block-rapid-slider {
-  border-radius: var(--theme-corner_radius_xlarge);
+  border-radius: var(--theme-corner_radius_large);
 }
 .wp-block-rapid-slider .swiper-button-next,
 .wp-block-rapid-slider .swiper-button-prev {
