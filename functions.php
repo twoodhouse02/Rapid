@@ -139,5 +139,6 @@ function multiblock_register_blocks()
     register_block_type(__DIR__ . "/build/blocks/styled-button");
     register_block_type(__DIR__ . "/build/blocks/styled-buttons");
     register_block_type(__DIR__ . "/build/blocks/card");
+    register_block_type(__DIR__ . "/build/blocks/gallery");
 }
 add_action("init", "multiblock_register_blocks");

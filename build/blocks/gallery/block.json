@@ -1,0 +1,50 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "rapid/gallery",
+  "version": "0.1.0",
+  "title": "Lightbox Gallery",
+  "category": "rapid-theme",
+  "icon": "format-gallery",
+  "description": "A collection of images that open a lightbox when clicked.",
+  "attributes": {
+    "images": {
+      "type": "array",
+      "default": []
+    },
+    "imageHeight": {
+      "type": "string",
+      "default": "300px"
+    },
+    "displayCaption": {
+      "type": "string",
+      "default": "onHover"
+    },
+    "layout": {
+      "type": "string",
+      "default": "grid"
+    },
+    "columns": {
+      "type": "number",
+      "default": 4
+    },
+    "animated": {
+      "type": "boolean",
+      "default": true
+    },
+    "enableLightbox": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "example": {},
+  "supports": {
+    "html": false
+  },
+  "textdomain": "gallery",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php",
+  "viewScript": "file:./view.js"
+}
