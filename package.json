@@ -20,9 +20,14 @@
   },
   "dependencies": {
     "@wordpress/icons": "^10.16.0",
+    "imagesloaded": "^5.0.0",
     "ionicons": "^7.4.0",
+    "masonry-layout": "^4.2.2",
     "motion": "^12.6.3",
+    "photoswipe": "^5.4.4",
+    "photoswipe-dynamic-caption-plugin": "^1.2.7",
     "react-modal": "^3.16.3",
+    "react-responsive-masonry": "^2.7.1",
     "swiper": "^11.2.5"
   }
 }
