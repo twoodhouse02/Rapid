@@ -63,3 +63,9 @@
 .flex-align-end {
   align-items: end;
 }
+
+/* Visibility helper classes */
+
+.is-hidden {
+  display: none;
+}
