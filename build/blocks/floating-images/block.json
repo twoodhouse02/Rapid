@@ -1,0 +1,45 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "rapid/floating-images",
+  "version": "0.1.0",
+  "title": "Floating Images",
+  "category": "rapid-theme",
+  "icon": "smiley",
+  "description": "A decorative block that allows you to add animated floating images.",
+  "attributes": {
+    "count": {
+      "type": "number",
+      "default": 4
+    },
+    "animated": {
+      "type": "boolean",
+      "default": true
+    },
+    "image1Url": {
+      "type": "string",
+      "default": "https://images.pexels.com/photos/31165982/pexels-photo-31165982/free-photo-of-beautiful-plum-blossoms-in-nanjing-spring.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    },
+    "image2Url": {
+      "type": "string",
+      "default": "https://images.pexels.com/photos/31267194/pexels-photo-31267194/free-photo-of-beautiful-pink-cherry-blossoms-in-spring.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    },
+    "image3Url": {
+      "type": "string",
+      "default": "https://images.pexels.com/photos/31331652/pexels-photo-31331652/free-photo-of-close-up-of-cherry-blossoms-in-gentle-bloom.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    },
+    "image4Url": {
+      "type": "string",
+      "default": "https://images.pexels.com/photos/31521760/pexels-photo-31521760/free-photo-of-beautiful-cherry-blossom-branch-in-spring.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    }
+  },
+  "example": {},
+  "supports": {
+    "html": false
+  },
+  "textdomain": "floating-images",
+  "editorScript": "file:./index.js",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php",
+  "viewScript": "file:./view.js"
+}

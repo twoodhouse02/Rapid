@@ -1,0 +1,88 @@
+/*!**************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/blocks/floating-images/style.scss ***!
+  \**************************************************************************************************************************************************************************************************************************************************************/
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.wp-block-rapid-floating-images {
+  height: 400px;
+  width: 400px;
+  margin: auto;
+  position: relative;
+}
+.wp-block-rapid-floating-images .floating-image {
+  height: 200px;
+  width: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: var(--theme-corner_radius_large);
+  position: absolute;
+  box-shadow: var(--theme-shadow_card_x_position_outside) var(--theme-shadow_card_y_position_outside) var(--theme-shadow_card_blur_outside) var(--theme-shadow_card_spread_outside) var(--theme-color_shadow_cards);
+}
+.wp-block-rapid-floating-images.animated .floating-image {
+  opacity: 0;
+  transform: translateY(50px);
+}
+.wp-block-rapid-floating-images.images-4 .image-1 {
+  top: 0;
+  left: 30px;
+  z-index: 5;
+}
+.wp-block-rapid-floating-images.images-4 .image-2 {
+  top: 60px;
+  right: 0px;
+  z-index: 4;
+  height: 150px;
+  width: 150px;
+}
+.wp-block-rapid-floating-images.images-4 .image-3 {
+  bottom: 70px;
+  left: 10px;
+  z-index: 3;
+  height: 150px;
+  width: 150px;
+}
+.wp-block-rapid-floating-images.images-4 .image-4 {
+  bottom: 20px;
+  right: 10px;
+  z-index: 2;
+}
+.wp-block-rapid-floating-images.images-3 .image-1 {
+  top: 30px;
+  left: 35px;
+  z-index: 5;
+}
+.wp-block-rapid-floating-images.images-3 .image-2 {
+  top: 10px;
+  right: 0px;
+  z-index: 4;
+  height: 150px;
+  width: 150px;
+}
+.wp-block-rapid-floating-images.images-3 .image-3 {
+  bottom: 70px;
+  right: 60px;
+  z-index: 3;
+  height: 150px;
+  width: 150px;
+}
+.wp-block-rapid-floating-images.images-2 {
+  height: 250px;
+}
+.wp-block-rapid-floating-images.images-2 .image-1 {
+  top: 30px;
+  left: 35px;
+  z-index: 5;
+}
+.wp-block-rapid-floating-images.images-2 .image-2 {
+  top: 10px;
+  right: 0px;
+  z-index: 4;
+  height: 150px;
+  width: 150px;
+}
+
+/*# sourceMappingURL=style-index.css.map*/
