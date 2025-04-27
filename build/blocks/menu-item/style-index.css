@@ -1,0 +1,44 @@
+/*!********************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/blocks/menu-item/style.scss ***!
+  \********************************************************************************************************************************************************************************************************************************************************/
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.wp-block-rapid-menu-item {
+  display: flex;
+  flex-direction: row;
+  gap: var(--theme-spacing-m);
+  width: 100%;
+}
+.wp-block-rapid-menu-item img {
+  height: 75px;
+  width: 100px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: var(--theme-corner_radius_regular);
+}
+.wp-block-rapid-menu-item .title,
+.wp-block-rapid-menu-item .description,
+.wp-block-rapid-menu-item .price {
+  margin: 0;
+}
+.wp-block-rapid-menu-item .price {
+  min-width: 75px !important;
+  text-align: right;
+}
+.wp-block-rapid-menu-item .menu-data {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--theme-spacing-m);
+  width: 100%;
+}
+.wp-block-rapid-menu-item .menu-item-img {
+  display: flex;
+  flex-direction: column;
+}
+
+/*# sourceMappingURL=style-index.css.map*/

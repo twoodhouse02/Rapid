@@ -1,0 +1,50 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "rapid/menu-item",
+  "version": "0.1.0",
+  "title": "Menu Item",
+  "category": "rapid-theme",
+  "parent": [
+    "rapid/menu-list"
+  ],
+  "description": "Individual menu item with description and image.",
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "Menu Item"
+    },
+    "displayDescription": {
+      "type": "boolean",
+      "default": true
+    },
+    "description": {
+      "type": "string",
+      "default": "Description of the menu item."
+    },
+    "displayImage": {
+      "type": "boolean",
+      "default": true
+    },
+    "imageUrl": {
+      "type": "string",
+      "default": "https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    },
+    "displayPrice": {
+      "type": "boolean",
+      "default": true
+    },
+    "price": {
+      "type": "string",
+      "default": "$##.##"
+    }
+  },
+  "example": {},
+  "supports": {
+    "html": false
+  },
+  "textdomain": "menu-item",
+  "editorScript": "file:./index.js",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

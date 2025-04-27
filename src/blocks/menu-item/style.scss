@@ -1,0 +1,43 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.wp-block-rapid-menu-item {
+  display: flex;
+  flex-direction: row;
+  gap: var(--theme-spacing-m);
+  width: 100%;
+  img {
+    height: 75px;
+    width: 100px;
+    object-fit: cover;
+    border-radius: var(--theme-corner_radius_regular);
+  }
+
+  .title,
+  .description,
+  .price {
+    margin: 0;
+  }
+
+  .price {
+    min-width: 75px !important;
+    text-align: right;
+  }
+
+  .menu-data {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--theme-spacing-m);
+    width: 100%;
+  }
+
+  .menu-item-img {
+    display: flex;
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,48 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.wp-block-rapid-menu-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .editor,
+  .block-editor-inner-blocks,
+  .block-editor-block-list__layout {
+    width: 100%;
+  }
+
+  .block-editor-inner-blocks .block-editor-block-list__layout,
+  .menu-items {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(var(--columns), minmax(0, 1fr));
+    column-gap: var(--theme-spacing-display-xl);
+
+    .wp-block-rapid-menu-item {
+      border-bottom: 1px dashed var(--theme-color-text_secondary);
+      padding: var(--theme-spacing-l) 0;
+    }
+
+    // generate .menu-items.columns-1 … .menu-items.columns-6
+    @for $i from 1 through 6 {
+      &.columns-#{$i} {
+        --columns: #{$i};
+
+        .wp-block-rapid-menu-item {
+          border-bottom: 1px dashed var(--theme-color-text_secondary);
+          padding: var(--theme-spacing-l) 0;
+        }
+
+        // remove border on the last $i items
+        .wp-block-rapid-menu-item:nth-last-child(-n + #{$i}) {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+}

@@ -134,6 +134,8 @@ function multiblock_register_blocks()
     register_block_type(__DIR__ . "/build/blocks/list-card");
     register_block_type(__DIR__ . "/build/blocks/list-line-item");
     register_block_type(__DIR__ . "/build/blocks/ordered-list");
+    register_block_type(__DIR__ . "/build/blocks/menu-list");
+    register_block_type(__DIR__ . "/build/blocks/menu-item");
     register_block_type(__DIR__ . "/build/blocks/profile");
     register_block_type(__DIR__ . "/build/blocks/preview-cards");
     register_block_type(__DIR__ . "/build/blocks/styled-button");

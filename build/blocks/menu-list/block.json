@@ -1,0 +1,31 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "rapid/menu-list",
+  "version": "0.1.0",
+  "title": "Menu List",
+  "category": "rapid-theme",
+  "description": "A list of menu items with descriptions and images.",
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "Section title"
+    },
+    "displayTitle": {
+      "type": "boolean",
+      "default": true
+    },
+    "columns": {
+      "type": "number",
+      "default": 2
+    }
+  },
+  "example": {},
+  "supports": {
+    "html": false
+  },
+  "textdomain": "menu-list",
+  "editorScript": "file:./index.js",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}
