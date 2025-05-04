@@ -297,6 +297,21 @@
             "css": "height: 40px; width: 40px"
           }
         }
+      },
+      "core/navigation": {
+        "elements": {
+          "link": {
+            "border": {
+              "radius": "var(--theme-corner_radius_button)"
+            },
+            "css": "transition: .3s ease all",
+            ":hover": {
+              "color": {
+                "background": "var(--theme-color-interactive_secondary)"
+              }
+            }
+          }
+        }
       }
     }
   },
