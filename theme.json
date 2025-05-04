@@ -274,6 +274,29 @@
             "left": "var(--theme-spacing-xxs)"
           }
         }
+      },
+      "core/group": {
+        "color": {
+          "background": "var(--theme-color-background)"
+        }
+      },
+      "core/search": {
+        "css": "& .wp-block-search__inside-wrapper {border: none; align-items: center;} & .wp-block-search__input { height: 40px; border-radius: 0.5rem; padding: 5px 10px; }",
+        "elements": {
+          "button": {
+            "color": {
+              "background": "var(--theme-color-interactive);",
+              "text": "var(--theme-color-button_text);"
+            },
+            "border": {
+              "radius": "var(--theme-corner_radius_button);"
+            },
+            "spacing": {
+              "padding": 0
+            },
+            "css": "height: 40px; width: 40px"
+          }
+        }
       }
     }
   },
