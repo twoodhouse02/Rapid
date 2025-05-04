@@ -6,6 +6,7 @@
 import { registerBlockType } from "@wordpress/blocks";
 import { buttons } from "@wordpress/icons";
 import { InnerBlocks } from "@wordpress/block-editor";
+import { addFilter } from "@wordpress/hooks";
 
 /**
  * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
@@ -37,3 +38,18 @@ registerBlockType(metadata.name, {
     return <InnerBlocks.Content />;
   },
 });
+
+// ←– extend core/navigation to allow this block
+addFilter(
+  "blocks.registerBlockType",
+  "rapid/styled-buttons",
+  (settings, name) => {
+    if (name === "core/navigation") {
+      settings.allowedBlocks = [
+        ...(settings.allowedBlocks || []),
+        "rapid/styled-buttons",
+      ];
+    }
+    return settings;
+  },
+);
