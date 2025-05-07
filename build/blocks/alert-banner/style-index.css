@@ -1,0 +1,58 @@
+/*!***********************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/blocks/alert-banner/style.scss ***!
+  \***********************************************************************************************************************************************************************************************************************************************************/
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.wp-block-rapid-alert-banner {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  max-width: 100vw;
+  margin-top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--theme-spacing-xxxs);
+  box-sizing: border-box;
+}
+.wp-block-rapid-alert-banner p {
+  margin: 0;
+}
+.wp-block-rapid-alert-banner ion-icon {
+  min-width: 50px;
+  font-size: 24px;
+}
+.wp-block-rapid-alert-banner .alert-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--theme-spacing-xxxs);
+  overflow: hidden;
+}
+.wp-block-rapid-alert-banner .alert-text-container {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.wp-block-rapid-alert-banner .alert-text-container.animated {
+  overflow: hidden;
+}
+.wp-block-rapid-alert-banner .alert-text-container.animated .alert-text {
+  display: inline-block;
+  white-space: nowrap;
+  transform: translateX(var(--marquee-start));
+  animation: scroll var(--marquee-duration) linear infinite;
+}
+@keyframes scroll {
+  from {
+    transform: translateX(var(--marquee-start));
+  }
+  to {
+    transform: translateX(calc(-1 * var(--marquee-distance)));
+  }
+}
+
+/*# sourceMappingURL=style-index.css.map*/

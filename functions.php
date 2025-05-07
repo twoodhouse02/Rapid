@@ -152,5 +152,6 @@ function multiblock_register_blocks()
     register_block_type(__DIR__ . "/build/blocks/card");
     register_block_type(__DIR__ . "/build/blocks/gallery");
     register_block_type(__DIR__ . "/build/blocks/floating-images");
+    register_block_type(__DIR__ . "/build/blocks/alert-banner");
 }
 add_action("init", "multiblock_register_blocks");

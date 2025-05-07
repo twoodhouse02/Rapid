@@ -1,0 +1,57 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "rapid/alert-banner",
+  "version": "0.1.0",
+  "title": "Alert Banner",
+  "category": "rapid-theme",
+  "icon": "warning",
+  "description": "A notifcation block that can be used to display alerts, warnings, or other important messages with an icon.",
+  "attributes": {
+    "backgroundColor": {
+      "type": "string",
+      "default": "var(--theme-color-brand_primary)"
+    },
+    "textColor": {
+      "type": "string",
+      "default": "#ffffff"
+    },
+    "text": {
+      "type": "string",
+      "default": "This is an alert message."
+    },
+    "animateLongText": {
+      "type": "boolean",
+      "default": true
+    },
+    "iconName": {
+      "type": "string",
+      "default": "alert-circle-outline"
+    },
+    "displayIcon": {
+      "type": "boolean",
+      "default": true
+    },
+    "url": {
+      "type": "string",
+      "default": ""
+    },
+    "opensInNewTab": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "example": {},
+  "supports": {
+    "html": false,
+    "color": {
+      "background": true,
+      "text": true
+    }
+  },
+  "textdomain": "alert-banner",
+  "editorScript": "file:./index.js",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php",
+  "viewScript": "file:./view.js"
+}
