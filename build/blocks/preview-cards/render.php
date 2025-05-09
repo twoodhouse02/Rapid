@@ -3,6 +3,7 @@
 
 $animated = $attributes["animated"];
 $layout = $attributes["layout"];
+$columns = $attributes["columns"];
 $displayAuthor = $attributes["displayAuthor"];
 $displayCategories = $attributes["displayCategories"];
 $variant = $attributes["variant"];
@@ -18,7 +19,10 @@ $excerptLength = 100;
 
 // Determine additional classes for the wrapper.
 $extra_classes = "";
-if ($variant === "image-background") {
+if (
+    $variant === "image-background-overlay" ||
+    $variant === "image-background-blur"
+) {
     $extra_classes .= " theme-dark";
 }
 if ($animated) {
@@ -32,6 +36,8 @@ $args = [
     "orderby" => $orderBy,
     "post_status" => "publish",
 ];
+
+$styles = sprintf("--columns: %d;", esc_attr($columns));
 
 // If categories are selected, filter by them.
 if (!empty($selectedCategories) && is_array($selectedCategories)) {
@@ -48,7 +54,10 @@ if (!empty($selectedCategories) && is_array($selectedCategories)) {
 
 $query = new WP_Query($args);
 ?>
-<div <?php echo get_block_wrapper_attributes(["class" => $extra_classes]); ?>>
+<div <?php echo get_block_wrapper_attributes([
+    "class" => $extra_classes,
+    "style" => $styles,
+]); ?>>
     <?php if ($query->have_posts()): ?>
     <?php
     while ($query->have_posts()):
@@ -104,7 +113,10 @@ $query = new WP_Query($args);
         ); ?>" href="<?php echo esc_url($permalink); ?>">
             <?php if ($featured_image): ?>
             <div class="featured-image">
-                <?php if ($variant === "image-background"): ?>
+                <?php if (
+                    $variant === "image-background-overlay" ||
+                    $variant === "image-background-blur"
+                ): ?>
                 <div class="image-overlay"></div>
                 <?php endif; ?>
                 <img src="<?php echo esc_url(

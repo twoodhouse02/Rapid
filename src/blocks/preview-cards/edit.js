@@ -6,11 +6,13 @@ import {
   QueryControls,
   SelectControl,
   ToggleControl,
+  RangeControl,
 } from "@wordpress/components";
 
 export default function Edit({ attributes, setAttributes }) {
   const {
     layout,
+    columns,
     displayAuthor,
     displayCategories,
     variant,
@@ -69,7 +71,7 @@ export default function Edit({ attributes, setAttributes }) {
   );
 
   const blockProps = useBlockProps({
-    className: `  ${variant === "image-background" && "theme-dark"}`,
+    className: `  ${(variant === "image-background-overlay" || variant === "image-background-blur") && "theme-dark"}`,
   });
 
   return (
@@ -91,7 +93,14 @@ export default function Edit({ attributes, setAttributes }) {
             options={[
               { label: "Basic", value: "basic" },
               { label: "Padded", value: "padded" },
-              { label: "Image Background", value: "image-background" },
+              {
+                label: "Image Background Overlay",
+                value: "image-background-overlay",
+              },
+              {
+                label: "Image Background Blur",
+                value: "image-background-blur",
+              },
             ]}
             onChange={(value) => setAttributes({ variant: value })}
           />
@@ -125,6 +134,16 @@ export default function Edit({ attributes, setAttributes }) {
             onChange={() =>
               setAttributes({ displayCategories: !displayCategories })
             }
+          />
+          <RangeControl
+            __next40pxDefaultSize
+            __nextHasNoMarginBottom
+            initialPosition={columns}
+            label="Columns (max)"
+            help="These settings will be applied to large screen sizes and adapt for smaller."
+            max={4}
+            min={1}
+            onChange={(value) => setAttributes({ columns: value })}
           />
           <QueryControls
             numberOfItems={numberOfCards}
@@ -168,7 +187,7 @@ export default function Edit({ attributes, setAttributes }) {
           />
         </PanelBody>
       </InspectorControls>
-      <div {...blockProps}>
+      <div {...blockProps} style={{ "--columns": columns }}>
         {posts && posts.length > 0 ? (
           posts.map((post) => {
             const featuredImage =
@@ -188,7 +207,8 @@ export default function Edit({ attributes, setAttributes }) {
               >
                 {featuredImage && (
                   <div className="featured-image">
-                    {variant === "image-background" && (
+                    {(variant === "image-background-overlay" ||
+                      variant === "image-background-blur") && (
                       <div className="image-overlay"></div>
                     )}
                     <img src={featuredImage} alt={post.title.rendered} />

@@ -11,6 +11,10 @@
       "type": "string",
       "default": "vertical"
     },
+    "columns": {
+      "type": "number",
+      "default": 3
+    },
     "variant": {
       "type": "string",
       "default": "basic"

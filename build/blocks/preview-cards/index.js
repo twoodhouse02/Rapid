@@ -64,6 +64,7 @@ function Edit({
 }) {
   const {
     layout,
+    columns,
     displayAuthor,
     displayCategories,
     variant,
@@ -109,7 +110,7 @@ function Edit({
     return select("core").getEntityRecords("postType", "post", query);
   }, [numberOfCards, order, orderBy, selectedCategoryIds]);
   const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps)({
-    className: `  ${variant === "image-background" && "theme-dark"}`
+    className: `  ${(variant === "image-background-overlay" || variant === "image-background-blur") && "theme-dark"}`
   });
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.Fragment, {
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.InspectorControls, {
@@ -138,8 +139,11 @@ function Edit({
             label: "Padded",
             value: "padded"
           }, {
-            label: "Image Background",
-            value: "image-background"
+            label: "Image Background Overlay",
+            value: "image-background-overlay"
+          }, {
+            label: "Image Background Blur",
+            value: "image-background-blur"
           }],
           onChange: value => setAttributes({
             variant: value
@@ -183,6 +187,17 @@ function Edit({
           checked: displayCategories,
           onChange: () => setAttributes({
             displayCategories: !displayCategories
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.RangeControl, {
+          __next40pxDefaultSize: true,
+          __nextHasNoMarginBottom: true,
+          initialPosition: columns,
+          label: "Columns (max)",
+          help: "These settings will be applied to large screen sizes and adapt for smaller.",
+          max: 4,
+          min: 1,
+          onChange: value => setAttributes({
+            columns: value
           })
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.QueryControls, {
           numberOfItems: numberOfCards,
@@ -232,6 +247,9 @@ function Edit({
       })
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
       ...blockProps,
+      style: {
+        "--columns": columns
+      },
       children: posts && posts.length > 0 ? posts.map(post => {
         const featuredImage = post._embedded?.["wp:featuredmedia"]?.[0]?.source_url;
         const authorName = post._embedded?.["author"]?.[0]?.name;
@@ -243,7 +261,7 @@ function Edit({
           className: `preview-card ${hoverEffect} ${variant} ${layout}`,
           children: [featuredImage && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
             className: "featured-image",
-            children: [variant === "image-background" && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+            children: [(variant === "image-background-overlay" || variant === "image-background-blur") && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
               className: "image-overlay"
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
               src: featuredImage,
@@ -444,7 +462,7 @@ module.exports = window["wp"]["primitives"];
   \*********************************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"rapid/preview-cards","version":"0.1.0","title":"Preview Cards","category":"rapid-theme","description":"A preview of blog content provided in a card with image and text.","attributes":{"layout":{"type":"string","default":"vertical"},"variant":{"type":"string","default":"basic"},"numberOfCards":{"type":"number","default":3},"order":{"type":"string","default":"desc"},"orderBy":{"type":"string","default":"date"},"selectedCategories":{"type":"array","default":[]},"displayAuthor":{"type":"boolean","default":true},"displayCategories":{"type":"boolean","default":true},"hoverEffect":{"type":"string","default":"scale-out"},"animated":{"type":"boolean","default":true}},"example":{},"supports":{"html":false},"textdomain":"preview-cards","editorScript":"file:./index.js","style":"file:./style-index.css","render":"file:./render.php","viewScript":"file:./view.js"}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"rapid/preview-cards","version":"0.1.0","title":"Preview Cards","category":"rapid-theme","description":"A preview of blog content provided in a card with image and text.","attributes":{"layout":{"type":"string","default":"vertical"},"columns":{"type":"number","default":3},"variant":{"type":"string","default":"basic"},"numberOfCards":{"type":"number","default":3},"order":{"type":"string","default":"desc"},"orderBy":{"type":"string","default":"date"},"selectedCategories":{"type":"array","default":[]},"displayAuthor":{"type":"boolean","default":true},"displayCategories":{"type":"boolean","default":true},"hoverEffect":{"type":"string","default":"scale-out"},"animated":{"type":"boolean","default":true}},"example":{},"supports":{"html":false},"textdomain":"preview-cards","editorScript":"file:./index.js","style":"file:./style-index.css","render":"file:./render.php","viewScript":"file:./view.js"}');
 
 /***/ })
 

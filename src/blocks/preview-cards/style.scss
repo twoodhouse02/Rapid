@@ -7,7 +7,7 @@
 
 .wp-block-rapid-preview-cards {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(var(--columns), 1fr);
   gap: var(--theme-spacing-s);
 
   &.animated-preview-cards .preview-card-wrapper {
@@ -26,6 +26,7 @@
     border: var(--theme-border_width_card) solid var(--theme-color_border_cards);
     border-radius: var(--theme-corner_radius_regular);
     transition: 0.2s ease all;
+    overflow: hidden;
     .author {
       display: flex;
       width: 100%;
@@ -128,8 +129,8 @@
         }
       }
     }
-    // VARIANT: BACKGROUND IMAGE
-    &.image-background {
+    // VARIANT: BACKGROUND IMAGE OVERLAY
+    &.image-background-overlay {
       height: 425px;
 
       .author {
@@ -159,6 +160,48 @@
         z-index: 5;
       }
     }
+
+    // VARIANT: BACKGROUND IMAGE BLUR
+    &.image-background-blur {
+      height: 425px;
+
+      .author {
+        border-top: none;
+      }
+
+      .featured-image {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+
+        .image-overlay {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          backdrop-filter: blur(12px) brightness(35%);
+          mask: linear-gradient(transparent, black, black);
+          z-index: 2;
+          pointer-events: none;
+        }
+
+        img {
+          height: 100%;
+          border-radius: var(--theme-corner_radius_regular);
+        }
+      }
+
+      .card-content {
+        z-index: 5;
+        justify-content: flex-end;
+      }
+
+      .card-body {
+        flex-grow: unset;
+      }
+    }
+
     // LAYOUT: HORIZONTAL
     &.horizontal {
       flex-direction: row;
@@ -195,13 +238,24 @@
         }
       }
       // VARIANT: BACKGROUND IMAGE
-      &.image-background {
+      &.image-background-overlay,
+      &.image-background-blur {
         height: auto;
         .featured-image {
           img {
             width: 100%;
             border-radius: var(--theme-corner_radius_regular);
           }
+        }
+      }
+      &.image-background-blur {
+        img {
+          filter: brightness(0.5);
+        }
+
+        .image-overlay {
+          backdrop-filter: blur(12px) brightness(55%);
+          mask: linear-gradient(transparent, black);
         }
       }
     }
