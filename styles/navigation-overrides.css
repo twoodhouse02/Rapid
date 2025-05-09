@@ -7,3 +7,11 @@ ul.wp-block-navigation__submenu-container.wp-block-navigation-submenu {
   border-radius: var(--theme-corner_radius_regular);
   padding: var(--theme-spacing-xxs);
 }
+
+.wp-block-navigation,
+.wp-block-navigation__responsive-dialog,
+.wp-block-navigation__responsive-container:not(.hidden-by-default):not(
+    .is-menu-open
+  ) {
+  position: unset;
+}
