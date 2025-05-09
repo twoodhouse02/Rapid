@@ -135,16 +135,7 @@ export default function Edit({ attributes, setAttributes }) {
               setAttributes({ displayCategories: !displayCategories })
             }
           />
-          <RangeControl
-            __next40pxDefaultSize
-            __nextHasNoMarginBottom
-            initialPosition={columns}
-            label="Columns (max)"
-            help="These settings will be applied to large screen sizes and adapt for smaller."
-            max={4}
-            min={1}
-            onChange={(value) => setAttributes({ columns: value })}
-          />
+
           <QueryControls
             numberOfItems={numberOfCards}
             minItems={1}
@@ -184,6 +175,16 @@ export default function Edit({ attributes, setAttributes }) {
                 .filter(Boolean);
               setAttributes({ selectedCategories: selectedObjects });
             }}
+          />
+          <RangeControl
+            __next40pxDefaultSize
+            __nextHasNoMarginBottom
+            initialPosition={columns}
+            label="Columns (max)"
+            help="These settings will be applied to large screen sizes and adapt for smaller."
+            max={4}
+            min={1}
+            onChange={(value) => setAttributes({ columns: value })}
           />
         </PanelBody>
       </InspectorControls>
