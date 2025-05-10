@@ -30,6 +30,7 @@
   border-radius: var(--theme-corner_radius_regular);
   transition: 0.2s ease all;
   overflow: hidden;
+  padding: 0 !important;
 }
 .wp-block-rapid-preview-cards .preview-card .author {
   display: flex;
