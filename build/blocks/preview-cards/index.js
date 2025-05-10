@@ -188,17 +188,6 @@ function Edit({
           onChange: () => setAttributes({
             displayCategories: !displayCategories
           })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.RangeControl, {
-          __next40pxDefaultSize: true,
-          __nextHasNoMarginBottom: true,
-          initialPosition: columns,
-          label: "Columns (max)",
-          help: "These settings will be applied to large screen sizes and adapt for smaller.",
-          max: 4,
-          min: 1,
-          onChange: value => setAttributes({
-            columns: value
-          })
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.QueryControls, {
           numberOfItems: numberOfCards,
           minItems: 1,
@@ -243,6 +232,17 @@ function Edit({
               selectedCategories: selectedObjects
             });
           }
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.RangeControl, {
+          __next40pxDefaultSize: true,
+          __nextHasNoMarginBottom: true,
+          initialPosition: columns,
+          label: "Columns (max)",
+          help: "These settings will be applied to large screen sizes and adapt for smaller.",
+          max: 4,
+          min: 1,
+          onChange: value => setAttributes({
+            columns: value
+          })
         })]
       })
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
