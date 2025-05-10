@@ -10,8 +10,8 @@
     "prettier": "^3.3.3"
   },
   "scripts": {
-    "build": "wp-scripts build --webpack-copy-php",
-    "start": "wp-scripts start --webpack-copy-php"
+    "build": "wp-scripts build --webpack-copy-php --experimental-modules",
+    "start": "wp-scripts start --webpack-copy-php --experimental-modules"
   },
   "prettier": {
     "plugins": [

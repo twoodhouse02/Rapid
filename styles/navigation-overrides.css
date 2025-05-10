@@ -9,6 +9,7 @@ ul.wp-block-navigation__submenu-container.wp-block-navigation-submenu {
 }
 
 .wp-block-navigation,
+.wp-block-navigation .wp-block-navigation-item.wp-block-rapid-mega-menu,
 .wp-block-navigation__responsive-dialog,
 .wp-block-navigation__responsive-container:not(.hidden-by-default):not(
     .is-menu-open

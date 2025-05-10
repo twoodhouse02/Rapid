@@ -1,0 +1,86 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.wp-block-rapid-mega-menu {
+  // Reset button styles.
+  a {
+    border: none;
+    color: currentColor;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: inherit;
+    font-style: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    text-transform: inherit;
+    .wp-block-navigation__submenu-icon {
+      background-color: transparent !important;
+    }
+    svg {
+      display: inline-block;
+      stroke: currentColor;
+      height: inherit;
+      margin-top: 0.075em;
+      width: inherit;
+    }
+  }
+
+  .wp-block-rapid-mega-menu__menu-container {
+    height: auto;
+    right: 0;
+    opacity: 0;
+    position: absolute;
+    top: 60px;
+    transition: opacity 0.1s linear;
+    visibility: hidden;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    z-index: 2;
+
+    .menu-container__close-button {
+      align-items: center;
+      -webkit-backdrop-filter: blur(16px) saturate(180%);
+      backdrop-filter: blur(16px) saturate(180%);
+      background-color: #ffffffba;
+      border: none;
+      border-radius: 999px;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      opacity: 0;
+      padding: 4px;
+      position: absolute;
+      right: 12px;
+      text-align: center;
+      top: 12px;
+      transition: opacity 0.2s ease;
+      z-index: 100;
+
+      // Show the close button when focused (for keyboard navigation)
+      &:focus {
+        opacity: 1;
+      }
+    }
+
+    // Show the close button when the mega menu is hovered.
+    &:hover {
+      .menu-container__close-button {
+        opacity: 1;
+      }
+    }
+  }
+
+  // Show the mega menu when aria-expanded is true.
+  a[aria-expanded="true"] {
+    & ~ .wp-block-rapid-mega-menu__menu-container {
+      opacity: 1;
+      overflow: visible;
+      visibility: visible;
+    }
+  }
+}
