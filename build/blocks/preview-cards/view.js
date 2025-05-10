@@ -9388,7 +9388,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var motion__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! motion */ "./node_modules/motion/dist/es/framer-motion/dist/es/animation/animate/index.mjs");
 /* harmony import */ var motion__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! motion */ "./node_modules/motion/dist/es/framer-motion/dist/es/animation/utils/stagger.mjs");
 
-(0,motion__WEBPACK_IMPORTED_MODULE_0__.inView)(".animated-preview-cards", element => {
+(0,motion__WEBPACK_IMPORTED_MODULE_0__.inView)(".animated-preview-cards:not(.wp-block-rapid-mega-menu__menu-container .animated-preview-cards)", element => {
   const children = element.querySelectorAll(".preview-card-wrapper");
   (0,motion__WEBPACK_IMPORTED_MODULE_1__.animate)(children, {
     opacity: 1,
@@ -9401,6 +9401,21 @@ __webpack_require__.r(__webpack_exports__);
   });
 }, {
   margin: "-300px 0px -200px 0px"
+});
+document.addEventListener("mega-menu-opened", () => {
+  const menuContainer = document.querySelector(".wp-block-rapid-mega-menu__menu-container");
+  if (menuContainer) {
+    const children = menuContainer.querySelectorAll(".preview-card-wrapper");
+    (0,motion__WEBPACK_IMPORTED_MODULE_1__.animate)(children, {
+      opacity: 1,
+      y: [50, 0]
+    }, {
+      duration: 0.1,
+      delay: (0,motion__WEBPACK_IMPORTED_MODULE_2__.stagger)(0.1),
+      type: "spring",
+      stiffness: 100
+    });
+  }
 });
 })();
 
