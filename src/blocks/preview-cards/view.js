@@ -24,7 +24,9 @@ document.addEventListener("mega-menu-opened", () => {
   );
 
   if (menuContainer) {
-    const children = menuContainer.querySelectorAll(".preview-card-wrapper");
+    const children = menuContainer.querySelectorAll(
+      ".animated-preview-cards .preview-card-wrapper",
+    );
     animate(
       children,
       { opacity: 1, y: [50, 0] },

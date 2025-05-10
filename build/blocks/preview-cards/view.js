@@ -9405,7 +9405,7 @@ __webpack_require__.r(__webpack_exports__);
 document.addEventListener("mega-menu-opened", () => {
   const menuContainer = document.querySelector(".wp-block-rapid-mega-menu__menu-container");
   if (menuContainer) {
-    const children = menuContainer.querySelectorAll(".preview-card-wrapper");
+    const children = menuContainer.querySelectorAll(".animated-preview-cards .preview-card-wrapper");
     (0,motion__WEBPACK_IMPORTED_MODULE_1__.animate)(children, {
       opacity: 1,
       y: [50, 0]
