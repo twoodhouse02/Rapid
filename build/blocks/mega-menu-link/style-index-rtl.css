@@ -1,0 +1,39 @@
+/*!*************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/blocks/mega-menu-link/style.scss ***!
+  \*************************************************************************************************************************************************************************************************************************************************************/
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.wp-block-rapid-mega-menu-link {
+  display: inline-flex;
+  flex-direction: row;
+  gap: var(--theme-spacing-xxxs);
+  padding: var(--theme-spacing-micro) var(--theme-spacing-xxs);
+  border-radius: var(--theme-corner_radius_regular);
+  transition: 0.3s ease all;
+}
+.wp-block-rapid-mega-menu-link ion-icon {
+  color: var(--theme-color-brand_primary);
+  font-size: 24px;
+  margin-top: 4px;
+}
+.wp-block-rapid-mega-menu-link .content {
+  display: flex;
+  flex-direction: column;
+}
+.wp-block-rapid-mega-menu-link .content p {
+  margin: 0;
+}
+.wp-block-rapid-mega-menu-link .content .label {
+  font-size: var(--theme-font-size-l);
+}
+.wp-block-rapid-mega-menu-link .content .description {
+  font-size: var(--theme-font-size-s);
+  color: var(--theme-color-text_secondary);
+}
+.wp-block-rapid-mega-menu-link:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}

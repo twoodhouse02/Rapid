@@ -179,5 +179,6 @@ function multiblock_register_blocks()
     register_block_type(__DIR__ . "/build/blocks/floating-images");
     register_block_type(__DIR__ . "/build/blocks/alert-banner");
     register_block_type(__DIR__ . "/build/blocks/mega-menu");
+    register_block_type(__DIR__ . "/build/blocks/mega-menu-link");
 }
 add_action("init", "multiblock_register_blocks");
