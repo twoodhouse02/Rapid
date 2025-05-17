@@ -19,11 +19,11 @@ inView(
 );
 
 document.addEventListener("mega-menu-opened", () => {
-  const menuContainer = document.querySelector(
+  const menuContainers = document.querySelectorAll(
     ".wp-block-rapid-mega-menu__menu-container",
   );
 
-  if (menuContainer) {
+  menuContainers.forEach((menuContainer) => {
     const children = menuContainer.querySelectorAll(
       ".animated-preview-cards .preview-card-wrapper",
     );
@@ -37,5 +37,5 @@ document.addEventListener("mega-menu-opened", () => {
         stiffness: 100,
       },
     );
-  }
+  });
 });
