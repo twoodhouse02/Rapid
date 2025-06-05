@@ -11,18 +11,19 @@ if (!$label || !$menu_slug) {
 
 $extra_classes = " wp-block-navigation-item";
 ?>
-<li <?php echo get_block_wrapper_attributes([
-    "class" => $extra_classes,
-]); ?> data-wp-interactive="rapid/mega-menu" data-wp-context='{ "isMenuOpen": false }'>
-    <a data-wp-on--mouseOver="actions.toggleMenu" data-wp-bind--aria-expanded="context.isMenuOpen"
-        class="wp-block-navigation-item__content"><?php echo $label; ?>
-        <span class="wp-block-navigation__submenu-icon wp-block-navigation-submenu__toggle" aria-expanded="false"><svg
-                xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none"
-                aria-hidden="true" focusable="false">
-                <path d="M1.50002 4L6.00002 8L10.5 4" stroke-width="1.5"></path>
-            </svg></span></a>
-
-    <div class="wp-block-rapid-mega-menu__menu-container" data-wp-on--mouseleave="actions.closeMenu">
+<span class="mega-menu-wrapper">
+    <li <?php echo get_block_wrapper_attributes([
+        "class" => $extra_classes,
+    ]); ?>>
+        <a tabindex="0" aria-haspopup="true" role="button"
+            class="wp-block-navigation-item__content"><?php echo $label; ?>
+            <span class="wp-block-navigation__submenu-icon wp-block-navigation-submenu__toggle"
+                aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"
+                    fill="none" aria-hidden="true" focusable="false">
+                    <path d="M1.50002 4L6.00002 8L10.5 4" stroke-width="1.5"></path>
+                </svg></span></a>
+    </li>
+    <div class="wp-block-rapid-mega-menu__menu-container">
         <?php echo block_template_part($menu_slug); ?>
     </div>
-</li>
+</span>

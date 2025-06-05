@@ -1,23 +1,40 @@
-import { store, getContext } from "@wordpress/interactivity";
+document.addEventListener("DOMContentLoaded", function () {
+  const menuItems = document.querySelectorAll(".mega-menu-wrapper");
+  const event = new CustomEvent("mega-menu-opened");
 
-const { actions } = store("rapid/mega-menu", {
-  actions: {
-    toggleMenu() {
-      const context = getContext();
+  menuItems.forEach((item) => {
+    const link = item.querySelector("a");
 
-      if (context.isMenuOpen) {
-        actions.closeMenu();
-      } else {
-        const event = new CustomEvent("mega-menu-opened", {
-          detail: { menuSlug: context.menuSlug },
-        });
-        document.dispatchEvent(event);
-        context.isMenuOpen = true;
+    link.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      // Close other open menus
+      menuItems.forEach((otherItem) => {
+        if (otherItem !== item) {
+          otherItem.classList.remove("active");
+        }
+      });
+
+      // Toggle current menu
+      item.classList.toggle("active");
+      document.dispatchEvent(event);
+    });
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener("click", function (e) {
+    let isClickInside = false;
+
+    menuItems.forEach((item) => {
+      if (item.contains(e.target)) {
+        isClickInside = true;
       }
-    },
-    closeMenu() {
-      const context = getContext();
-      context.isMenuOpen = false;
-    },
-  },
+    });
+
+    if (!isClickInside) {
+      menuItems.forEach((item) => {
+        item.classList.remove("active");
+      });
+    }
+  });
 });
