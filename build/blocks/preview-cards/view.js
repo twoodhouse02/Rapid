@@ -9402,19 +9402,18 @@ __webpack_require__.r(__webpack_exports__);
 }, {
   margin: "-300px 0px -200px 0px"
 });
-document.addEventListener("mega-menu-opened", () => {
-  const menuContainers = document.querySelectorAll(".wp-block-rapid-mega-menu__menu-container");
-  menuContainers.forEach(menuContainer => {
-    const children = menuContainer.querySelectorAll(".animated-preview-cards .preview-card-wrapper");
-    (0,motion__WEBPACK_IMPORTED_MODULE_1__.animate)(children, {
-      opacity: 1,
-      y: [50, 0]
-    }, {
-      duration: 0.1,
-      delay: (0,motion__WEBPACK_IMPORTED_MODULE_2__.stagger)(0.1),
-      type: "spring",
-      stiffness: 100
-    });
+document.addEventListener("mega-menu-opened", e => {
+  const menuContainer = e.detail.menu.querySelector(".wp-block-rapid-mega-menu__menu-container");
+  if (!menuContainer) return;
+  const children = menuContainer.querySelectorAll(".animated-preview-cards .preview-card-wrapper");
+  (0,motion__WEBPACK_IMPORTED_MODULE_1__.animate)(children, {
+    opacity: 1,
+    y: [50, 0]
+  }, {
+    duration: 0.1,
+    delay: (0,motion__WEBPACK_IMPORTED_MODULE_2__.stagger)(0.1),
+    type: "spring",
+    stiffness: 100
   });
 });
 })();

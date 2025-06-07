@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
   const menuItems = document.querySelectorAll(".mega-menu-wrapper");
-  const event = new CustomEvent("mega-menu-opened");
 
   menuItems.forEach((item) => {
     const link = item.querySelector("a");
@@ -16,8 +15,16 @@ document.addEventListener("DOMContentLoaded", function () {
       });
 
       // Toggle current menu
+      const isNowActive = !item.classList.contains("active");
       item.classList.toggle("active");
-      document.dispatchEvent(event);
+
+      // Dispatch only if menu is being opened
+      if (isNowActive) {
+        const event = new CustomEvent("mega-menu-opened", {
+          detail: { menu: item }, // Pass the opened menu
+        });
+        document.dispatchEvent(event);
+      }
     });
   });
 
