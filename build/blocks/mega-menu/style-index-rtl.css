@@ -40,7 +40,7 @@
   width: 100vw;
   margin-right: calc(50% - 50vw);
   margin-left: calc(50% - 50vw);
-  z-index: 2;
+  z-index: 10;
 }
 .mega-menu-wrapper .wp-block-rapid-mega-menu__menu-container .menu-container__close-button {
   align-items: center;
