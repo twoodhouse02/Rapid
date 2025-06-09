@@ -34,6 +34,31 @@
           "name": "Text, secondary",
           "slug": "text_secondary",
           "color": "var(--theme-color-text_secondary)"
+        },
+        {
+          "name": "Website background",
+          "slug": "background",
+          "color": "var(--theme-background)"
+        },
+        {
+          "name": "Website background",
+          "slug": "background",
+          "color": "var(--theme-background)"
+        },
+        {
+          "name": "Layer 1 (color against background)",
+          "slug": "layer_1",
+          "color": "var(--theme-color-layer_1)"
+        },
+        {
+          "name": "Layer 2 (color against background)",
+          "slug": "layer_2",
+          "color": "var(--theme-color-layer_2)"
+        },
+        {
+          "name": "Layer 3 (color against background)",
+          "slug": "layer_3",
+          "color": "var(--theme-color-layer_3)"
         }
       ]
     },
