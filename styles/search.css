@@ -1,0 +1,25 @@
+.rapid-theme-query .no-results-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+}
+
+.rapid-theme-query .no-results {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--theme-color-layer_1);
+  padding: var(--theme-spacing-xl) var(--theme-spacing-xxxl);
+  border-radius: var(--theme-corner_radius_large);
+}
+
+.rapid-theme-query .no-results svg {
+  height: 42px;
+}
+
+.rapid-theme-query .no-results p {
+  margin-bottom: 0;
+}

@@ -70,6 +70,14 @@ function enqueue_theme_assets()
         [],
         THEME_VERSION
     );
+
+    // Enqueue the generated CSS file with versioning for both the front end and the editor
+    wp_enqueue_style(
+        "search",
+        get_template_directory_uri() . "/styles/search.css",
+        [],
+        THEME_VERSION
+    );
 }
 add_action("wp_enqueue_scripts", "enqueue_theme_assets");
 
@@ -80,6 +88,7 @@ function enqueue_theme_editor_assets()
     add_editor_style("styles/admin-theme-variables.css");
     add_editor_style("styles/typography.css");
     add_editor_style("styles/layout.css");
+    add_editor_style("styles/search.css");
     add_editor_style("styles/navigation-overrides.css");
 }
 add_action("after_setup_theme", "enqueue_theme_editor_assets");
