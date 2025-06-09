@@ -51,12 +51,12 @@
           "color": "var(--theme-color-layer_1)"
         },
         {
-          "name": "Layer 2 (color against background)",
+          "name": "Layer 2 (color against layer 1)",
           "slug": "layer_2",
           "color": "var(--theme-color-layer_2)"
         },
         {
-          "name": "Layer 3 (color against background)",
+          "name": "Layer 3 (color against layer 2)",
           "slug": "layer_3",
           "color": "var(--theme-color-layer_3)"
         }
