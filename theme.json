@@ -311,7 +311,7 @@
         }
       },
       "core/search": {
-        "css": "& .wp-block-search__inside-wrapper {border: none; align-items: center;} & .wp-block-search__input { background-color: var(--theme-color-interactive_secondary); height: 40px; border-radius: 0.5rem; padding: 5px 10px; }",
+        "css": "& .wp-block-search__inside-wrapper {border: none; align-items: center;} & .wp-block-search__input { background-color: var(--theme-color-interactive_secondary); height: 40px; border-radius: 0.5rem; padding: 5px 10px; border-color: var(--theme-color-button_borders_secondary) }",
         "elements": {
           "button": {
             "color": {
