@@ -138,6 +138,20 @@ function custom_block_category($categories)
 }
 add_filter("block_categories_all", "custom_block_category", 10, 2);
 
+// Add excerpt length filter to change the default excerpt length:
+add_filter(
+    "excerpt_length",
+    function ($length) {
+        return 20;
+    },
+    999
+);
+
+// Add excerpt more filter to change the default excerpt trailing text:
+add_filter("excerpt_more", function ($more) {
+    return "...";
+});
+
 //  Adds a custom template part area for mega menus to the list of template part areas.
 
 //  @param array $areas Existing array of template part areas.
@@ -183,6 +197,7 @@ function multiblock_register_blocks()
     register_block_type(__DIR__ . "/build/blocks/preview-cards");
     register_block_type(__DIR__ . "/build/blocks/styled-button");
     register_block_type(__DIR__ . "/build/blocks/styled-buttons");
+    register_block_type(__DIR__ . "/build/blocks/search-result");
     register_block_type(__DIR__ . "/build/blocks/card");
     register_block_type(__DIR__ . "/build/blocks/gallery");
     register_block_type(__DIR__ . "/build/blocks/floating-images");
