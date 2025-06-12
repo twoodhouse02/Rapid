@@ -1,0 +1,70 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.wp-block-rapid-search-result {
+  display: flex;
+  background-color: var(--theme-color-layer_1);
+  border-radius: var(--theme-corner_radius_regular);
+  transition: 0.2s ease all;
+  text-decoration: none;
+
+  .featured-img {
+    width: 150px;
+    min-width: 150px;
+    border-radius: var(--theme-corner_radius_regular) 0 0
+      var(--theme-corner_radius_regular);
+    transition: 0.2s ease all;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .post-meta {
+    display: flex;
+    flex-direction: column;
+    padding: var(--theme-spacing-s);
+    gap: var(--theme-spacing-xxxs);
+
+    p,
+    h5 {
+      margin: 0;
+    }
+
+    .post-categories {
+      font-size: var(--theme-font-size-s);
+      color: var(--theme-color-brand_primary);
+    }
+
+    .post-date {
+      font-size: var(--theme-font-size-s);
+    }
+  }
+
+  .read-more {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--theme-spacing-micro);
+    color: var(--theme-color-interactive);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.2s ease all;
+    transition-delay: 0.2s;
+  }
+
+  &:hover {
+    box-shadow: 0px 10px 20px 5px var(--theme-color_shadow_cards);
+
+    .featured-img {
+      width: 175px;
+      min-width: 175px;
+    }
+
+    .read-more {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
