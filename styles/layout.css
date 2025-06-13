@@ -23,10 +23,6 @@
   max-width: 100vw;
 }
 
-.alignfull img {
-  width: 100vw;
-}
-
 .img-bg-position-center,
 .img-bg-position-center img {
   background-position: center;
