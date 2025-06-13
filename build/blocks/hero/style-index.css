@@ -14,7 +14,7 @@
   box-sizing: border-box;
   box-sizing: border-box;
 }
-.wp-block-rapid-hero .animated > div {
+.wp-block-rapid-hero .animated.hero-content > .wp-block-group > * {
   opacity: 0;
   transform: translateY(50px);
 }
@@ -184,6 +184,12 @@
     grid-template-columns: 1fr !important;
     grid-template-rows: 1fr 3fr !important;
   }
+}
+.wp-block-rapid-hero.content-overhang {
+  margin-bottom: var(--overhang-amount);
+}
+.wp-block-rapid-hero.content-overhang .hero-content {
+  margin-bottom: calc(-1 * var(--overhang-amount));
 }
 
 /*# sourceMappingURL=style-index.css.map*/

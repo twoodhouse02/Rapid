@@ -3,7 +3,9 @@ import { animate, inView, stagger } from "motion";
 inView(
   ".animated",
   (element) => {
-    const children = element.querySelectorAll("div");
+    const children = Array.from(
+      element.querySelector(".wp-block-group")?.children || [],
+    );
     animate(
       children,
       { opacity: 1, y: [50, 0] },

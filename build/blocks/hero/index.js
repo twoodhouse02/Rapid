@@ -31,14 +31,10 @@ function Edit({
   const {
     variant,
     fullWidthVariant,
+    contentOverhang,
+    overhangAmount,
     height,
     align,
-    alignText,
-    heroText,
-    descriptionText,
-    eyebrowText,
-    displayCTAs,
-    displayEyebrow,
     theme,
     imageURL,
     imagePosition,
@@ -47,15 +43,39 @@ function Edit({
     imageScroll,
     animated
   } = attributes;
-  const innerBlockTemplate = [["rapid/styled-button", {
-    label: "Primary action",
-    variant: "primary"
+  const TEMPLATE = [["core/group", {
+    layout: {
+      type: "flex",
+      orientation: "vertical",
+      justifyContent: "center"
+    }
+  }, [["core/group", {
+    style: {
+      spacing: {
+        blockGap: "0"
+      }
+    },
+    layout: {
+      type: "flex",
+      orientation: "vertical",
+      justifyContent: "center"
+    }
+  }, [["core/paragraph", {
+    className: "eyebrow",
+    placeholder: "Eyebrow text here…"
+  }], ["core/heading", {
+    placeholder: "Add in a long title text here…"
+  }]]], ["core/paragraph", {
+    align: "center",
+    placeholder: "Lorem ipsum…"
+  }], ["rapid/styled-buttons", {}, [["rapid/styled-button", {
+    label: "Primary button"
   }], ["rapid/styled-button", {
-    label: "Secondary action",
+    label: "Secondary button",
     variant: "secondary"
-  }]];
+  }]]]]]];
   const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps)({
-    className: `${variant} text-align-${alignText}  ${align === "full" ? "full-width-" + fullWidthVariant : ""} ${variant === "split" ? "split-image-" + splitPosition : ""} ${variant === "split" ? "split-content-" + splitContentSize : ""}`
+    className: `${variant} ${contentOverhang && "content-overhang"}  ${align === "full" ? "full-width-" + fullWidthVariant : ""} ${variant === "split" ? "split-image-" + splitPosition : ""} ${variant === "split" ? "split-content-" + splitContentSize : ""}`
   });
   const onImageSelect = media => {
     setAttributes({
@@ -85,66 +105,6 @@ function Edit({
 
   // #region Icons
 
-  const alignLeftIcon = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("svg", {
-    xmlns: "http://www.w3.org/2000/svg",
-    width: "32",
-    height: "32",
-    fill: "#000000",
-    viewBox: "0 0 256 256",
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("path", {
-      d: "M32,64a8,8,0,0,1,8-8H216a8,8,0,0,1,0,16H40A8,8,0,0,1,32,64Zm8,48H168a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16Zm176,24H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Zm-48,40H40a8,8,0,0,0,0,16H168a8,8,0,0,0,0-16Z"
-    })
-  });
-  const alignLeftIconSolid = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("svg", {
-    xmlns: "http://www.w3.org/2000/svg",
-    width: "32",
-    height: "32",
-    fill: "#000000",
-    viewBox: "0 0 256 256",
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("path", {
-      d: "M208,32H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM160,184H64a8,8,0,0,1,0-16h96a8,8,0,0,1,0,16Zm32-32H64a8,8,0,0,1,0-16H192a8,8,0,0,1,0,16ZM56,112a8,8,0,0,1,8-8h96a8,8,0,0,1,0,16H64A8,8,0,0,1,56,112ZM192,88H64a8,8,0,0,1,0-16H192a8,8,0,0,1,0,16Z"
-    })
-  });
-  const alignRightIcon = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("svg", {
-    xmlns: "http://www.w3.org/2000/svg",
-    width: "32",
-    height: "32",
-    fill: "#000000",
-    viewBox: "0 0 256 256",
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("path", {
-      d: "M32,64a8,8,0,0,1,8-8H216a8,8,0,0,1,0,16H40A8,8,0,0,1,32,64ZM216,96H88a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Zm0,40H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Zm0,40H88a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z"
-    })
-  });
-  const alignRightIconSolid = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("svg", {
-    xmlns: "http://www.w3.org/2000/svg",
-    width: "32",
-    height: "32",
-    fill: "#000000",
-    viewBox: "0 0 256 256",
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("path", {
-      d: "M208,32H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM192,184H96a8,8,0,0,1,0-16h96a8,8,0,0,1,0,16Zm0-32H64a8,8,0,0,1,0-16H192a8,8,0,0,1,0,16Zm0-32H96a8,8,0,0,1,0-16h96a8,8,0,0,1,0,16Zm0-32H64a8,8,0,0,1,0-16H192a8,8,0,0,1,0,16Z"
-    })
-  });
-  const alignCenterIcon = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("svg", {
-    xmlns: "http://www.w3.org/2000/svg",
-    width: "32",
-    height: "32",
-    fill: "#000000",
-    viewBox: "0 0 256 256",
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("path", {
-      d: "M32,64a8,8,0,0,1,8-8H216a8,8,0,0,1,0,16H40A8,8,0,0,1,32,64ZM64,96a8,8,0,0,0,0,16H192a8,8,0,0,0,0-16Zm152,40H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Zm-24,40H64a8,8,0,0,0,0,16H192a8,8,0,0,0,0-16Z"
-    })
-  });
-  const alignCenterIconSolid = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("svg", {
-    xmlns: "http://www.w3.org/2000/svg",
-    width: "32",
-    height: "32",
-    fill: "#000000",
-    viewBox: "0 0 256 256",
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("path", {
-      d: "M208,32H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM176,184H80a8,8,0,0,1,0-16h96a8,8,0,0,1,0,16Zm16-32H64a8,8,0,0,1,0-16H192a8,8,0,0,1,0,16ZM72,112a8,8,0,0,1,8-8h96a8,8,0,0,1,0,16H80A8,8,0,0,1,72,112ZM192,88H64a8,8,0,0,1,0-16H192a8,8,0,0,1,0,16Z"
-    })
-  });
   const variantSimple = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("svg", {
     xmlns: "http://www.w3.org/2000/svg",
     width: "32",
@@ -281,31 +241,6 @@ function Edit({
           label: "Select a variant",
           onToggle: () => {}
         })
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.ToolbarGroup, {
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.DropdownMenu, {
-          controls: [{
-            icon: alignText === "left" ? alignLeftIconSolid : alignLeftIcon,
-            onClick: () => setAttributes({
-              alignText: "left"
-            }),
-            title: "Align left"
-          }, {
-            icon: alignText === "center" ? alignCenterIconSolid : alignCenterIcon,
-            onClick: () => setAttributes({
-              alignText: "center"
-            }),
-            title: "Align center"
-          }, {
-            icon: alignText === "right" ? alignRightIconSolid : alignRightIcon,
-            onClick: () => setAttributes({
-              alignText: "right"
-            }),
-            title: "Align right"
-          }],
-          icon: alignText === "left" ? alignLeftIcon : alignText === "center" ? alignCenterIcon : alignRightIcon,
-          label: "Align text",
-          onToggle: () => {}
-        })
       }), variant !== "split" && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.ToolbarGroup, {
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.DropdownMenu, {
           controls: [{
@@ -338,17 +273,22 @@ function Edit({
           })
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.ToggleControl, {
           __nextHasNoMarginBottom: true,
-          label: "Display Eyebrow",
-          checked: displayEyebrow,
+          label: "Overhang content",
+          checked: contentOverhang,
+          help: "Enable to allow content to overflow the hero section, useful when including cards.",
           onChange: () => setAttributes({
-            displayEyebrow: !displayEyebrow
+            contentOverhang: !contentOverhang
           })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.ToggleControl, {
+        }), contentOverhang && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.RangeControl, {
           __nextHasNoMarginBottom: true,
-          label: "Display CTA Buttons",
-          checked: displayCTAs,
-          onChange: () => setAttributes({
-            displayCTAs: !displayCTAs
+          __next40pxDefaultSize: true,
+          help: "Select the amount of overhang in pixels.",
+          initialPosition: overhangAmount,
+          label: "Overhang amount",
+          max: 500,
+          min: 0,
+          onChange: value => setAttributes({
+            overhangAmount: value
           })
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
           __nextHasNoMarginBottom: true,
@@ -449,7 +389,10 @@ function Edit({
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
       ...blockProps,
       style: {
-        height: height
+        height: height,
+        ...(contentOverhang && {
+          "--overhang-amount": `${overhangAmount}px`
+        })
       },
       children: [imageVariant && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
         className: `hero-background theme-${theme} img-bg-position-${imagePosition}`,
@@ -472,43 +415,12 @@ function Edit({
             children: imageURL ? "Change Image" : "Select Image"
           })
         })
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
         className: `hero-content theme-${theme}`,
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-          className: "title-area",
-          children: [displayEyebrow && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText, {
-            tagName: "p",
-            className: "eyebrow",
-            value: eyebrowText,
-            onChange: value => setAttributes({
-              eyebrowText: value
-            }),
-            placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)("Eyebrow text here...", "rapid")
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText, {
-            tagName: "h2",
-            className: "hero-text",
-            value: heroText,
-            onChange: value => setAttributes({
-              heroText: value
-            }),
-            placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)("Hero text here...", "rapid")
-          })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText, {
-          tagName: "p",
-          className: "description",
-          value: descriptionText,
-          onChange: value => setAttributes({
-            descriptionText: value
-          }),
-          placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)("Hero description here...", "rapid")
-        }), displayCTAs && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
-          className: "cta-buttons",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.InnerBlocks, {
-            allowedBlocks: ["rapid/styled-button"],
-            template: innerBlockTemplate,
-            templateLock: false
-          })
-        })]
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.InnerBlocks, {
+          template: TEMPLATE,
+          templateLock: false
+        })
       })]
     })]
   });
@@ -642,7 +554,7 @@ module.exports = window["wp"]["i18n"];
   \************************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"rapid/hero","version":"0.1.0","title":"Hero","category":"rapid-theme","icon":"align-full-width","attributes":{"variant":{"type":"string","default":"simple"},"fullWidthVariant":{"type":"string","default":"simple"},"height":{"type":"string","default":"auto"},"alignText":{"type":"string","default":"center"},"heroText":{"type":"string","default":"Hero text here..."},"descriptionText":{"type":"string","default":"Hero description here..."},"eyebrowText":{"type":"string","default":"Eyebrow text here..."},"displayCTAs":{"type":"boolean","default":true},"displayEyebrow":{"type":"boolean","default":true},"theme":{"type":"string","default":"light"},"imageURL":{"type":"string","default":"https://images.pexels.com/photos/1366919/pexels-photo-1366919.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"},"imagePosition":{"type":"string","default":"center"},"splitPosition":{"type":"string","default":"left"},"splitContentSize":{"type":"string","default":"50"},"imageScroll":{"type":"string","default":"scroll"},"animated":{"type":"boolean","default":true}},"example":{},"supports":{"html":false,"align":["wide","full"]},"textdomain":"list-card","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","render":"file:./render.php","viewScript":"file:./view.js"}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"rapid/hero","version":"0.1.0","title":"Hero","category":"rapid-theme","icon":"align-full-width","attributes":{"variant":{"type":"string","default":"simple"},"fullWidthVariant":{"type":"string","default":"simple"},"height":{"type":"string","default":"auto"},"contentOverhang":{"type":"boolean","default":false},"overhangAmount":{"type":"number","default":200},"theme":{"type":"string","default":"light"},"imageURL":{"type":"string","default":"https://images.pexels.com/photos/1366919/pexels-photo-1366919.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"},"imagePosition":{"type":"string","default":"center"},"splitPosition":{"type":"string","default":"left"},"splitContentSize":{"type":"string","default":"50"},"imageScroll":{"type":"string","default":"scroll"},"animated":{"type":"boolean","default":true}},"example":{},"supports":{"html":false,"align":["wide","full"]},"textdomain":"list-card","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","render":"file:./render.php","viewScript":"file:./view.js"}');
 
 /***/ })
 

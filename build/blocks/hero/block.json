@@ -19,29 +19,13 @@
       "type": "string",
       "default": "auto"
     },
-    "alignText": {
-      "type": "string",
-      "default": "center"
-    },
-    "heroText": {
-      "type": "string",
-      "default": "Hero text here..."
-    },
-    "descriptionText": {
-      "type": "string",
-      "default": "Hero description here..."
-    },
-    "eyebrowText": {
-      "type": "string",
-      "default": "Eyebrow text here..."
-    },
-    "displayCTAs": {
+    "contentOverhang": {
       "type": "boolean",
-      "default": true
+      "default": false
     },
-    "displayEyebrow": {
-      "type": "boolean",
-      "default": true
+    "overhangAmount": {
+      "type": "number",
+      "default": 200
     },
     "theme": {
       "type": "string",

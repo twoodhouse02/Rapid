@@ -12,7 +12,7 @@
   box-sizing: border-box;
   box-sizing: border-box;
 
-  .animated > div {
+  .animated.hero-content > .wp-block-group > * {
     opacity: 0;
     transform: translateY(50px);
   }
@@ -199,6 +199,13 @@
     @media (max-width: 678px) {
       grid-template-columns: 1fr !important;
       grid-template-rows: 1fr 3fr !important;
+    }
+  }
+
+  &.content-overhang {
+    margin-bottom: var(--overhang-amount);
+    .hero-content {
+      margin-bottom: calc(-1 * var(--overhang-amount));
     }
   }
 }

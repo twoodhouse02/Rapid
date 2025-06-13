@@ -16,20 +16,17 @@ import {
   ToggleControl,
   SelectControl,
   TextControl,
+  RangeControl,
 } from "@wordpress/components";
 
 export default function Edit({ attributes, setAttributes }) {
   const {
     variant,
     fullWidthVariant,
+    contentOverhang,
+    overhangAmount,
     height,
     align,
-    alignText,
-    heroText,
-    descriptionText,
-    eyebrowText,
-    displayCTAs,
-    displayEyebrow,
     theme,
     imageURL,
     imagePosition,
@@ -39,25 +36,53 @@ export default function Edit({ attributes, setAttributes }) {
     animated,
   } = attributes;
 
-  const innerBlockTemplate = [
+  const TEMPLATE = [
     [
-      "rapid/styled-button",
+      "core/group",
       {
-        label: "Primary action",
-        variant: "primary",
+        layout: {
+          type: "flex",
+          orientation: "vertical",
+          justifyContent: "center",
+        },
       },
-    ],
-    [
-      "rapid/styled-button",
-      {
-        label: "Secondary action",
-        variant: "secondary",
-      },
+      [
+        [
+          "core/group",
+          {
+            style: { spacing: { blockGap: "0" } },
+            layout: {
+              type: "flex",
+              orientation: "vertical",
+              justifyContent: "center",
+            },
+          },
+          [
+            [
+              "core/paragraph",
+              { className: "eyebrow", placeholder: "Eyebrow text here…" },
+            ],
+            ["core/heading", { placeholder: "Add in a long title text here…" }],
+          ],
+        ],
+        ["core/paragraph", { align: "center", placeholder: "Lorem ipsum…" }],
+        [
+          "rapid/styled-buttons",
+          {},
+          [
+            ["rapid/styled-button", { label: "Primary button" }],
+            [
+              "rapid/styled-button",
+              { label: "Secondary button", variant: "secondary" },
+            ],
+          ],
+        ],
+      ],
     ],
   ];
 
   const blockProps = useBlockProps({
-    className: `${variant} text-align-${alignText}  ${align === "full" ? "full-width-" + fullWidthVariant : ""} ${variant === "split" ? "split-image-" + splitPosition : ""} ${variant === "split" ? "split-content-" + splitContentSize : ""}`,
+    className: `${variant} ${contentOverhang && "content-overhang"}  ${align === "full" ? "full-width-" + fullWidthVariant : ""} ${variant === "split" ? "split-image-" + splitPosition : ""} ${variant === "split" ? "split-content-" + splitContentSize : ""}`,
   });
 
   const onImageSelect = (media) => {
@@ -78,78 +103,6 @@ export default function Edit({ attributes, setAttributes }) {
   const imageVariant = variant === "background-image" || variant === "split";
 
   // #region Icons
-
-  const alignLeftIcon = (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="32"
-      height="32"
-      fill="#000000"
-      viewBox="0 0 256 256"
-    >
-      <path d="M32,64a8,8,0,0,1,8-8H216a8,8,0,0,1,0,16H40A8,8,0,0,1,32,64Zm8,48H168a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16Zm176,24H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Zm-48,40H40a8,8,0,0,0,0,16H168a8,8,0,0,0,0-16Z"></path>
-    </svg>
-  );
-
-  const alignLeftIconSolid = (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="32"
-      height="32"
-      fill="#000000"
-      viewBox="0 0 256 256"
-    >
-      <path d="M208,32H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM160,184H64a8,8,0,0,1,0-16h96a8,8,0,0,1,0,16Zm32-32H64a8,8,0,0,1,0-16H192a8,8,0,0,1,0,16ZM56,112a8,8,0,0,1,8-8h96a8,8,0,0,1,0,16H64A8,8,0,0,1,56,112ZM192,88H64a8,8,0,0,1,0-16H192a8,8,0,0,1,0,16Z"></path>
-    </svg>
-  );
-
-  const alignRightIcon = (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="32"
-      height="32"
-      fill="#000000"
-      viewBox="0 0 256 256"
-    >
-      <path d="M32,64a8,8,0,0,1,8-8H216a8,8,0,0,1,0,16H40A8,8,0,0,1,32,64ZM216,96H88a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Zm0,40H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Zm0,40H88a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z"></path>
-    </svg>
-  );
-
-  const alignRightIconSolid = (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="32"
-      height="32"
-      fill="#000000"
-      viewBox="0 0 256 256"
-    >
-      <path d="M208,32H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM192,184H96a8,8,0,0,1,0-16h96a8,8,0,0,1,0,16Zm0-32H64a8,8,0,0,1,0-16H192a8,8,0,0,1,0,16Zm0-32H96a8,8,0,0,1,0-16h96a8,8,0,0,1,0,16Zm0-32H64a8,8,0,0,1,0-16H192a8,8,0,0,1,0,16Z"></path>
-    </svg>
-  );
-
-  const alignCenterIcon = (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="32"
-      height="32"
-      fill="#000000"
-      viewBox="0 0 256 256"
-    >
-      <path d="M32,64a8,8,0,0,1,8-8H216a8,8,0,0,1,0,16H40A8,8,0,0,1,32,64ZM64,96a8,8,0,0,0,0,16H192a8,8,0,0,0,0-16Zm152,40H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Zm-24,40H64a8,8,0,0,0,0,16H192a8,8,0,0,0,0-16Z"></path>
-    </svg>
-  );
-
-  const alignCenterIconSolid = (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="32"
-      height="32"
-      fill="#000000"
-      viewBox="0 0 256 256"
-    >
-      <path d="M208,32H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM176,184H80a8,8,0,0,1,0-16h96a8,8,0,0,1,0,16Zm16-32H64a8,8,0,0,1,0-16H192a8,8,0,0,1,0,16ZM72,112a8,8,0,0,1,8-8h96a8,8,0,0,1,0,16H80A8,8,0,0,1,72,112ZM192,88H64a8,8,0,0,1,0-16H192a8,8,0,0,1,0,16Z"></path>
-    </svg>
-  );
 
   const variantSimple = (
     <svg
@@ -314,40 +267,6 @@ export default function Edit({ attributes, setAttributes }) {
             onToggle={() => {}}
           />
         </ToolbarGroup>
-        <ToolbarGroup>
-          <DropdownMenu
-            controls={[
-              {
-                icon: alignText === "left" ? alignLeftIconSolid : alignLeftIcon,
-                onClick: () => setAttributes({ alignText: "left" }),
-                title: "Align left",
-              },
-              {
-                icon:
-                  alignText === "center"
-                    ? alignCenterIconSolid
-                    : alignCenterIcon,
-                onClick: () => setAttributes({ alignText: "center" }),
-                title: "Align center",
-              },
-              {
-                icon:
-                  alignText === "right" ? alignRightIconSolid : alignRightIcon,
-                onClick: () => setAttributes({ alignText: "right" }),
-                title: "Align right",
-              },
-            ]}
-            icon={
-              alignText === "left"
-                ? alignLeftIcon
-                : alignText === "center"
-                  ? alignCenterIcon
-                  : alignRightIcon
-            }
-            label="Align text"
-            onToggle={() => {}}
-          />
-        </ToolbarGroup>
         {variant !== "split" && (
           <ToolbarGroup>
             <DropdownMenu
@@ -380,16 +299,26 @@ export default function Edit({ attributes, setAttributes }) {
           />
           <ToggleControl
             __nextHasNoMarginBottom
-            label="Display Eyebrow"
-            checked={displayEyebrow}
-            onChange={() => setAttributes({ displayEyebrow: !displayEyebrow })}
+            label="Overhang content"
+            checked={contentOverhang}
+            help="Enable to allow content to overflow the hero section, useful when including cards."
+            onChange={() =>
+              setAttributes({ contentOverhang: !contentOverhang })
+            }
           />
-          <ToggleControl
-            __nextHasNoMarginBottom
-            label="Display CTA Buttons"
-            checked={displayCTAs}
-            onChange={() => setAttributes({ displayCTAs: !displayCTAs })}
-          />
+          {contentOverhang && (
+            <RangeControl
+              __nextHasNoMarginBottom
+              __next40pxDefaultSize
+              help="Select the amount of overhang in pixels."
+              initialPosition={overhangAmount}
+              label="Overhang amount"
+              max={500}
+              min={0}
+              onChange={(value) => setAttributes({ overhangAmount: value })}
+            />
+          )}
+
           <TextControl
             __nextHasNoMarginBottom
             __next40pxDefaultSize
@@ -466,7 +395,15 @@ export default function Edit({ attributes, setAttributes }) {
           </PanelBody>
         )}
       </InspectorControls>
-      <div {...blockProps} style={{ height: height }}>
+      <div
+        {...blockProps}
+        style={{
+          height: height,
+          ...(contentOverhang && {
+            "--overhang-amount": `${overhangAmount}px`,
+          }),
+        }}
+      >
         {/* Image Content */}
         {imageVariant && (
           <div
@@ -503,43 +440,7 @@ export default function Edit({ attributes, setAttributes }) {
 
         {/* Text Content */}
         <div className={`hero-content theme-${theme}`}>
-          <div className="title-area">
-            {displayEyebrow && (
-              <RichText
-                tagName="p"
-                className="eyebrow"
-                value={eyebrowText}
-                onChange={(value) => setAttributes({ eyebrowText: value })}
-                placeholder={__("Eyebrow text here...", "rapid")}
-              />
-            )}
-
-            <RichText
-              tagName="h2"
-              className="hero-text"
-              value={heroText}
-              onChange={(value) => setAttributes({ heroText: value })}
-              placeholder={__("Hero text here...", "rapid")}
-            />
-          </div>
-
-          <RichText
-            tagName="p"
-            className="description"
-            value={descriptionText}
-            onChange={(value) => setAttributes({ descriptionText: value })}
-            placeholder={__("Hero description here...", "rapid")}
-          />
-
-          {displayCTAs && (
-            <span className="cta-buttons">
-              <InnerBlocks
-                allowedBlocks={["rapid/styled-button"]}
-                template={innerBlockTemplate}
-                templateLock={false}
-              />
-            </span>
-          )}
+          <InnerBlocks template={TEMPLATE} templateLock={false} />
         </div>
       </div>
     </>

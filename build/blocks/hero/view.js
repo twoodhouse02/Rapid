@@ -9389,7 +9389,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var motion__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! motion */ "./node_modules/motion/dist/es/framer-motion/dist/es/animation/utils/stagger.mjs");
 
 (0,motion__WEBPACK_IMPORTED_MODULE_0__.inView)(".animated", element => {
-  const children = element.querySelectorAll("div");
+  const children = Array.from(element.querySelector(".wp-block-group")?.children || []);
   (0,motion__WEBPACK_IMPORTED_MODULE_1__.animate)(children, {
     opacity: 1,
     y: [50, 0]
