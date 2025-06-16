@@ -116,12 +116,14 @@ export default function Edit({ attributes, setAttributes }) {
   const handleSetSimpleVariant = () => {
     setAttributes({ variant: "simple" });
     setAttributes({ fullWidthVariant: "simple" });
+    setAttributes({ contentOverhang: false });
   };
 
   const handleSetSplitVariant = () => {
     setAttributes({ variant: "split" });
     setAttributes({ theme: "light" });
     setAttributes({ fullWidthVariant: "simple" });
+    setAttributes({ contentOverhang: false });
   };
 
   const imageVariant = variant === "background-image" || variant === "split";
@@ -267,7 +269,9 @@ export default function Edit({ attributes, setAttributes }) {
                   variant === "background-image"
                     ? variantBackgroundImageSolid
                     : variantBackgroundImage,
-                onClick: () => setAttributes({ variant: "background-image" }),
+                onClick: () => {
+                  setAttributes({ variant: "background-image" });
+                },
                 title: "Background image",
               },
               {
@@ -321,28 +325,31 @@ export default function Edit({ attributes, setAttributes }) {
             checked={animated}
             onChange={() => setAttributes({ animated: !animated })}
           />
-          <ToggleControl
-            __nextHasNoMarginBottom
-            label="Overhang content"
-            checked={contentOverhang}
-            help="Enable to allow content to overflow the hero section, useful when including cards."
-            onChange={() =>
-              setAttributes({ contentOverhang: !contentOverhang })
-            }
-          />
-          {contentOverhang && (
-            <RangeControl
-              __nextHasNoMarginBottom
-              __next40pxDefaultSize
-              help="Select the amount of overhang in pixels."
-              initialPosition={overhangAmount}
-              label="Overhang amount"
-              max={500}
-              min={0}
-              onChange={(value) => setAttributes({ overhangAmount: value })}
-            />
+          {variant === "background-image" && (
+            <>
+              <ToggleControl
+                __nextHasNoMarginBottom
+                label="Overhang content"
+                checked={contentOverhang}
+                help="Enable to allow content to overflow the hero section, useful when including cards."
+                onChange={() =>
+                  setAttributes({ contentOverhang: !contentOverhang })
+                }
+              />
+              {contentOverhang && (
+                <RangeControl
+                  __nextHasNoMarginBottom
+                  __next40pxDefaultSize
+                  help="Select the amount of overhang in pixels."
+                  initialPosition={overhangAmount}
+                  label="Overhang amount"
+                  max={500}
+                  min={0}
+                  onChange={(value) => setAttributes({ overhangAmount: value })}
+                />
+              )}
+            </>
           )}
-
           <TextControl
             __nextHasNoMarginBottom
             __next40pxDefaultSize

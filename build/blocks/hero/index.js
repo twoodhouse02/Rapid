@@ -91,6 +91,9 @@ function Edit({
     setAttributes({
       fullWidthVariant: "simple"
     });
+    setAttributes({
+      contentOverhang: false
+    });
   };
   const handleSetSplitVariant = () => {
     setAttributes({
@@ -101,6 +104,9 @@ function Edit({
     });
     setAttributes({
       fullWidthVariant: "simple"
+    });
+    setAttributes({
+      contentOverhang: false
     });
   };
   const imageVariant = variant === "background-image" || variant === "split";
@@ -221,9 +227,11 @@ function Edit({
             title: "Simple"
           }, {
             icon: variant === "background-image" ? variantBackgroundImageSolid : variantBackgroundImage,
-            onClick: () => setAttributes({
-              variant: "background-image"
-            }),
+            onClick: () => {
+              setAttributes({
+                variant: "background-image"
+              });
+            },
             title: "Background image"
           }, {
             icon: variant === "split" ? variantSplitSolid : variantSplit,
@@ -273,25 +281,27 @@ function Edit({
           onChange: () => setAttributes({
             animated: !animated
           })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.ToggleControl, {
-          __nextHasNoMarginBottom: true,
-          label: "Overhang content",
-          checked: contentOverhang,
-          help: "Enable to allow content to overflow the hero section, useful when including cards.",
-          onChange: () => setAttributes({
-            contentOverhang: !contentOverhang
-          })
-        }), contentOverhang && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.RangeControl, {
-          __nextHasNoMarginBottom: true,
-          __next40pxDefaultSize: true,
-          help: "Select the amount of overhang in pixels.",
-          initialPosition: overhangAmount,
-          label: "Overhang amount",
-          max: 500,
-          min: 0,
-          onChange: value => setAttributes({
-            overhangAmount: value
-          })
+        }), variant === "background-image" && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.Fragment, {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.ToggleControl, {
+            __nextHasNoMarginBottom: true,
+            label: "Overhang content",
+            checked: contentOverhang,
+            help: "Enable to allow content to overflow the hero section, useful when including cards.",
+            onChange: () => setAttributes({
+              contentOverhang: !contentOverhang
+            })
+          }), contentOverhang && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.RangeControl, {
+            __nextHasNoMarginBottom: true,
+            __next40pxDefaultSize: true,
+            help: "Select the amount of overhang in pixels.",
+            initialPosition: overhangAmount,
+            label: "Overhang amount",
+            max: 500,
+            min: 0,
+            onChange: value => setAttributes({
+              overhangAmount: value
+            })
+          })]
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
           __nextHasNoMarginBottom: true,
           __next40pxDefaultSize: true,
