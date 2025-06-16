@@ -18,6 +18,7 @@ import {
   TextControl,
   RangeControl,
 } from "@wordpress/components";
+import { textColor } from "@wordpress/icons";
 
 export default function Edit({ attributes, setAttributes }) {
   const {
@@ -60,20 +61,43 @@ export default function Edit({ attributes, setAttributes }) {
           [
             [
               "core/paragraph",
-              { className: "eyebrow", placeholder: "Eyebrow text here…" },
+              {
+                className: "eyebrow",
+                placeholder: "Eyebrow text here…",
+                textColor: "brand_primary",
+              },
             ],
-            ["core/heading", { placeholder: "Add in a long title text here…" }],
+            [
+              "core/heading",
+              {
+                placeholder: "Add in a long title text here…",
+              },
+            ],
           ],
         ],
-        ["core/paragraph", { align: "center", placeholder: "Lorem ipsum…" }],
+        [
+          "core/paragraph",
+          {
+            align: "center",
+            placeholder: "Lorem ipsum…",
+          },
+        ],
         [
           "rapid/styled-buttons",
           {},
           [
-            ["rapid/styled-button", { label: "Primary button" }],
             [
               "rapid/styled-button",
-              { label: "Secondary button", variant: "secondary" },
+              {
+                label: "Primary button",
+              },
+            ],
+            [
+              "rapid/styled-button",
+              {
+                label: "Secondary button",
+                variant: "secondary",
+              },
             ],
           ],
         ],

@@ -24,6 +24,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 function Edit({
   attributes,
   setAttributes
@@ -62,7 +63,8 @@ function Edit({
     }
   }, [["core/paragraph", {
     className: "eyebrow",
-    placeholder: "Eyebrow text here…"
+    placeholder: "Eyebrow text here…",
+    textColor: "brand_primary"
   }], ["core/heading", {
     placeholder: "Add in a long title text here…"
   }]]], ["core/paragraph", {

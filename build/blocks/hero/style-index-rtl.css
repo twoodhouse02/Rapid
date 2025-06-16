@@ -84,9 +84,6 @@
   padding: var(--theme-spacing-xxl) 0;
   box-sizing: border-box;
 }
-.wp-block-rapid-hero .hero-content .eyebrow {
-  color: var(--theme-color-brand_primary);
-}
 .wp-block-rapid-hero .hero-content .title-area {
   display: flex;
   flex-direction: column;
