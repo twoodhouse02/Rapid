@@ -41,11 +41,6 @@
           "color": "var(--theme-background)"
         },
         {
-          "name": "Website background",
-          "slug": "background",
-          "color": "var(--theme-background)"
-        },
-        {
           "name": "Layer 1 (color against background)",
           "slug": "layer_1",
           "color": "var(--theme-color-layer_1)"
