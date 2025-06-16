@@ -1,0 +1,4 @@
+/* Addresses bug in Wordpress' theme where light/dark modes are being confused with their class implementation. Bug last seen on version 6.8.1 */
+.has-brand-primary-color {
+  color: var(--theme-color-brand_primary) !important;
+}
