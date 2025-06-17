@@ -33,4 +33,5 @@
 .wp-block-rapid-styled-buttons.full-width .block-editor-inner-blocks a,
 .wp-block-rapid-styled-buttons.full-width .block-editor-inner-blocks .block-editor-block-list__layout a {
   flex-grow: 1;
+  justify-content: center;
 }
