@@ -54,12 +54,33 @@
     "animated": {
       "type": "boolean",
       "default": true
+    },
+    "overlayColor": {
+      "type": "string"
+    },
+    "overlayOpacity": {
+      "type": "number",
+      "default": 0.5
+    },
+    "duotone": {
+      "type": "array"
     }
   },
   "example": {},
   "supports": {
     "html": false,
-    "align": ["wide", "full"]
+    "align": ["wide", "full"],
+    "color": {
+      "background": false,
+
+      "overlay": true
+    },
+    "filter": {
+      "duotone": true
+    }
+  },
+  "selectors": {
+    "filter": { "duotone": "> .hero-section > .hero-background" }
   },
   "textdomain": "list-card",
   "editorScript": "file:./index.js",

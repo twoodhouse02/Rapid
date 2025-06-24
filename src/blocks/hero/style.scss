@@ -17,6 +17,16 @@
     transform: translateY(50px);
   }
 
+  .overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    background-color: var(--overlay-color);
+    opacity: var(--overlay-opacity);
+  }
+
   .hero-background {
     position: absolute;
     top: 0;
@@ -38,7 +48,8 @@
   }
 
   &.full-width-faded-bottom {
-    .hero-background {
+    .hero-background,
+    .overlay {
       --mask: linear-gradient(
           to bottom,
           rgba(0, 0, 0, 1) 0,
@@ -59,7 +70,7 @@
       right: 0;
       bottom: -1px;
       height: 150px;
-      z-index: 1;
+      z-index: 3;
       background: var(--theme-color-background);
       clip-path: polygon(100% 100%, 0% 100%, 100% 40%);
     }
@@ -67,7 +78,7 @@
 
   .hero-content {
     position: relative;
-    z-index: 2; // Place above background
+    z-index: 5;
     gap: var(--theme-spacing-xl);
     display: flex;
     justify-content: center;

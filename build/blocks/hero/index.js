@@ -24,7 +24,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
 function Edit({
   attributes,
   setAttributes
@@ -41,9 +40,13 @@ function Edit({
     imagePosition,
     splitPosition,
     splitContentSize,
+    overlayColor,
+    overlayOpacity,
     imageScroll,
-    animated
+    animated,
+    duotone
   } = attributes;
+  console.log("overlayColor", overlayColor);
   const TEMPLATE = [["core/group", {
     layout: {
       type: "flex",
@@ -77,7 +80,12 @@ function Edit({
     variant: "secondary"
   }]]]]]];
   const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps)({
-    className: `${variant} ${contentOverhang && "content-overhang"}  ${align === "full" ? "full-width-" + fullWidthVariant : ""} ${variant === "split" ? "split-image-" + splitPosition : ""} ${variant === "split" ? "split-content-" + splitContentSize : ""}`
+    className: `${variant} ${contentOverhang && "content-overhang"}  ${align === "full" ? "full-width-" + fullWidthVariant : ""} ${variant === "split" ? "split-image-" + splitPosition : ""} ${variant === "split" ? "split-content-" + splitContentSize : ""}`,
+    style: {
+      color: {
+        duotone: duotone
+      }
+    }
   });
   const onImageSelect = media => {
     setAttributes({
@@ -398,33 +406,69 @@ function Edit({
           })
         })]
       })]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.InspectorControls, {
+      group: "styles",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.PanelColorSettings, {
+        title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)("Overlay", "rapid"),
+        colorSettings: [{
+          value: overlayColor,
+          onChange: value => setAttributes({
+            overlayColor: value
+          }),
+          label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)("Overlay color", "rapid")
+        }]
+      }), overlayColor && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelBody, {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.RangeControl, {
+          __nextHasNoMarginBottom: true,
+          __next40pxDefaultSize: true,
+          initialPosition: overlayOpacity,
+          label: "Overlay opacity",
+          max: 1,
+          min: 0,
+          step: 0.1,
+          onChange: value => setAttributes({
+            overlayOpacity: value
+          })
+        })
+      })]
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
       ...blockProps,
       style: {
         height: height,
+        "--overlay-color": overlayColor,
+        "--overlay-opacity": overlayOpacity,
         ...(contentOverhang && {
           "--overhang-amount": `${overhangAmount}px`
         })
       },
-      children: [imageVariant && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-        className: `hero-background theme-${theme} img-bg-position-${imagePosition}`,
-        style: {
-          backgroundImage: imageURL && variant === "background-image" ? `linear-gradient(90deg, var(--theme-color-overlays), var(--theme-color-overlays)), url(${imageURL})` : imageURL ? `url(${imageURL})` : "",
-          backgroundAttachment: imageScroll
-        },
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.MediaUpload, {
-          onSelect: onImageSelect,
-          allowedTypes: ["image"],
-          render: ({
-            open
-          }) => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Button, {
-            onClick: open,
-            variant: "secondary",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.MediaUpload, {
+        onSelect: onImageSelect,
+        allowedTypes: ["image"],
+        render: ({
+          open
+        }) => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Button, {
+          onClick: open,
+          variant: "secondary",
+          style: {
+            backgroundColor: theme === "dark" || variant === "split" ? "white" : "",
+            zIndex: 10,
+            position: "absolute",
+            left: "20px",
+            top: "20px"
+          },
+          children: imageURL ? "Change Image" : "Select Image"
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
+        className: "overlay"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+        className: `hero-section `,
+        children: imageVariant && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.Fragment, {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+            className: `hero-background theme-${theme}   wp-block-cover__image-background img-bg-position-${imagePosition}`,
             style: {
-              backgroundColor: theme === "dark" || variant === "split" ? "white" : "",
-              margin: "20px"
-            },
-            children: imageURL ? "Change Image" : "Select Image"
+              backgroundImage: imageURL && `url(${imageURL})`,
+              backgroundAttachment: imageScroll
+            }
           })
         })
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
@@ -566,7 +610,7 @@ module.exports = window["wp"]["i18n"];
   \************************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"rapid/hero","version":"0.1.0","title":"Hero","category":"rapid-theme","icon":"align-full-width","attributes":{"variant":{"type":"string","default":"simple"},"fullWidthVariant":{"type":"string","default":"simple"},"height":{"type":"string","default":"auto"},"contentOverhang":{"type":"boolean","default":false},"overhangAmount":{"type":"number","default":200},"theme":{"type":"string","default":"light"},"imageURL":{"type":"string","default":"https://images.pexels.com/photos/1366919/pexels-photo-1366919.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"},"imagePosition":{"type":"string","default":"center"},"splitPosition":{"type":"string","default":"left"},"splitContentSize":{"type":"string","default":"50"},"imageScroll":{"type":"string","default":"scroll"},"animated":{"type":"boolean","default":true}},"example":{},"supports":{"html":false,"align":["wide","full"]},"textdomain":"list-card","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","render":"file:./render.php","viewScript":"file:./view.js"}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"rapid/hero","version":"0.1.0","title":"Hero","category":"rapid-theme","icon":"align-full-width","attributes":{"variant":{"type":"string","default":"simple"},"fullWidthVariant":{"type":"string","default":"simple"},"height":{"type":"string","default":"auto"},"contentOverhang":{"type":"boolean","default":false},"overhangAmount":{"type":"number","default":200},"theme":{"type":"string","default":"light"},"imageURL":{"type":"string","default":"https://images.pexels.com/photos/1366919/pexels-photo-1366919.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"},"imagePosition":{"type":"string","default":"center"},"splitPosition":{"type":"string","default":"left"},"splitContentSize":{"type":"string","default":"50"},"imageScroll":{"type":"string","default":"scroll"},"animated":{"type":"boolean","default":true},"overlayColor":{"type":"string"},"overlayOpacity":{"type":"number","default":0.5},"duotone":{"type":"array"}},"example":{},"supports":{"html":false,"align":["wide","full"],"color":{"background":false,"overlay":true},"filter":{"duotone":true}},"selectors":{"filter":{"duotone":"> .hero-section > .hero-background"}},"textdomain":"list-card","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","render":"file:./render.php","viewScript":"file:./view.js"}');
 
 /***/ })
 

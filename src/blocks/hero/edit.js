@@ -2,11 +2,12 @@ import { __ } from "@wordpress/i18n";
 
 import {
   useBlockProps,
-  RichText,
   BlockControls,
   InspectorControls,
   MediaUpload,
   InnerBlocks,
+  PanelColorSettings,
+  useSetting,
 } from "@wordpress/block-editor";
 import {
   ToolbarGroup,
@@ -18,7 +19,6 @@ import {
   TextControl,
   RangeControl,
 } from "@wordpress/components";
-import { textColor } from "@wordpress/icons";
 
 export default function Edit({ attributes, setAttributes }) {
   const {
@@ -33,9 +33,14 @@ export default function Edit({ attributes, setAttributes }) {
     imagePosition,
     splitPosition,
     splitContentSize,
+    overlayColor,
+    overlayOpacity,
     imageScroll,
     animated,
+    duotone,
   } = attributes;
+
+  console.log("overlayColor", overlayColor);
 
   const TEMPLATE = [
     [
@@ -107,6 +112,9 @@ export default function Edit({ attributes, setAttributes }) {
 
   const blockProps = useBlockProps({
     className: `${variant} ${contentOverhang && "content-overhang"}  ${align === "full" ? "full-width-" + fullWidthVariant : ""} ${variant === "split" ? "split-image-" + splitPosition : ""} ${variant === "split" ? "split-content-" + splitContentSize : ""}`,
+    style: {
+      color: { duotone: duotone },
+    },
   });
 
   const onImageSelect = (media) => {
@@ -426,50 +434,79 @@ export default function Edit({ attributes, setAttributes }) {
           </PanelBody>
         )}
       </InspectorControls>
+
+      <InspectorControls group="styles">
+        <PanelColorSettings
+          title={__("Overlay", "rapid")}
+          colorSettings={[
+            {
+              value: overlayColor,
+              onChange: (value) => setAttributes({ overlayColor: value }),
+              label: __("Overlay color", "rapid"),
+            },
+          ]}
+        />
+        {overlayColor && (
+          <PanelBody>
+            <RangeControl
+              __nextHasNoMarginBottom
+              __next40pxDefaultSize
+              initialPosition={overlayOpacity}
+              label="Overlay opacity"
+              max={1}
+              min={0}
+              step={0.1}
+              onChange={(value) => setAttributes({ overlayOpacity: value })}
+            />
+          </PanelBody>
+        )}
+      </InspectorControls>
+
       <div
         {...blockProps}
         style={{
           height: height,
+          "--overlay-color": overlayColor,
+          "--overlay-opacity": overlayOpacity,
           ...(contentOverhang && {
             "--overhang-amount": `${overhangAmount}px`,
           }),
         }}
       >
-        {/* Image Content */}
-        {imageVariant && (
-          <div
-            className={`hero-background theme-${theme} img-bg-position-${imagePosition}`}
-            style={{
-              backgroundImage:
-                imageURL && variant === "background-image"
-                  ? `linear-gradient(90deg, var(--theme-color-overlays), var(--theme-color-overlays)), url(${imageURL})`
-                  : imageURL
-                    ? `url(${imageURL})`
-                    : "",
-              backgroundAttachment: imageScroll,
-            }}
-          >
-            <MediaUpload
-              onSelect={onImageSelect}
-              allowedTypes={["image"]}
-              render={({ open }) => (
-                <Button
-                  onClick={open}
-                  variant="secondary"
-                  style={{
-                    backgroundColor:
-                      theme === "dark" || variant === "split" ? "white" : "",
-                    margin: "20px",
-                  }}
-                >
-                  {imageURL ? "Change Image" : "Select Image"}
-                </Button>
-              )}
-            />
-          </div>
-        )}
-
-        {/* Text Content */}
+        <MediaUpload
+          onSelect={onImageSelect}
+          allowedTypes={["image"]}
+          render={({ open }) => (
+            <Button
+              onClick={open}
+              variant="secondary"
+              style={{
+                backgroundColor:
+                  theme === "dark" || variant === "split" ? "white" : "",
+                zIndex: 10,
+                position: "absolute",
+                left: "20px",
+                top: "20px",
+              }}
+            >
+              {imageURL ? "Change Image" : "Select Image"}
+            </Button>
+          )}
+        />
+        <span className="overlay"></span>
+        <div className={`hero-section `}>
+          {imageVariant && (
+            <>
+              <div
+                className={`hero-background theme-${theme}   wp-block-cover__image-background img-bg-position-${imagePosition}`}
+                style={{
+                  backgroundImage: imageURL && `url(${imageURL})`,
+                  backgroundAttachment: imageScroll,
+                }}
+              ></div>
+            </>
+          )}
+        </div>
         <div className={`hero-content theme-${theme}`}>
           <InnerBlocks template={TEMPLATE} templateLock={false} />
         </div>
