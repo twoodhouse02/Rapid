@@ -12,7 +12,7 @@ $variant = $attributes["variant"];
 $fullWidthVariant = $attributes["fullWidthVariant"];
 $height = $attributes["height"];
 $theme = $attributes["theme"];
-$imageURL = $attributes["imageURL"];
+$mediaURL = $attributes["mediaURL"];
 $imageScroll = $attributes["imageScroll"];
 $imagePosition = $attributes["imagePosition"];
 $splitPosition = $attributes["splitPosition"];
@@ -75,7 +75,7 @@ $style_string = !empty($inline_styles) ? implode(";", $inline_styles) : "";
             $theme .
             " img-bg-position-" .
             $imagePosition; ?>" style="background-image: url(<?php echo esc_html(
-    $imageURL
+    $mediaURL
 ); ?>); background-attachment: <?php echo esc_html($imageScroll); ?>;">
         </div>
     </div>

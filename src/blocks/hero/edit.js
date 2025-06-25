@@ -7,6 +7,7 @@ import {
   MediaUpload,
   InnerBlocks,
   PanelColorSettings,
+  MediaReplaceFlow,
 } from "@wordpress/block-editor";
 import {
   ToolbarGroup,
@@ -18,8 +19,15 @@ import {
   TextControl,
   RangeControl,
 } from "@wordpress/components";
+import { useSelect } from "@wordpress/data";
 
-export default function Edit({ attributes, setAttributes }) {
+export default function Edit({
+  attributes,
+  setAttributes,
+  toggleUseFeaturedImage,
+  onClearMedia,
+  currentSettings,
+}) {
   const {
     variant,
     fullWidthVariant,
@@ -28,7 +36,8 @@ export default function Edit({ attributes, setAttributes }) {
     height,
     align,
     theme,
-    imageURL,
+    mediaURL,
+    useFeaturedImage,
     imagePosition,
     splitPosition,
     splitContentSize,
@@ -38,6 +47,32 @@ export default function Edit({ attributes, setAttributes }) {
     animated,
     duotone,
   } = attributes;
+
+  const featuredImageID = useSelect(
+    (select) => select("core/editor").getEditedPostAttribute("featured_media"),
+    [],
+  );
+
+  const featuredImageURL = useSelect((select) => {
+    const id = select("core/editor").getEditedPostAttribute("featured_media");
+    return id ? select("core").getMedia(id)?.source_url : null;
+  }, []);
+
+  const onToggleFeaturedImage = () => {
+    if (!attributes.useFeaturedImage) {
+      setAttributes({
+        useFeaturedImage: true,
+        mediaId: featuredImageID,
+        mediaURL: featuredImageURL,
+      });
+    } else {
+      setAttributes({
+        useFeaturedImage: false,
+        mediaId: undefined,
+        mediaURL: undefined,
+      });
+    }
+  };
 
   const TEMPLATE = [
     [
@@ -115,7 +150,7 @@ export default function Edit({ attributes, setAttributes }) {
   });
 
   const onImageSelect = (media) => {
-    setAttributes({ imageURL: media.url });
+    setAttributes({ mediaURL: media.url });
   };
 
   const handleSetSimpleVariant = () => {
@@ -321,6 +356,20 @@ export default function Edit({ attributes, setAttributes }) {
             />
           </ToolbarGroup>
         )}
+        {imageVariant && (
+          <ToolbarGroup>
+            <MediaReplaceFlow
+              mediaId={attributes.mediaId}
+              mediaURL={attributes.mediaURL}
+              onSelect={onImageSelect}
+              allowedTypes={["image"]}
+              name={attributes.mediaURL ? "Change Image" : "Select Image"}
+              useFeaturedImage={attributes.useFeaturedImage}
+              onToggleFeaturedImage={onToggleFeaturedImage}
+              onReset={onClearMedia}
+            />
+          </ToolbarGroup>
+        )}
       </BlockControls>
       <InspectorControls>
         <PanelBody title="Advanced Display Settings">
@@ -470,26 +519,6 @@ export default function Edit({ attributes, setAttributes }) {
           }),
         }}
       >
-        <MediaUpload
-          onSelect={onImageSelect}
-          allowedTypes={["image"]}
-          render={({ open }) => (
-            <Button
-              onClick={open}
-              variant="secondary"
-              style={{
-                backgroundColor:
-                  theme === "dark" || variant === "split" ? "white" : "",
-                zIndex: 10,
-                position: "absolute",
-                left: "20px",
-                top: "20px",
-              }}
-            >
-              {imageURL ? "Change Image" : "Select Image"}
-            </Button>
-          )}
-        />
         <span className="overlay"></span>
         <div className={`hero-section `}>
           {imageVariant && (
@@ -497,7 +526,7 @@ export default function Edit({ attributes, setAttributes }) {
               <div
                 className={`hero-background theme-${theme}   wp-block-cover__image-background img-bg-position-${imagePosition}`}
                 style={{
-                  backgroundImage: imageURL && `url(${imageURL})`,
+                  backgroundImage: mediaURL && `url(${mediaURL})`,
                   backgroundAttachment: imageScroll,
                 }}
               ></div>
