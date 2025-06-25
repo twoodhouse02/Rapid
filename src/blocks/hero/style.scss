@@ -25,6 +25,7 @@
     top: 0;
     background-color: var(--overlay-color);
     opacity: var(--overlay-opacity);
+    border-radius: var(--theme-corner_radius_xlarge);
   }
 
   .hero-background {
@@ -39,7 +40,8 @@
     z-index: 0;
   }
 
-  &.alignfull .hero-background {
+  &.alignfull .hero-background,
+  &.alignfull .overlay {
     border-radius: 0;
   }
 

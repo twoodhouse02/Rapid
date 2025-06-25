@@ -46,7 +46,6 @@ function Edit({
     animated,
     duotone
   } = attributes;
-  console.log("overlayColor", overlayColor);
   const TEMPLATE = [["core/group", {
     layout: {
       type: "flex",

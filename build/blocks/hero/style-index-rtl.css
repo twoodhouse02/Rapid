@@ -26,6 +26,7 @@
   top: 0;
   background-color: var(--overlay-color);
   opacity: var(--overlay-opacity);
+  border-radius: var(--theme-corner_radius_xlarge);
 }
 .wp-block-rapid-hero .hero-background {
   position: absolute;
@@ -38,7 +39,7 @@
   border-radius: var(--theme-corner_radius_xlarge);
   z-index: 0;
 }
-.wp-block-rapid-hero.alignfull .hero-background {
+.wp-block-rapid-hero.alignfull .hero-background, .wp-block-rapid-hero.alignfull .overlay {
   border-radius: 0;
 }
 .wp-block-rapid-hero.background-image {

@@ -7,7 +7,6 @@ import {
   MediaUpload,
   InnerBlocks,
   PanelColorSettings,
-  useSetting,
 } from "@wordpress/block-editor";
 import {
   ToolbarGroup,
@@ -39,8 +38,6 @@ export default function Edit({ attributes, setAttributes }) {
     animated,
     duotone,
   } = attributes;
-
-  console.log("overlayColor", overlayColor);
 
   const TEMPLATE = [
     [
