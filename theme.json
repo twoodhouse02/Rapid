@@ -352,5 +352,12 @@
       "area": "footer",
       "name": "footer"
     }
+  ],
+  "customTemplates": [
+    {
+      "name": "single-contained-header",
+      "title": "Contained Header",
+      "postTypes": ["page", "post"]
+    }
   ]
 }
