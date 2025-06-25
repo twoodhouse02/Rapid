@@ -5,8 +5,32 @@
 
 <!-- wp:group {"layout":{"inherit":true,"type":"constrained"}} -->
 <div class="wp-block-group">
-  <!-- wp:rapid/hero {"heroText":"Page not found","descriptionText":"Try searching again or return home","eyebrowText":"Oops, this page is empty"} -->
-  <!-- wp:rapid/styled-button {"url":"/","label":"Bring me back home"} /-->
+  <!-- wp:rapid/hero -->
+  <!-- wp:group {"layout":{"type":"flex","orientation":"vertical","justifyContent":"center"}} -->
+  <div class="wp-block-group">
+    <!-- wp:group {"style":{"spacing":{"blockGap":"0"}},"layout":{"type":"flex","orientation":"vertical","justifyContent":"center"}} -->
+    <div class="wp-block-group">
+      <!-- wp:paragraph {"placeholder":"Eyebrow text here…","className":"eyebrow","textColor":"brand_primary"} -->
+      <p class="eyebrow has-brand-primary-color has-text-color">
+        Oops! this page is empty
+      </p>
+      <!-- /wp:paragraph -->
+
+      <!-- wp:heading {"level":3,"placeholder":"Add in a long title text here…"} -->
+      <h3 class="wp-block-heading">Page not found</h3>
+      <!-- /wp:heading -->
+    </div>
+    <!-- /wp:group -->
+
+    <!-- wp:paragraph {"align":"center","placeholder":"Lorem ipsum…"} -->
+    <p class="has-text-align-center">Try searching again or return home</p>
+    <!-- /wp:paragraph -->
+
+    <!-- wp:rapid/styled-buttons -->
+    <!-- wp:rapid/styled-button {"label":"Bring me back home","displayIconRight":true,"iconRightName":"arrow-forward"} /-->
+    <!-- /wp:rapid/styled-buttons -->
+  </div>
+  <!-- /wp:group -->
   <!-- /wp:rapid/hero -->
 </div>
 <!-- /wp:group -->
