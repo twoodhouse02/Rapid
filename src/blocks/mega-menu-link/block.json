@@ -6,6 +6,7 @@
   "title": "Mega Menu Link",
   "category": "rapid-theme",
   "icon": "smiley",
+  "parent": ["rapid/mega-menu"],
   "description": "A detailed link block for the mega menu.",
   "attributes": {
     "label": {
