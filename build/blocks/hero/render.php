@@ -12,11 +12,19 @@ $variant = $attributes["variant"];
 $fullWidthVariant = $attributes["fullWidthVariant"];
 $height = $attributes["height"];
 $theme = $attributes["theme"];
-$mediaURL = $attributes["mediaURL"];
+$mediaURL = "";
 $imageScroll = $attributes["imageScroll"];
 $imagePosition = $attributes["imagePosition"];
 $splitPosition = $attributes["splitPosition"];
 $splitContentSize = $attributes["splitContentSize"];
+
+if (!empty($attributes["useFeaturedImage"])) {
+    // Always fetch the current post's featured image dynamically
+    $mediaURL = get_the_post_thumbnail_url(get_the_ID(), "full");
+} elseif (!empty($attributes["mediaURL"])) {
+    // Fallback to the custom image if set
+    $mediaURL = esc_url($attributes["mediaURL"]);
+}
 
 // Build custom class names
 $custom_classes = implode(" ", [$variant]);
