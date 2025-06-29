@@ -1,12 +1,50 @@
 <!-- wp:template-part {"slug":"header","theme":"Rapid","tagName":"header"} /-->
 
-<!-- wp:group {"style":{"spacing":{"margin":{"top":"0","bottom":"0"}}},"layout":{"inherit":true,"type":"constrained"}} -->
-<div class="wp-block-group" style="margin-top: 0; margin-bottom: 0">
-  <!-- wp:rapid/hero {"variant":"background-image","theme":"dark","useFeaturedImage":true,"mediaURL":null,"imageScroll":"fixed","overlayColor":"#000000","overlayOpacity":0.7,"align":"full","style":{"color":[]}} -->
-  <!-- wp:group {"layout":{"type":"flex","orientation":"vertical","justifyContent":"left"}} -->
-  <div class="wp-block-group"><!-- wp:post-title {"level":1} /--></div>
+<!-- wp:group {"style":{"spacing":{"padding":{"right":"0","left":"0","top":"0","bottom":"0"},"margin":{"top":"0","bottom":"0"},"blockGap":"0"}},"layout":{"type":"constrained","contentSize":"100%"}} -->
+<div
+  class="wp-block-group"
+  style="
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+  "
+>
+  <!-- wp:group {"style":{"spacing":{"margin":{"top":"0","bottom":"0"}}},"layout":{"inherit":true,"type":"constrained"}} -->
+  <div class="wp-block-group" style="margin-top: 0; margin-bottom: 0">
+    <!-- wp:rapid/hero {"variant":"background-image","theme":"dark","useFeaturedImage":true,"imageScroll":"fixed","overlayColor":"#000000","overlayOpacity":0.7,"align":"full","style":{"color":[]}} -->
+    <!-- wp:group {"style":{"spacing":{"blockGap":"0"}},"layout":{"type":"flex","orientation":"vertical"}} -->
+    <div class="wp-block-group">
+      <!-- wp:post-terms {"term":"category","className":"eyebrow theme-dark","style":{"elements":{"link":{"color":{"text":"var:preset|color|brand_primary"}}}},"textColor":"brand_primary"} /-->
+
+      <!-- wp:group {"layout":{"type":"flex","orientation":"vertical","justifyContent":"left"}} -->
+      <div class="wp-block-group"><!-- wp:post-title {"level":1} /--></div>
+      <!-- /wp:group -->
+    </div>
+    <!-- /wp:group -->
+    <!-- /wp:rapid/hero -->
+  </div>
   <!-- /wp:group -->
-  <!-- /wp:rapid/hero -->
+
+  <!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40"}}},"backgroundColor":"layer_1","layout":{"type":"constrained"}} -->
+  <div
+    class="wp-block-group has-layer-1-background-color has-background"
+    style="
+      padding-top: var(--wp--preset--spacing--40);
+      padding-bottom: var(--wp--preset--spacing--40);
+    "
+  >
+    <!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between"}} -->
+    <div class="wp-block-group">
+      <!-- wp:post-author-name {"isLink":true,"style":{"elements":{"link":{"color":{"text":"var:preset|color|brand_interactive"}}}}} /-->
+
+      <!-- wp:post-date {"style":{"elements":{"link":{"color":{"text":"var:preset|color|text_secondary"}}}},"textColor":"text_secondary"} /-->
+    </div>
+    <!-- /wp:group -->
+  </div>
+  <!-- /wp:group -->
 </div>
 <!-- /wp:group -->
 
@@ -14,4 +52,26 @@
 <div class="wp-block-group"><!-- wp:post-content /--></div>
 <!-- /wp:group -->
 
-<!-- wp:template-part {"slug":"footer","theme":"Rapid","tagName":"footer"} /-->
+<!-- wp:group {"style":{"spacing":{"blockGap":"0"}},"layout":{"type":"default"}} -->
+<div class="wp-block-group">
+  <!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40"}}},"backgroundColor":"layer_2","layout":{"type":"constrained","contentSize":""}} -->
+  <div
+    class="wp-block-group has-layer-2-background-color has-background"
+    style="
+      padding-top: var(--wp--preset--spacing--40);
+      padding-bottom: var(--wp--preset--spacing--40);
+    "
+  >
+    <!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between"}} -->
+    <div class="wp-block-group">
+      <!-- wp:post-navigation-link {"type":"previous","label":"Previous post: ","showTitle":true,"linkLabel":true,"arrow":"arrow","style":{"elements":{"link":{"color":{"text":"var:preset|color|brand_interactive"}}}},"textColor":"brand_interactive"} /-->
+
+      <!-- wp:post-navigation-link {"label":"Next post: ","showTitle":true,"linkLabel":true,"arrow":"arrow","style":{"elements":{"link":{"color":{"text":"var:preset|color|brand_interactive"}}}},"textColor":"brand_interactive"} /-->
+    </div>
+    <!-- /wp:group -->
+  </div>
+  <!-- /wp:group -->
+
+  <!-- wp:template-part {"slug":"footer","theme":"Rapid","tagName":"footer"} /-->
+</div>
+<!-- /wp:group -->
