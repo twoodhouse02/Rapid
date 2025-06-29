@@ -7,7 +7,7 @@
 h1 {
   font-size: var(--theme-font-size-h1);
   font-weight: 700;
-  letter-spacing: -2.28px;
+  letter-spacing: calc(-0.047 * 1em);
 }
 
 h2 {
