@@ -26,6 +26,11 @@
           "color": "var(--theme-color-brand_tertiary)"
         },
         {
+          "name": "Interactive",
+          "slug": "brand_interactive",
+          "color": "var(--theme-color-interactive)"
+        },
+        {
           "name": "Text, primary",
           "slug": "text_primary",
           "color": "var(--theme-color-text_primary)"
