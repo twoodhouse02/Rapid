@@ -1,4 +1,21 @@
 /* Addresses bug in Wordpress' theme where light/dark modes are being confused with their class implementation. Bug last seen on version 6.8.1 */
-.has-brand-primary-color {
+.has-brand-primary-color,
+.theme-dark.has-brand-primary-color,
+.theme-dark.has-brand-primary-color > a,
+.has-brand-primary-color.has-text-color {
   color: var(--theme-color-brand_primary) !important;
+}
+
+.has-text-primary-color time {
+  color: var(--theme-color-text_primary) !important;
+}
+
+.has-text-secondary-color time {
+  color: var(--theme-color-text_secondary) !important;
+}
+
+/* Addresses bug where dropdown menu is hidden behind Hero block */
+
+.wp-block-navigation .has-child .wp-block-navigation__submenu-container {
+  z-index: 5;
 }
