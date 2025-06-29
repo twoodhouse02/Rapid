@@ -33,7 +33,7 @@
   color: var(--theme-color-brand_primary);
 }
 .wp-block-rapid-card .body {
-  padding: var(--theme-spacing-xl);
+  padding: var(--theme-spacing-m);
 }
 .wp-block-rapid-card h1,
 .wp-block-rapid-card h2,
