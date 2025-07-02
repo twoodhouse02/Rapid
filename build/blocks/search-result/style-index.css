@@ -28,6 +28,8 @@
   flex-direction: column;
   padding: var(--theme-spacing-s);
   gap: var(--theme-spacing-xxxs);
+  padding-right: 30px;
+  transition: 0.2s ease all;
 }
 .wp-block-rapid-search-result .post-meta p,
 .wp-block-rapid-search-result .post-meta h5 {
@@ -56,6 +58,9 @@
 .wp-block-rapid-search-result:hover .featured-img {
   width: 175px;
   min-width: 175px;
+}
+.wp-block-rapid-search-result:hover .post-meta {
+  padding-right: 10px;
 }
 .wp-block-rapid-search-result:hover .read-more {
   opacity: 1;

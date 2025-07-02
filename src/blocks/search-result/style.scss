@@ -27,6 +27,8 @@
     flex-direction: column;
     padding: var(--theme-spacing-s);
     gap: var(--theme-spacing-xxxs);
+    padding-right: 30px;
+    transition: 0.2s ease all;
 
     p,
     h5 {
@@ -60,6 +62,10 @@
     .featured-img {
       width: 175px;
       min-width: 175px;
+    }
+
+    .post-meta {
+      padding-right: 10px;
     }
 
     .read-more {
