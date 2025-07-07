@@ -361,7 +361,7 @@
   "customTemplates": [
     {
       "name": "single-contained-header",
-      "title": "Contained Header",
+      "title": "Contained Style Header",
       "postTypes": ["page", "post"]
     },
     {
