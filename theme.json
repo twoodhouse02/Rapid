@@ -363,6 +363,11 @@
       "name": "single-contained-header",
       "title": "Contained Header",
       "postTypes": ["page", "post"]
+    },
+    {
+      "name": "page-no-top-margin",
+      "title": "No Top Margin",
+      "postTypes": ["page"]
     }
   ]
 }
