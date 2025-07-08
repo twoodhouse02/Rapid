@@ -1,4 +1,7 @@
-import { animate, inView, stagger } from "motion";
+import { animate, inView } from "motion";
+import { animationConfig } from "../../../assets/js/animation-utils";
+
+console.log("animationConfig", animationConfig);
 
 inView(
   ".animated",
@@ -6,16 +9,7 @@ inView(
     const children = Array.from(
       element.querySelector(".wp-block-group")?.children || [],
     );
-    animate(
-      children,
-      { opacity: 1, y: [50, 0] },
-      {
-        duration: 0.25,
-        delay: stagger(0.1),
-        type: "spring",
-        stiffness: 100,
-      },
-    );
+    animate(children, animationConfig.keyframes, animationConfig.options);
   },
   { margin: "-300px 0px -200px 0px" },
 );

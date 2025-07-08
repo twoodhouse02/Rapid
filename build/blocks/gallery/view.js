@@ -1,6 +1,86 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./assets/js/animation-utils.js":
+/*!**************************************!*\
+  !*** ./assets/js/animation-utils.js ***!
+  \**************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   animationConfig: () => (/* binding */ animationConfig),
+/* harmony export */   animationType: () => (/* binding */ animationType)
+/* harmony export */ });
+/* harmony import */ var motion__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! motion */ "./node_modules/motion/dist/es/framer-motion/dist/es/animation/utils/stagger.mjs");
+// animation-utils.js - Shared animation utilities
+
+
+/**
+ * Get global animation type from WordPress localized data
+ * @returns {string} Animation type
+ */
+function getGlobalAnimationType() {
+  // Check for WordPress localized data
+
+  if (typeof window !== "undefined" && window.ThemeAnimationConfig) {
+    console.log("Using global animation type:", window.ThemeAnimationConfig.animation_type);
+    return window.ThemeAnimationConfig.animation_type || "fade-up";
+  }
+
+  // Fallback to default
+  return "fade-up";
+}
+const animationType = getGlobalAnimationType();
+
+/**
+ * Animation configuration generator
+ * @returns {object} Animation configuration object
+ */
+function getAnimationConfig(animationType) {
+  const baseConfig = {
+    duration: 0.25,
+    delay: (0,motion__WEBPACK_IMPORTED_MODULE_0__.stagger)(0.1),
+    type: "tween",
+    stiffness: 100
+  };
+  const animations = {
+    "fade-only": {
+      keyframes: {
+        opacity: [0, 1],
+        y: [0, 0]
+      },
+      options: {
+        ...baseConfig,
+        duration: 0.5
+      }
+    },
+    "move-in": {
+      keyframes: {
+        opacity: [0, 1],
+        y: [50, 0]
+      },
+      options: baseConfig
+    },
+    bounce: {
+      keyframes: {
+        opacity: [0, 1],
+        y: [50, 0]
+      },
+      options: {
+        ...baseConfig,
+        type: "spring",
+        stiffness: 100
+      }
+    }
+  };
+  return animations[animationType] || animations["fade-up"];
+}
+const animationConfig = getAnimationConfig(animationType);
+
+/***/ }),
+
 /***/ "./node_modules/desandro-matches-selector/matches-selector.js":
 /*!********************************************************************!*\
   !*** ./node_modules/desandro-matches-selector/matches-selector.js ***!
@@ -14541,13 +14621,14 @@ var __webpack_exports__ = {};
   !*** ./src/blocks/gallery/view.js ***!
   \************************************/
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var motion__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! motion */ "./node_modules/motion/dist/es/framer-motion/dist/es/render/dom/viewport/index.mjs");
-/* harmony import */ var motion__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! motion */ "./node_modules/motion/dist/es/framer-motion/dist/es/animation/animate/index.mjs");
-/* harmony import */ var motion__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! motion */ "./node_modules/motion/dist/es/framer-motion/dist/es/animation/utils/stagger.mjs");
+/* harmony import */ var motion__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! motion */ "./node_modules/motion/dist/es/framer-motion/dist/es/render/dom/viewport/index.mjs");
+/* harmony import */ var motion__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! motion */ "./node_modules/motion/dist/es/framer-motion/dist/es/animation/animate/index.mjs");
 /* harmony import */ var masonry_layout__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! masonry-layout */ "./node_modules/masonry-layout/masonry.js");
 /* harmony import */ var masonry_layout__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(masonry_layout__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var photoswipe_lightbox__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! photoswipe/lightbox */ "./node_modules/photoswipe/dist/photoswipe-lightbox.esm.js");
 /* harmony import */ var photoswipe_dynamic_caption_plugin__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! photoswipe-dynamic-caption-plugin */ "./node_modules/photoswipe-dynamic-caption-plugin/photoswipe-dynamic-caption-plugin.esm.js");
+/* harmony import */ var _assets_js_animation_utils__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../assets/js/animation-utils */ "./assets/js/animation-utils.js");
+
 
 
 
@@ -14575,17 +14656,9 @@ document.querySelectorAll(".gallery-preview").forEach(gallery => {
   }
   lightbox.init();
 });
-(0,motion__WEBPACK_IMPORTED_MODULE_3__.inView)(".animated-gallery-images", element => {
+(0,motion__WEBPACK_IMPORTED_MODULE_4__.inView)(".animated-gallery-images", element => {
   const children = element.querySelectorAll(".gallery-image");
-  (0,motion__WEBPACK_IMPORTED_MODULE_4__.animate)(children, {
-    opacity: 1,
-    y: [50, 0]
-  }, {
-    duration: 0.5,
-    delay: (0,motion__WEBPACK_IMPORTED_MODULE_5__.stagger)(0.1),
-    type: "spring",
-    stiffness: 100
-  });
+  (0,motion__WEBPACK_IMPORTED_MODULE_5__.animate)(children, _assets_js_animation_utils__WEBPACK_IMPORTED_MODULE_3__.animationConfig.keyframes, _assets_js_animation_utils__WEBPACK_IMPORTED_MODULE_3__.animationConfig.options);
 }, {
   margin: "-300px 0px -200px 0px"
 });

@@ -2,6 +2,85 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./assets/js/animation-utils.js":
+/*!**************************************!*\
+  !*** ./assets/js/animation-utils.js ***!
+  \**************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   animationConfig: () => (/* binding */ animationConfig),
+/* harmony export */   animationType: () => (/* binding */ animationType)
+/* harmony export */ });
+/* harmony import */ var motion__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! motion */ "./node_modules/motion/dist/es/framer-motion/dist/es/animation/utils/stagger.mjs");
+// animation-utils.js - Shared animation utilities
+
+
+/**
+ * Get global animation type from WordPress localized data
+ * @returns {string} Animation type
+ */
+function getGlobalAnimationType() {
+  // Check for WordPress localized data
+
+  if (typeof window !== "undefined" && window.ThemeAnimationConfig) {
+    console.log("Using global animation type:", window.ThemeAnimationConfig.animation_type);
+    return window.ThemeAnimationConfig.animation_type || "fade-up";
+  }
+
+  // Fallback to default
+  return "fade-up";
+}
+const animationType = getGlobalAnimationType();
+
+/**
+ * Animation configuration generator
+ * @returns {object} Animation configuration object
+ */
+function getAnimationConfig(animationType) {
+  const baseConfig = {
+    duration: 0.25,
+    delay: (0,motion__WEBPACK_IMPORTED_MODULE_0__.stagger)(0.1),
+    type: "tween",
+    stiffness: 100
+  };
+  const animations = {
+    "fade-only": {
+      keyframes: {
+        opacity: [0, 1],
+        y: [0, 0]
+      },
+      options: {
+        ...baseConfig,
+        duration: 0.5
+      }
+    },
+    "move-in": {
+      keyframes: {
+        opacity: [0, 1],
+        y: [50, 0]
+      },
+      options: baseConfig
+    },
+    bounce: {
+      keyframes: {
+        opacity: [0, 1],
+        y: [50, 0]
+      },
+      options: {
+        ...baseConfig,
+        type: "spring",
+        stiffness: 100
+      }
+    }
+  };
+  return animations[animationType] || animations["fade-up"];
+}
+const animationConfig = getAnimationConfig(animationType);
+
+/***/ }),
+
 /***/ "./node_modules/motion/dist/es/framer-motion/dist/es/animation/animate/index.mjs":
 /*!***************************************************************************************!*\
   !*** ./node_modules/motion/dist/es/framer-motion/dist/es/animation/animate/index.mjs ***!
@@ -9384,21 +9463,15 @@ var __webpack_exports__ = {};
   !*** ./src/blocks/hero/view.js ***!
   \*********************************/
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var motion__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! motion */ "./node_modules/motion/dist/es/framer-motion/dist/es/render/dom/viewport/index.mjs");
-/* harmony import */ var motion__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! motion */ "./node_modules/motion/dist/es/framer-motion/dist/es/animation/animate/index.mjs");
-/* harmony import */ var motion__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! motion */ "./node_modules/motion/dist/es/framer-motion/dist/es/animation/utils/stagger.mjs");
+/* harmony import */ var motion__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! motion */ "./node_modules/motion/dist/es/framer-motion/dist/es/render/dom/viewport/index.mjs");
+/* harmony import */ var motion__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! motion */ "./node_modules/motion/dist/es/framer-motion/dist/es/animation/animate/index.mjs");
+/* harmony import */ var _assets_js_animation_utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../assets/js/animation-utils */ "./assets/js/animation-utils.js");
 
-(0,motion__WEBPACK_IMPORTED_MODULE_0__.inView)(".animated", element => {
+
+console.log("animationConfig", _assets_js_animation_utils__WEBPACK_IMPORTED_MODULE_0__.animationConfig);
+(0,motion__WEBPACK_IMPORTED_MODULE_1__.inView)(".animated", element => {
   const children = Array.from(element.querySelector(".wp-block-group")?.children || []);
-  (0,motion__WEBPACK_IMPORTED_MODULE_1__.animate)(children, {
-    opacity: 1,
-    y: [50, 0]
-  }, {
-    duration: 0.25,
-    delay: (0,motion__WEBPACK_IMPORTED_MODULE_2__.stagger)(0.1),
-    type: "spring",
-    stiffness: 100
-  });
+  (0,motion__WEBPACK_IMPORTED_MODULE_2__.animate)(children, _assets_js_animation_utils__WEBPACK_IMPORTED_MODULE_0__.animationConfig.keyframes, _assets_js_animation_utils__WEBPACK_IMPORTED_MODULE_0__.animationConfig.options);
 }, {
   margin: "-300px 0px -200px 0px"
 });

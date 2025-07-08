@@ -8,6 +8,10 @@ if (!defined("THEME_VERSION")) {
 // Include the function to enqueue the icon files into the theme front and back end
 require_once get_template_directory() . "/functions/enqueue-icons.php";
 
+// Capture the global bounce setting from ACF options and make available to theme js files
+require_once get_template_directory() .
+    "/functions/global-animation-config.php";
+
 // Include the function to generate the CSS variables file
 require_once get_template_directory() .
     "/functions/generate-theme-variables.php";

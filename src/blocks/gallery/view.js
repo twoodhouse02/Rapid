@@ -2,6 +2,7 @@ import { animate, inView, stagger } from "motion";
 import Masonry from "masonry-layout";
 import PhotoSwipeLightbox from "photoswipe/lightbox";
 import PhotoSwipeDynamicCaption from "photoswipe-dynamic-caption-plugin";
+import { animationConfig } from "../../../assets/js/animation-utils";
 
 var elems = document.querySelectorAll(".gallery-preview.masonry");
 elems.forEach((elem) => {
@@ -36,16 +37,7 @@ inView(
   ".animated-gallery-images",
   (element) => {
     const children = element.querySelectorAll(".gallery-image");
-    animate(
-      children,
-      { opacity: 1, y: [50, 0] },
-      {
-        duration: 0.5,
-        delay: stagger(0.1),
-        type: "spring",
-        stiffness: 100,
-      },
-    );
+    animate(children, animationConfig.keyframes, animationConfig.options);
   },
   { margin: "-300px 0px -200px 0px" },
 );
