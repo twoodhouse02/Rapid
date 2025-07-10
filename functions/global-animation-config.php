@@ -3,7 +3,7 @@ function enqueue_animation_config_script()
 {
     wp_enqueue_script(
         "theme-animation-config",
-        get_template_directory_uri() . "/assets/js/animation-config.js",
+        get_template_directory_uri() . "/assets/js/animation-utils.js",
         [],
         "1.0.0",
         true
