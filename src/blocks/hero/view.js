@@ -1,8 +1,6 @@
 import { animate, inView } from "motion";
 import { animationConfig } from "../../../assets/js/animation-utils";
 
-console.log("animationConfig", animationConfig);
-
 inView(
   ".animated",
   (element) => {

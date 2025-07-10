@@ -25,7 +25,6 @@ function getGlobalAnimationType() {
   // Check for WordPress localized data
 
   if (typeof window !== "undefined" && window.ThemeAnimationConfig) {
-    console.log("Using global animation type:", window.ThemeAnimationConfig.animation_type);
     return window.ThemeAnimationConfig.animation_type || "fade-up";
   }
 
@@ -9468,7 +9467,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _assets_js_animation_utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../assets/js/animation-utils */ "./assets/js/animation-utils.js");
 
 
-console.log("animationConfig", _assets_js_animation_utils__WEBPACK_IMPORTED_MODULE_0__.animationConfig);
 (0,motion__WEBPACK_IMPORTED_MODULE_1__.inView)(".animated", element => {
   const children = Array.from(element.querySelector(".wp-block-group")?.children || []);
   (0,motion__WEBPACK_IMPORTED_MODULE_2__.animate)(children, _assets_js_animation_utils__WEBPACK_IMPORTED_MODULE_0__.animationConfig.keyframes, _assets_js_animation_utils__WEBPACK_IMPORTED_MODULE_0__.animationConfig.options);

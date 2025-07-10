@@ -9,10 +9,6 @@ function getGlobalAnimationType() {
   // Check for WordPress localized data
 
   if (typeof window !== "undefined" && window.ThemeAnimationConfig) {
-    console.log(
-      "Using global animation type:",
-      window.ThemeAnimationConfig.animation_type,
-    );
     return window.ThemeAnimationConfig.animation_type || "fade-up";
   }
 
