@@ -6,6 +6,20 @@
   color: var(--theme-color-brand_primary) !important;
 }
 
+.has-brand-secondary-color,
+.theme-dark.has-brand-secondary-color,
+.theme-dark.has-brand-secondary-color > a,
+.has-brand-secondary-color.has-text-color {
+  color: var(--theme-color-brand_secondary) !important;
+}
+
+.has-text-secondary-color,
+.theme-dark.has-text-secondary-color,
+.theme-dark.has-text-secondary-color > a,
+.has-text-secondary-color.has-text-color {
+  color: var(--theme-color-text_secondary) !important;
+}
+
 .has-text-primary-color time {
   color: var(--theme-color-text_primary) !important;
 }
