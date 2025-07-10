@@ -22,7 +22,7 @@
   display: inline-flex;
   flex-direction: row;
   align-items: center;
-  gap: var(--theme-spacing-micro);
+  gap: var(--theme-spacing-xxxs);
   line-height: 1.2;
 }
 .wp-block-rapid-styled-button:hover {
