@@ -217,4 +217,11 @@
       margin-bottom: calc(-1 * var(--overhang-amount));
     }
   }
+
+  /** Mobile Breakpoints: **/
+  @media (max-width: 992px) {
+    &.background-image {
+      padding: var(--theme-spacing-display);
+    }
+  }
 }

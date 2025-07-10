@@ -13,6 +13,7 @@
   justify-content: center;
   box-sizing: border-box;
   box-sizing: border-box;
+  /** Mobile Breakpoints: **/
 }
 .wp-block-rapid-hero .animated.hero-content > .wp-block-group > * {
   opacity: 0;
@@ -198,4 +199,9 @@
 }
 .wp-block-rapid-hero.content-overhang .hero-content {
   margin-bottom: calc(-1 * var(--overhang-amount));
+}
+@media (max-width: 992px) {
+  .wp-block-rapid-hero.background-image {
+    padding: var(--theme-spacing-display);
+  }
 }
