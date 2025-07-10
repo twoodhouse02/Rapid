@@ -84,3 +84,58 @@
   height: 150px;
   width: 150px;
 }
+@media (max-width: 1024px) {
+  .wp-block-rapid-floating-images .floating-image {
+    height: 150px;
+    width: 150px;
+  }
+  .wp-block-rapid-floating-images.images-4 .image-1 {
+    top: 50px;
+    right: 50px;
+  }
+  .wp-block-rapid-floating-images.images-4 .image-2 {
+    top: 60px;
+    left: 40px;
+    height: 100px;
+    width: 100px;
+  }
+  .wp-block-rapid-floating-images.images-4 .image-3 {
+    bottom: 70px;
+    right: 70px;
+    height: 100px;
+    width: 100px;
+  }
+  .wp-block-rapid-floating-images.images-4 .image-4 {
+    bottom: 100px;
+    left: 60px;
+  }
+  .wp-block-rapid-floating-images.images-3 .image-1 {
+    top: 80px;
+    right: 55px;
+  }
+  .wp-block-rapid-floating-images.images-3 .image-2 {
+    top: 50px;
+    left: 75px;
+    height: 100px;
+    width: 100px;
+  }
+  .wp-block-rapid-floating-images.images-3 .image-3 {
+    bottom: 100px;
+    left: 125px;
+    height: 100px;
+    width: 100px;
+  }
+  .wp-block-rapid-floating-images.images-2 {
+    height: 250px;
+  }
+  .wp-block-rapid-floating-images.images-2 .image-1 {
+    top: 30px;
+    right: 65px;
+  }
+  .wp-block-rapid-floating-images.images-2 .image-2 {
+    top: 10px;
+    left: 70px;
+    height: 100px;
+    width: 100px;
+  }
+}
