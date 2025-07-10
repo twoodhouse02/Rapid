@@ -14,7 +14,7 @@
     },
     "display": {
       "type": "string",
-      "default": "inline"
+      "default": "full-width-mobile"
     }
   },
   "example": {},

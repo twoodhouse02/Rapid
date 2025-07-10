@@ -327,7 +327,7 @@ module.exports = window["wp"]["primitives"];
   \**********************************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"rapid/styled-buttons","version":"0.1.0","title":"Styled Buttons","category":"rapid-theme","icon":"smiley","description":"A group of buttons with more advanced style controls than the default Wordpress buttons","attributes":{"layout":{"type":"string","default":"horizontal"},"display":{"type":"string","default":"inline"}},"example":{},"supports":{"html":false},"textdomain":"styled-buttons","editorScript":"file:./index.js","style":"file:./style-index.css","render":"file:./render.php"}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"rapid/styled-buttons","version":"0.1.0","title":"Styled Buttons","category":"rapid-theme","icon":"smiley","description":"A group of buttons with more advanced style controls than the default Wordpress buttons","attributes":{"layout":{"type":"string","default":"horizontal"},"display":{"type":"string","default":"full-width-mobile"}},"example":{},"supports":{"html":false},"textdomain":"styled-buttons","editorScript":"file:./index.js","style":"file:./style-index.css","render":"file:./render.php"}');
 
 /***/ })
 
