@@ -42,3 +42,16 @@ h5 {
   text-transform: uppercase;
   font-family: var(--theme-font-family-caption);
 }
+
+/** Mobile Breakpoints: **/
+@media (max-width: 768px) {
+  html {
+    font-size: 93.75%;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 75%; /* 12px */
+  }
+}
