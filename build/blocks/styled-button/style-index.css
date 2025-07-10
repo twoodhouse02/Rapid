@@ -50,18 +50,6 @@
 .wp-block-rapid-styled-button.small {
   padding: var(--theme-spacing-xxxs) var(--theme-spacing-xxs);
 }
-.wp-block-rapid-styled-button.full-width {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-}
-@media (max-width: 480px) {
-  .wp-block-rapid-styled-button.full-width-mobile {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-  }
-}
 .theme-dark .wp-block-rapid-styled-button:not(.primary):hover,
 .wp-block-rapid-styled-button.theme-dark:not(.primary):hover {
   background: linear-gradient(90deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.2) 100%);

@@ -26,7 +26,6 @@ export default function Edit({ attributes, setAttributes }) {
     label,
     variant,
     size,
-    display,
     displayIconLeft,
     iconLeftName,
     displayIconRight,
@@ -34,7 +33,7 @@ export default function Edit({ attributes, setAttributes }) {
   } = attributes;
 
   const blockProps = useBlockProps({
-    className: `${variant} ${size} ${display}`,
+    className: `${variant} ${size} `,
   });
 
   const [isLinkPopoverOpen, setIsLinkPopoverOpen] = useState(false);
@@ -254,16 +253,6 @@ export default function Edit({ attributes, setAttributes }) {
               { label: "Small", value: "small" },
             ]}
             onChange={(value) => setAttributes({ size: value })}
-          />
-          <SelectControl
-            label="Display"
-            value={display}
-            options={[
-              { label: "Inline", value: "inline" },
-              { label: "Full-width", value: "full-width" },
-              { label: "Full-width on mobile", value: "full-width-mobile" },
-            ]}
-            onChange={(value) => setAttributes({ display: value })}
           />
         </PanelBody>
       </InspectorControls>

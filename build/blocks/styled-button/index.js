@@ -39,14 +39,13 @@ function Edit({
     label,
     variant,
     size,
-    display,
     displayIconLeft,
     iconLeftName,
     displayIconRight,
     iconRightName
   } = attributes;
   const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps)({
-    className: `${variant} ${size} ${display}`
+    className: `${variant} ${size} `
   });
   const [isLinkPopoverOpen, setIsLinkPopoverOpen] = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_3__.useState)(false);
   const [isIconPopoverOpen, setIsIconPopoverOpen] = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_3__.useState)(false);
@@ -237,9 +236,9 @@ function Edit({
         })
       })]
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.InspectorControls, {
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelBody, {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelBody, {
         title: "Style",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.SelectControl, {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.SelectControl, {
           label: "Size",
           value: size,
           options: [{
@@ -252,23 +251,7 @@ function Edit({
           onChange: value => setAttributes({
             size: value
           })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.SelectControl, {
-          label: "Display",
-          value: display,
-          options: [{
-            label: "Inline",
-            value: "inline"
-          }, {
-            label: "Full-width",
-            value: "full-width"
-          }, {
-            label: "Full-width on mobile",
-            value: "full-width-mobile"
-          }],
-          onChange: value => setAttributes({
-            display: value
-          })
-        })]
+        })
       })
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("a", {
       ...blockProps,
@@ -427,7 +410,7 @@ module.exports = /*#__PURE__*/JSON.parse('{"name":"ionicons","version":"7.4.0","
   \*********************************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"rapid/styled-button","version":"0.1.0","title":"Styled Button","category":"rapid-theme","parent":["rapid/styled-buttons"],"icon":"button","description":"A button with more advanced style controls than the default Wordpress buttons","attributes":{"url":{"type":"string","default":""},"opensInNewTab":{"type":"boolean","default":false},"label":{"type":"string","default":"Button"},"variant":{"type":"string","default":"primary"},"size":{"type":"string","default":"default"},"display":{"type":"string","default":"inline"},"displayIconLeft":{"type":"boolean","default":false},"iconLeftName":{"type":"string","default":"add-outline"},"displayIconRight":{"type":"boolean","default":false},"iconRightName":{"type":"string","default":"add-outline"}},"example":{},"supports":{"html":false},"textdomain":"styled-button","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","render":"file:./render.php"}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"rapid/styled-button","version":"0.1.0","title":"Styled Button","category":"rapid-theme","parent":["rapid/styled-buttons"],"icon":"button","description":"A button with more advanced style controls than the default Wordpress buttons","attributes":{"url":{"type":"string","default":""},"opensInNewTab":{"type":"boolean","default":false},"label":{"type":"string","default":"Button"},"variant":{"type":"string","default":"primary"},"size":{"type":"string","default":"default"},"displayIconLeft":{"type":"boolean","default":false},"iconLeftName":{"type":"string","default":"add-outline"},"displayIconRight":{"type":"boolean","default":false},"iconRightName":{"type":"string","default":"add-outline"}},"example":{},"supports":{"html":false},"textdomain":"styled-button","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","render":"file:./render.php"}');
 
 /***/ })
 

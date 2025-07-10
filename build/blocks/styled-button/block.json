@@ -31,10 +31,6 @@
       "type": "string",
       "default": "default"
     },
-    "display": {
-      "type": "string",
-      "default": "inline"
-    },
     "displayIconLeft": {
       "type": "boolean",
       "default": false
