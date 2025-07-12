@@ -74,7 +74,7 @@ export default function Edit({ attributes, setAttributes }) {
         <div className="menu-data">
           <div className="item-label">
             <RichText
-              tagName="h5"
+              tagName="h6"
               className="title"
               value={title}
               onChange={(value) => setAttributes({ title: value })}
@@ -92,7 +92,7 @@ export default function Edit({ attributes, setAttributes }) {
           </div>
           {displayPrice && (
             <RichText
-              tagName="h6"
+              tagName="p"
               className="price"
               value={price}
               onChange={(value) => setAttributes({ price: value })}

@@ -19,7 +19,7 @@ $price = $attributes["price"];
     <div class="menu-data">
         <div class="item-label">
             <?php if ($title): ?>
-            <h5 class="title"><?php echo esc_html($title); ?></h5>
+            <h6 class="title"><?php echo esc_html($title); ?></h6>
             <?php endif; ?>
 
             <?php if ($displayDescription && $description): ?>
@@ -28,7 +28,7 @@ $price = $attributes["price"];
         </div>
 
         <?php if ($displayPrice && $price): ?>
-        <h6 class="price"><?php echo esc_html($price); ?></h6>
+        <p class="price"><?php echo esc_html($price); ?></p>
         <?php endif; ?>
     </div>
 </div>

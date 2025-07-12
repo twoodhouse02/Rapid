@@ -25,13 +25,16 @@
 .wp-block-rapid-menu-item .price {
   margin: 0;
 }
+.wp-block-rapid-menu-item .description {
+  font-size: var(--theme-font-size-s);
+}
 .wp-block-rapid-menu-item .price {
   min-width: 75px !important;
   text-align: left;
 }
 .wp-block-rapid-menu-item .menu-data {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   gap: var(--theme-spacing-m);
   width: 100%;
@@ -39,4 +42,9 @@
 .wp-block-rapid-menu-item .menu-item-img {
   display: flex;
   flex-direction: column;
+}
+@media (max-width: 1024px) {
+  .wp-block-rapid-menu-item img {
+    width: 75px;
+  }
 }

@@ -23,6 +23,10 @@
     margin: 0;
   }
 
+  .description {
+    font-size: var(--theme-font-size-s);
+  }
+
   .price {
     min-width: 75px !important;
     text-align: right;
@@ -30,7 +34,7 @@
 
   .menu-data {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     gap: var(--theme-spacing-m);
     width: 100%;
@@ -39,5 +43,11 @@
   .menu-item-img {
     display: flex;
     flex-direction: column;
+  }
+
+  @media (max-width: 1024px) {
+    img {
+      width: 75px;
+    }
   }
 }

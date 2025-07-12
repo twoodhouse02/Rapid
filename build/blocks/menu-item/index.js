@@ -132,7 +132,7 @@ function Edit({
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
           className: "item-label",
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText, {
-            tagName: "h5",
+            tagName: "h6",
             className: "title",
             value: title,
             onChange: value => setAttributes({
@@ -149,7 +149,7 @@ function Edit({
             placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)("Menu item description...", "rapid")
           })]
         }), displayPrice && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText, {
-          tagName: "h6",
+          tagName: "p",
           className: "price",
           value: price,
           onChange: value => setAttributes({

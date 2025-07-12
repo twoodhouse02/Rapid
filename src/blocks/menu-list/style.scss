@@ -21,7 +21,11 @@
     width: 100%;
     display: grid;
     grid-template-columns: repeat(var(--columns), minmax(0, 1fr));
-    column-gap: var(--theme-spacing-display-xl);
+    column-gap: var(--theme-spacing-display);
+
+    &.columns-3 {
+      column-gap: var(--theme-spacing-xxl);
+    }
 
     .wp-block-rapid-menu-item {
       border-bottom: 1px dashed var(--theme-color-text_secondary);
@@ -42,6 +46,23 @@
         .wp-block-rapid-menu-item:nth-last-child(-n + #{$i}) {
           border-bottom: none;
         }
+      }
+    }
+  }
+
+  @media (max-width: 1200px) {
+    .menu-items {
+      &.columns-3 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .menu-items {
+      &.columns-3,
+      &.columns-2 {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
       }
     }
   }
