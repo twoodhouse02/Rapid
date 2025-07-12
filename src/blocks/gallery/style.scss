@@ -21,6 +21,7 @@
 
     &.grid {
       display: grid;
+      grid-template-columns: repeat(var(--columns), minmax(0, 1fr));
     }
 
     .gallery-image {

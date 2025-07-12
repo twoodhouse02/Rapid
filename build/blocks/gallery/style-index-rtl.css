@@ -416,6 +416,7 @@ div.pswp__img--placeholder,
 }
 .wp-block-rapid-gallery .gallery-preview.grid {
   display: grid;
+  grid-template-columns: repeat(var(--columns), minmax(0, 1fr));
 }
 .wp-block-rapid-gallery .gallery-preview .gallery-image {
   width: 100%;

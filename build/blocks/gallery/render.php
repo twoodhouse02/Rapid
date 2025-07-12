@@ -21,23 +21,16 @@ $inner_classes = sprintf(
     esc_attr($layout),
     esc_attr($animated_class)
 );
-$inner_style = sprintf(
-    'style="--columns: %d; %s"',
-    esc_attr($columns),
-    "grid" === $layout
-        ? sprintf(
-            "grid-template-columns: repeat(%d, minmax(0, 1fr));",
-            esc_attr($columns)
-        )
-        : ""
-);
+$inner_style = sprintf('style="--columns: %d; "', esc_attr($columns));
 ?>
 <!-- Block wrapper -->
 <div <?php echo get_block_wrapper_attributes(); ?>>
 
     <!-- Inner layout wrapper -->
-    <div class="<?php echo $inner_classes; ?>"
-        display-captions="<?php echo $display_caption !== "never" ? 'true' : 'false'; ?>" <?php echo $inner_style; ?>>
+    <div class="<?php echo $inner_classes; ?>" display-captions="<?php echo $display_caption !==
+"never"
+    ? "true"
+    : "false"; ?>" <?php echo $inner_style; ?>>
 
         <?php if (empty($images)): ?>
         <p><?php esc_html_e("No images selected.", "custom-theme"); ?></p>
