@@ -63,3 +63,17 @@
   flex-direction: row;
   align-items: start;
 }
+@media (max-width: 1024px) {
+  .wp-block-rapid-profile.large .profile-image img {
+    height: 100px;
+    width: 100px;
+  }
+  .wp-block-rapid-profile.medium .profile-image img {
+    height: 50px;
+    width: 50px;
+  }
+  .wp-block-rapid-profile.small .profile-image img {
+    height: 30px;
+    width: 30px;
+  }
+}

@@ -84,4 +84,31 @@
     flex-direction: row;
     align-items: start;
   }
+
+  @media (max-width: 1024px) {
+    &.large {
+      .profile-image {
+        img {
+          height: 100px;
+          width: 100px;
+        }
+      }
+    }
+    &.medium {
+      .profile-image {
+        img {
+          height: 50px;
+          width: 50px;
+        }
+      }
+    }
+    &.small {
+      .profile-image {
+        img {
+          height: 30px;
+          width: 30px;
+        }
+      }
+    }
+  }
 }
