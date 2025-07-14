@@ -76,6 +76,7 @@ function Edit({
           __next40pxDefaultSize: true,
           __nextHasNoMarginBottom: true,
           initialPosition: columns,
+          help: "These settings will be applied to large screen sizes and adapt for smaller.",
           label: "Columns",
           max: 5,
           min: 2,

@@ -67,6 +67,16 @@
   top: 0;
   right: calc(var(--line-offset) * -1);
 }
+@media (max-width: 1024px) {
+  .wp-block-rapid-metric-group.grid, .wp-block-rapid-metric-group.editor-grid .block-editor-inner-blocks .block-editor-block-list__layout {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .wp-block-rapid-metric-group.grid, .wp-block-rapid-metric-group.editor-grid .block-editor-inner-blocks .block-editor-block-list__layout {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
 .wp-block-rapid-metric-group.card {
   background-color: var(--theme-color-layer_1);
   border-radius: var(--theme-corner_radius_regular);

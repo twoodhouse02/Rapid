@@ -75,6 +75,7 @@ export default function Edit({ attributes, setAttributes }) {
               __next40pxDefaultSize
               __nextHasNoMarginBottom
               initialPosition={columns}
+              help="These settings will be applied to large screen sizes and adapt for smaller."
               label="Columns"
               max={5}
               min={2}
