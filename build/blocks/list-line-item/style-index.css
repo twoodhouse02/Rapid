@@ -39,6 +39,7 @@
   display: flex;
   flex-direction: row;
   width: 100%;
+  gap: var(--theme-spacing-xxs);
 }
 .two-column .wp-block-rapid-list-line-item {
   width: 50%;
