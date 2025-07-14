@@ -220,5 +220,15 @@
   -webkit-mask: linear-gradient(transparent, black);
           mask: linear-gradient(transparent, black);
 }
+@media (max-width: 1024px) {
+  .wp-block-rapid-preview-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .wp-block-rapid-preview-cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
 
 /*# sourceMappingURL=style-index.css.map*/
