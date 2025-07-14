@@ -68,6 +68,7 @@
   height: 200px;
   -o-object-fit: cover;
      object-fit: cover;
+  transition: 0.2s ease all;
 }
 .wp-block-rapid-preview-cards .preview-card .card-header {
   display: flex;
@@ -110,6 +111,9 @@
 }
 .wp-block-rapid-preview-cards .preview-card.push-up:hover {
   transform: translateY(-10px);
+}
+.wp-block-rapid-preview-cards .preview-card.basic:hover .featured-image img {
+  transform: scale(1.05);
 }
 .wp-block-rapid-preview-cards .preview-card.padded .featured-image {
   padding: var(--theme-spacing-m);
@@ -177,6 +181,9 @@
 }
 .wp-block-rapid-preview-cards .preview-card.image-background-blur .card-body {
   flex-grow: initial;
+}
+.wp-block-rapid-preview-cards .preview-card.image-background-blur:hover .featured-image img {
+  transform: scale(1.05);
 }
 .wp-block-rapid-preview-cards .preview-card.horizontal {
   flex-direction: row;
