@@ -164,6 +164,7 @@ export default function Edit({ attributes, setAttributes }) {
           <SelectControl
             label="Content width"
             selected={contentWidth}
+            help="These settings will be applied to large screen sizes and stretch to 100% on smaller screens."
             value={contentWidth}
             options={[
               { label: "30%", value: "30%" },

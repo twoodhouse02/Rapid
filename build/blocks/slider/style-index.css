@@ -837,5 +837,20 @@ button.swiper-pagination-bullet {
 .wp-block-rapid-slider.alignfull {
   border-radius: 0;
 }
+@media (max-width: 768px) {
+  .wp-block-rapid-slider .swiper-button-next,
+  .wp-block-rapid-slider .swiper-button-prev {
+    top: inherit;
+    bottom: 30px;
+    height: 30px;
+    width: 30px;
+  }
+  .wp-block-rapid-slider .swiper-button-next {
+    left: 80px;
+  }
+  .wp-block-rapid-slider .swiper-button-prev {
+    left: 25px;
+  }
+}
 
 /*# sourceMappingURL=style-index.css.map*/

@@ -207,6 +207,7 @@ function Edit({
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.SelectControl, {
           label: "Content width",
           selected: contentWidth,
+          help: "These settings will be applied to large screen sizes and stretch to 100% on smaller screens.",
           value: contentWidth,
           options: [{
             label: "30%",

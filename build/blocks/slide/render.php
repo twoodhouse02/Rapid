@@ -29,6 +29,6 @@ $wrapper_attributes = get_block_wrapper_attributes([
          ")"; ?>;">
     <div class="slide-content <?php echo "flex-justify-" .
         $textAlignment; ?> <?php if ($contentOverlay): ?>overlay<?php endif; ?>"
-        style="width: <?php echo $contentWidth; ?> ">
+        style="--content-width: <?php echo $contentWidth; ?>;">
         <?php echo $content; ?></div>
 </div>

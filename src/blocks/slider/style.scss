@@ -65,4 +65,22 @@
   &.alignfull {
     border-radius: 0;
   }
+
+  @media (max-width: 768px) {
+    .swiper-button-next,
+    .swiper-button-prev {
+      top: inherit;
+      bottom: 30px;
+      height: 30px;
+      width: 30px;
+    }
+
+    .swiper-button-next {
+      left: 80px;
+    }
+
+    .swiper-button-prev {
+      left: 25px;
+    }
+  }
 }
