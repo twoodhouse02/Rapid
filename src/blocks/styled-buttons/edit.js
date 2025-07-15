@@ -90,7 +90,11 @@ export default function Edit({ attributes, setAttributes }) {
       <BlockControls>
         <ToolbarGroup>
           <DropdownMenu
-            icon={layout === "vertical" ? verticalIcon : horizontalIcon}
+            icon={
+              layout === "vertical" || layout === "vertical-mobile"
+                ? verticalIcon
+                : horizontalIcon
+            }
             label="Select a layout"
             controls={[
               {
@@ -102,6 +106,11 @@ export default function Edit({ attributes, setAttributes }) {
                 icon: verticalIcon,
                 title: "Vertical",
                 onClick: () => setAttributes({ layout: "vertical" }),
+              },
+              {
+                icon: verticalIcon,
+                title: "Vertical on mobile",
+                onClick: () => setAttributes({ layout: "vertical-mobile" }),
               },
             ]}
           />

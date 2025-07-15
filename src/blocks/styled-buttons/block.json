@@ -10,7 +10,7 @@
   "attributes": {
     "layout": {
       "type": "string",
-      "default": "horizontal"
+      "default": "vertical-mobile"
     },
     "display": {
       "type": "string",

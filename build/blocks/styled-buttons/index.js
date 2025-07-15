@@ -123,7 +123,7 @@ function Edit({
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.BlockControls, {
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.ToolbarGroup, {
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.DropdownMenu, {
-          icon: layout === "vertical" ? verticalIcon : horizontalIcon,
+          icon: layout === "vertical" || layout === "vertical-mobile" ? verticalIcon : horizontalIcon,
           label: "Select a layout",
           controls: [{
             icon: horizontalIcon,
@@ -136,6 +136,12 @@ function Edit({
             title: "Vertical",
             onClick: () => setAttributes({
               layout: "vertical"
+            })
+          }, {
+            icon: verticalIcon,
+            title: "Vertical on mobile",
+            onClick: () => setAttributes({
+              layout: "vertical-mobile"
             })
           }]
         })
@@ -327,7 +333,7 @@ module.exports = window["wp"]["primitives"];
   \**********************************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"rapid/styled-buttons","version":"0.1.0","title":"Styled Buttons","category":"rapid-theme","icon":"smiley","description":"A group of buttons with more advanced style controls than the default Wordpress buttons","attributes":{"layout":{"type":"string","default":"horizontal"},"display":{"type":"string","default":"full-width-mobile"}},"example":{},"supports":{"html":false},"textdomain":"styled-buttons","editorScript":"file:./index.js","style":"file:./style-index.css","render":"file:./render.php"}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"rapid/styled-buttons","version":"0.1.0","title":"Styled Buttons","category":"rapid-theme","icon":"smiley","description":"A group of buttons with more advanced style controls than the default Wordpress buttons","attributes":{"layout":{"type":"string","default":"vertical-mobile"},"display":{"type":"string","default":"full-width-mobile"}},"example":{},"supports":{"html":false},"textdomain":"styled-buttons","editorScript":"file:./index.js","style":"file:./style-index.css","render":"file:./render.php"}');
 
 /***/ })
 

@@ -61,3 +61,10 @@
     }
   }
 }
+
+.wp-block-rapid-styled-buttons.vertical-mobile,
+.wp-block-rapid-styled-buttons.vertical-mobile {
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+}

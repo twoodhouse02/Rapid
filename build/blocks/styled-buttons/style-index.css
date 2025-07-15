@@ -48,5 +48,11 @@
     justify-content: center;
   }
 }
+@media (max-width: 768px) {
+  .wp-block-rapid-styled-buttons.vertical-mobile,
+  .wp-block-rapid-styled-buttons.vertical-mobile {
+    flex-direction: column;
+  }
+}
 
 /*# sourceMappingURL=style-index.css.map*/
