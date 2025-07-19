@@ -48,7 +48,8 @@ function getAnimationConfig(animationType) {
     "fade-only": {
       keyframes: {
         opacity: [0, 1],
-        y: [0, 0]
+        y: [0, 0],
+        filter: ["blur(8px)", "blur(0px)"]
       },
       options: {
         ...baseConfig,
@@ -58,14 +59,16 @@ function getAnimationConfig(animationType) {
     "move-in": {
       keyframes: {
         opacity: [0, 1],
-        y: [50, 0]
+        y: [50, 0],
+        filter: ["blur(8px)", "blur(0px)"]
       },
       options: baseConfig
     },
     bounce: {
       keyframes: {
         opacity: [0, 1],
-        y: [50, 0]
+        y: [50, 0],
+        filter: ["blur(8px)", "blur(0px)"]
       },
       options: {
         ...baseConfig,

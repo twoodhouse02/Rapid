@@ -48,7 +48,8 @@ function getAnimationConfig(animationType) {
     "fade-only": {
       keyframes: {
         opacity: [0, 1],
-        y: [0, 0]
+        y: [0, 0],
+        filter: ["blur(8px)", "blur(0px)"]
       },
       options: {
         ...baseConfig,
@@ -58,14 +59,16 @@ function getAnimationConfig(animationType) {
     "move-in": {
       keyframes: {
         opacity: [0, 1],
-        y: [50, 0]
+        y: [50, 0],
+        filter: ["blur(8px)", "blur(0px)"]
       },
       options: baseConfig
     },
     bounce: {
       keyframes: {
         opacity: [0, 1],
-        y: [50, 0]
+        y: [50, 0],
+        filter: ["blur(8px)", "blur(0px)"]
       },
       options: {
         ...baseConfig,
@@ -9475,7 +9478,8 @@ __webpack_require__.r(__webpack_exports__);
     (0,motion__WEBPACK_IMPORTED_MODULE_2__.animate)(children, {
       opacity: 1,
       y: [50, 0],
-      scale: [0.8, 1]
+      scale: [0.8, 1],
+      filter: ["blur(8px)", "blur(0px)"]
     }, _assets_js_animation_utils__WEBPACK_IMPORTED_MODULE_0__.animationConfig.options);
   }
 }, {

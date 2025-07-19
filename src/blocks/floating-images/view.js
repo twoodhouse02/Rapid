@@ -13,7 +13,12 @@ inView(
     } else {
       animate(
         children,
-        { opacity: 1, y: [50, 0], scale: [0.8, 1] },
+        {
+          opacity: 1,
+          y: [50, 0],
+          scale: [0.8, 1],
+          filter: ["blur(8px)", "blur(0px)"],
+        },
         animationConfig.options,
       );
     }

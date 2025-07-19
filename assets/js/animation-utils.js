@@ -32,18 +32,30 @@ function getAnimationConfig(animationType) {
 
   const animations = {
     "fade-only": {
-      keyframes: { opacity: [0, 1], y: [0, 0] },
+      keyframes: {
+        opacity: [0, 1],
+        y: [0, 0],
+        filter: ["blur(8px)", "blur(0px)"],
+      },
       options: {
         ...baseConfig,
         duration: 0.5,
       },
     },
     "move-in": {
-      keyframes: { opacity: [0, 1], y: [50, 0] },
+      keyframes: {
+        opacity: [0, 1],
+        y: [50, 0],
+        filter: ["blur(8px)", "blur(0px)"],
+      },
       options: baseConfig,
     },
     bounce: {
-      keyframes: { opacity: [0, 1], y: [50, 0] },
+      keyframes: {
+        opacity: [0, 1],
+        y: [50, 0],
+        filter: ["blur(8px)", "blur(0px)"],
+      },
       options: {
         ...baseConfig,
         type: "spring",
