@@ -1,0 +1,136 @@
+/*!**************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/blocks/navigation-link/style.scss ***!
+  \**************************************************************************************************************************************************************************************************************************************************************/
+@charset "UTF-8";
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.wp-block-rapid-navigation-link {
+  position: relative;
+}
+.wp-block-rapid-navigation-link a.navigation-link {
+  color: var(--theme-color-text_primary);
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding: var(--theme-spacing-micro) var(--theme-spacing-xxs);
+  border-radius: var(--theme-corner_radius_button);
+  transition: 0.2s ease all;
+  font-size: var(--theme-font-size-standard);
+  display: flex;
+  align-items: center;
+  gap: var(--theme-spacing-micro);
+}
+.wp-block-rapid-navigation-link a.navigation-link:hover {
+  background-color: var(--theme-color-interactive_secondary);
+  color: var(--theme-color-interactive);
+}
+.wp-block-rapid-navigation-link .sub-menu {
+  display: none;
+  visibility: hidden;
+}
+.wp-block-rapid-navigation-link .sub-menu,
+.wp-block-rapid-navigation-link .editor-submenu {
+  position: absolute;
+  z-index: 10;
+  flex-direction: column;
+  background-color: white;
+  min-width: 200px;
+  border-radius: var(--theme-corner_radius_regular);
+  padding: var(--theme-spacing-xxxs);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+.wp-block-rapid-navigation-link .sub-menu a,
+.wp-block-rapid-navigation-link .editor-submenu a {
+  justify-content: space-between;
+  width: 100%;
+}
+.wp-block-rapid-navigation-link .sub-menu a ion-icon,
+.wp-block-rapid-navigation-link .editor-submenu a ion-icon {
+  transform: rotate(90deg);
+}
+.wp-block-rapid-navigation-link:hover > .sub-menu {
+  display: flex;
+  visibility: visible;
+}
+.wp-block-rapid-navigation-link .sub-menu .sub-menu,
+.wp-block-rapid-navigation-link .editor-submenu .editor-submenu {
+  left: -105%;
+  top: 0;
+  right: auto;
+}
+.wp-block-rapid-navigation-link .link-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.menu-mobile .wp-block-rapid-navigation-link {
+  width: 100%;
+  border-bottom: 1px solid var(--theme-color-layer_3);
+  padding: var(--theme-spacing-xxs) 0;
+  /* make each link full‑width */
+  /* hide all sub‑menus by default */
+  /* when we add an “is-open” class, show it */
+  /* rotate chevron on open */
+}
+.menu-mobile .wp-block-rapid-navigation-link:last-of-type {
+  border-bottom: none;
+  margin-bottom: var(--theme-spacing-xs);
+}
+.menu-mobile .wp-block-rapid-navigation-link a.navigation-link {
+  width: 100%;
+  justify-content: space-between;
+}
+.menu-mobile .wp-block-rapid-navigation-link a.navigation-link .link-wrap {
+  width: 100%;
+}
+.menu-mobile .wp-block-rapid-navigation-link button.submenu-toggle {
+  display: flex;
+  border: none;
+  background-color: var(--theme-color-interactive_secondary);
+  color: var(--theme-color-interactive);
+  padding: var(--theme-spacing-xxs);
+  border-radius: var(--theme-corner_radius_button);
+}
+.menu-mobile .wp-block-rapid-navigation-link ion-icon {
+  transition: 0.2s ease all;
+  font-size: 16px;
+}
+.menu-mobile .wp-block-rapid-navigation-link ion-icon.desktop-icon {
+  display: none;
+}
+.menu-mobile .wp-block-rapid-navigation-link .sub-menu {
+  display: flex;
+  height: auto;
+  max-height: 0;
+  overflow: auto;
+  position: static;
+  box-shadow: none;
+  background-color: var(--theme-color-layer_3);
+  margin: 0 var(--theme-spacing-xs);
+  padding: 0 var(--theme-spacing-xxs);
+  transition: 0.2s ease all;
+}
+.menu-mobile .wp-block-rapid-navigation-link .sub-menu button.submenu-toggle {
+  background-color: var(--theme-color-layer_1);
+}
+.menu-mobile .wp-block-rapid-navigation-link .sub-menu .sub-menu {
+  border-top: 0px;
+  border-bottom: 0px;
+  border-radius: 0;
+}
+.menu-mobile .wp-block-rapid-navigation-link.is-open > .sub-menu {
+  margin: var(--theme-spacing-xs);
+  flex-direction: column;
+  transition: 0.2s ease all;
+  max-height: 800px;
+}
+.menu-mobile .wp-block-rapid-navigation-link.is-open > .sub-menu .is-open > .sub-menu {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.menu-mobile .wp-block-rapid-navigation-link.is-open > .link-wrap ion-icon {
+  transform: rotate(-180deg);
+}

@@ -9,26 +9,27 @@
 .mega-menu-wrapper {
   .wp-block-rapid-mega-menu {
     // Reset button styles.
-    a {
-      border: none;
-      color: currentColor;
-      cursor: pointer;
-      font-family: inherit;
-      font-size: inherit;
-      font-style: inherit;
-      font-weight: inherit;
-      line-height: inherit;
-      text-transform: inherit;
-      .wp-block-navigation__submenu-icon {
-        background-color: transparent !important;
-      }
-      svg {
-        display: inline-block;
-        stroke: currentColor;
-        height: inherit;
-        margin-top: 0.075em;
-        width: inherit;
-      }
+
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    font-style: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    text-transform: inherit;
+
+    color: var(--theme-color-text_primary);
+    text-decoration: none;
+    padding: var(--theme-spacing-micro) var(--theme-spacing-xxs);
+    border-radius: var(--theme-corner_radius_button);
+    transition: 0.2s ease all;
+    font-size: var(--theme-font-size-standard);
+    display: flex;
+    align-items: center;
+    gap: var(--theme-spacing-micro);
+    &:hover {
+      background-color: var(--theme-color-interactive_secondary);
+      color: var(--theme-color-interactive);
     }
   }
 

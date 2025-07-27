@@ -1,0 +1,127 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+$bar-width: 25px;
+$bar-height: 2px;
+$bar-spacing: 5px;
+
+.wp-block-rapid-navigation-menu,
+.wp-block-rapid-navigation-menu
+  > .block-editor-inner-blocks
+  > .block-editor-block-list__layout {
+  .menu-container {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: var(--theme-spacing-micro);
+  }
+
+  .menu-toggle,
+  button.submenu-toggle {
+    display: none;
+  }
+
+  //////////////////////////////////////////////////////////////
+  // MOBILE MENU STYLES:
+  &.menu-mobile {
+    /* 1. Hide the menu-container off-canvas */
+    .menu-container {
+      position: fixed;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: white;
+      overflow-y: auto;
+      transform: translateX(100%);
+      transition: transform 0.3s ease;
+      z-index: 100;
+      padding: var(--theme-spacing-l);
+      box-sizing: border-box;
+      flex-direction: column;
+      opacity: 0;
+      gap: 0;
+      margin-top: 20px;
+    }
+
+    /* 2. Show it when we add .menu-open */
+    &.menu-open .menu-container {
+      transform: translateX(0);
+      opacity: 1;
+    }
+
+    /* 3. Style the hamburger button so it sits above */
+    .menu-toggle {
+      position: relative;
+      z-index: 110;
+      background: none;
+      border: none;
+      padding: 0;
+      width: $bar-width;
+      height: $bar-height + $bar-spacing * 2;
+      cursor: pointer;
+      display: block;
+      transform: translateY(-$bar-spacing);
+    }
+
+    .hamburger-menu,
+    .hamburger-menu:after,
+    .hamburger-menu:before {
+      width: $bar-width;
+      height: $bar-height;
+      border-radius: 50px;
+    }
+
+    .hamburger-menu {
+      position: relative;
+      transform: translateY($bar-spacing);
+      background: var(--theme-color-interactive);
+      transition: all 0ms 300ms;
+
+      &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: $bar-spacing;
+        background: var(--theme-color-interactive);
+        transition:
+          bottom 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1),
+          transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+      }
+
+      &:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: $bar-spacing;
+        background: var(--theme-color-interactive);
+        transition:
+          top 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1),
+          transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+      }
+
+      &.animate {
+        background: rgba(255, 255, 255, 0);
+
+        &:after {
+          top: 0;
+          transform: rotate(45deg);
+          transition:
+            top 300ms cubic-bezier(0.23, 1, 0.32, 1),
+            transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        &:before {
+          bottom: 0;
+          transform: rotate(-45deg);
+          transition:
+            bottom 300ms cubic-bezier(0.23, 1, 0.32, 1),
+            transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);
+        }
+      }
+    }
+  }
+}

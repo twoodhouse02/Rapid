@@ -1,0 +1,151 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.wp-block-rapid-navigation-link {
+  position: relative;
+  & a.navigation-link {
+    color: var(--theme-color-text_primary);
+    text-decoration: none;
+    padding: var(--theme-spacing-micro) var(--theme-spacing-xxs);
+    border-radius: var(--theme-corner_radius_button);
+    transition: 0.2s ease all;
+    font-size: var(--theme-font-size-standard);
+    display: flex;
+    align-items: center;
+    gap: var(--theme-spacing-micro);
+    &:hover {
+      background-color: var(--theme-color-interactive_secondary);
+      color: var(--theme-color-interactive);
+    }
+  }
+
+  .sub-menu {
+    display: none;
+    visibility: hidden;
+  }
+
+  .sub-menu,
+  .editor-submenu {
+    position: absolute;
+    z-index: 10;
+    flex-direction: column;
+    background-color: white;
+    min-width: 200px;
+    border-radius: var(--theme-corner_radius_regular);
+    padding: var(--theme-spacing-xxxs);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+
+    a {
+      justify-content: space-between;
+      width: 100%;
+      ion-icon {
+        transform: rotate(-90deg);
+      }
+    }
+  }
+
+  &:hover {
+    & > .sub-menu {
+      display: flex;
+      visibility: visible;
+    }
+  }
+
+  .sub-menu .sub-menu,
+  .editor-submenu .editor-submenu {
+    right: -105%;
+    top: 0;
+    left: auto;
+  }
+
+  .link-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+//////////////////////////////////////////////////////////////
+// MOBILE MENU STYLES:
+
+.menu-mobile .wp-block-rapid-navigation-link {
+  width: 100%;
+  border-bottom: 1px solid var(--theme-color-layer_3);
+  padding: var(--theme-spacing-xxs) 0;
+
+  &:last-of-type {
+    border-bottom: none;
+    margin-bottom: var(--theme-spacing-xs);
+  }
+  /* make each link full‑width */
+  a.navigation-link {
+    width: 100%;
+    justify-content: space-between;
+
+    .link-wrap {
+      width: 100%;
+    }
+  }
+
+  button.submenu-toggle {
+    display: flex;
+    border: none;
+    background-color: var(--theme-color-interactive_secondary);
+    color: var(--theme-color-interactive);
+    padding: var(--theme-spacing-xxs);
+    border-radius: var(--theme-corner_radius_button);
+  }
+
+  ion-icon {
+    transition: 0.2s ease all;
+    font-size: 16px;
+  }
+
+  ion-icon.desktop-icon {
+    display: none;
+  }
+
+  /* hide all sub‑menus by default */
+  .sub-menu {
+    display: flex;
+    height: auto;
+    max-height: 0;
+    overflow: auto;
+    position: static;
+    box-shadow: none;
+    background-color: var(--theme-color-layer_3);
+    margin: 0 var(--theme-spacing-xs);
+    padding: 0 var(--theme-spacing-xxs);
+    transition: 0.2s ease all;
+    button.submenu-toggle {
+      background-color: var(--theme-color-layer_1);
+    }
+
+    .sub-menu {
+      border-top: 0px;
+      border-bottom: 0px;
+      border-radius: 0;
+    }
+  }
+
+  /* when we add an “is-open” class, show it */
+  &.is-open > .sub-menu {
+    margin: var(--theme-spacing-xs);
+    flex-direction: column;
+    transition: 0.2s ease all;
+    max-height: 800px;
+    .is-open > .sub-menu {
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  /* rotate chevron on open */
+  &.is-open > .link-wrap ion-icon {
+    transform: rotate(180deg);
+  }
+}

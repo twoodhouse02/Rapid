@@ -7,26 +7,28 @@
  *
  * Replace them with your own styles or remove the file completely.
  */
-.mega-menu-wrapper .wp-block-rapid-mega-menu a {
+.mega-menu-wrapper .wp-block-rapid-mega-menu {
   border: none;
-  color: currentColor;
   cursor: pointer;
   font-family: inherit;
-  font-size: inherit;
   font-style: inherit;
   font-weight: inherit;
   line-height: inherit;
   text-transform: inherit;
+  color: var(--theme-color-text_primary);
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding: var(--theme-spacing-micro) var(--theme-spacing-xxs);
+  border-radius: var(--theme-corner_radius_button);
+  transition: 0.2s ease all;
+  font-size: var(--theme-font-size-standard);
+  display: flex;
+  align-items: center;
+  gap: var(--theme-spacing-micro);
 }
-.mega-menu-wrapper .wp-block-rapid-mega-menu a .wp-block-navigation__submenu-icon {
-  background-color: transparent !important;
-}
-.mega-menu-wrapper .wp-block-rapid-mega-menu a svg {
-  display: inline-block;
-  stroke: currentColor;
-  height: inherit;
-  margin-top: 0.075em;
-  width: inherit;
+.mega-menu-wrapper .wp-block-rapid-mega-menu:hover {
+  background-color: var(--theme-color-interactive_secondary);
+  color: var(--theme-color-interactive);
 }
 .mega-menu-wrapper .wp-block-rapid-mega-menu__menu-container {
   height: auto;

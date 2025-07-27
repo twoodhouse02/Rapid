@@ -6,7 +6,8 @@
   "title": "Mega Menu",
   "category": "rapid-theme",
   "parent": [
-    "core/navigation"
+    "core/navigation",
+    "rapid/navigation-menu"
   ],
   "description": "Add a mega menu to your navigation.",
   "example": {},
