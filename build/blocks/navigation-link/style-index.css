@@ -27,6 +27,19 @@
   background-color: var(--theme-color-interactive_secondary);
   color: var(--theme-color-interactive);
 }
+.wp-block-rapid-navigation-link a.navigation-link.editor-chevron::after {
+  border-style: solid;
+  border-width: 0.15em 0.15em 0 0;
+  content: "";
+  display: inline-block;
+  height: 0.25em;
+  left: 0.15em;
+  position: relative;
+  top: -2px;
+  vertical-align: top;
+  width: 0.25em;
+  transform: rotate(135deg);
+}
 .wp-block-rapid-navigation-link .sub-menu {
   display: none;
   visibility: hidden;

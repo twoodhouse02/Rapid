@@ -9,11 +9,9 @@ $bar-width: 25px;
 $bar-height: 2px;
 $bar-spacing: 5px;
 
-.wp-block-rapid-navigation-menu,
-.wp-block-rapid-navigation-menu
-  > .block-editor-inner-blocks
-  > .block-editor-block-list__layout {
-  .menu-container {
+.wp-block-rapid-navigation-menu {
+  .menu-container,
+  & > .block-editor-inner-blocks > .block-editor-block-list__layout {
     display: flex;
     align-items: center;
     flex-direction: row;

@@ -249,19 +249,23 @@ function Edit({
       style: {
         position: "relative"
       },
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText, {
-        tagName: "a",
-        value: label,
-        onChange: handleLabelChange,
-        placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)("Link text", "text-domain"),
-        allowedFormats: [] // No formatting for plain text
-        ,
-        href: url || undefined,
-        target: opensInNewTab ? "_blank" : undefined,
-        rel: opensInNewTab ? "noopener noreferrer" : undefined,
-        onClick: e => e.preventDefault() // Prevent navigation in editor
-        ,
-        keepPlaceholderOnFocus: true
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+        className: "link-wrap",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText, {
+          tagName: "a",
+          value: label,
+          onChange: handleLabelChange,
+          placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)("Link text", "text-domain"),
+          allowedFormats: [] // No formatting for plain text
+          ,
+          href: url || undefined,
+          target: opensInNewTab ? "_blank" : undefined,
+          rel: opensInNewTab ? "noopener noreferrer" : undefined,
+          onClick: e => e.preventDefault() // Prevent navigation in editor
+          ,
+          keepPlaceholderOnFocus: true,
+          className: `navigation-link ${isParent && "editor-chevron"}`
+        })
       }), isParent && isSelected && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
         className: "editor-submenu",
         style: {

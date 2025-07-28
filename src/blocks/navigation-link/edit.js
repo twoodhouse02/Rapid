@@ -113,18 +113,21 @@ export default function Edit({ attributes, setAttributes, clientId }) {
       </BlockControls>
 
       <div {...blockProps} style={{ position: "relative" }}>
-        <RichText
-          tagName="a"
-          value={label}
-          onChange={handleLabelChange}
-          placeholder={__("Link text", "text-domain")}
-          allowedFormats={[]} // No formatting for plain text
-          href={url || undefined}
-          target={opensInNewTab ? "_blank" : undefined}
-          rel={opensInNewTab ? "noopener noreferrer" : undefined}
-          onClick={(e) => e.preventDefault()} // Prevent navigation in editor
-          keepPlaceholderOnFocus={true}
-        />
+        <div className="link-wrap">
+          <RichText
+            tagName="a"
+            value={label}
+            onChange={handleLabelChange}
+            placeholder={__("Link text", "text-domain")}
+            allowedFormats={[]} // No formatting for plain text
+            href={url || undefined}
+            target={opensInNewTab ? "_blank" : undefined}
+            rel={opensInNewTab ? "noopener noreferrer" : undefined}
+            onClick={(e) => e.preventDefault()} // Prevent navigation in editor
+            keepPlaceholderOnFocus={true}
+            className={`navigation-link ${isParent && "editor-chevron"}`}
+          />
+        </div>
 
         {isParent && isSelected && (
           <div
