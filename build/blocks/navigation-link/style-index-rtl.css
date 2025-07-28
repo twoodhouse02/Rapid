@@ -81,7 +81,6 @@
 }
 .menu-mobile .wp-block-rapid-navigation-link {
   width: 100%;
-  border-bottom: 1px solid var(--theme-color-layer_3);
   padding: var(--theme-spacing-xxs) 0;
   /* make each link full‑width */
   /* hide all sub‑menus by default */
@@ -89,7 +88,6 @@
   /* rotate chevron on open */
 }
 .menu-mobile .wp-block-rapid-navigation-link:last-of-type {
-  border-bottom: none;
   margin-bottom: var(--theme-spacing-xs);
 }
 .menu-mobile .wp-block-rapid-navigation-link a.navigation-link {

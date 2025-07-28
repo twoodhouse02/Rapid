@@ -39,6 +39,12 @@
   gap: 0;
   margin-top: 20px;
 }
+.wp-block-rapid-navigation-menu.menu-mobile .menu-container > * {
+  border-bottom: 1px solid var(--theme-color-layer_3);
+}
+.wp-block-rapid-navigation-menu.menu-mobile .menu-container > *:last-child {
+  border-bottom: none;
+}
 .wp-block-rapid-navigation-menu.menu-mobile.menu-open .menu-container {
   transform: translateX(0);
   opacity: 1;

@@ -88,11 +88,9 @@
 
 .menu-mobile .wp-block-rapid-navigation-link {
   width: 100%;
-  border-bottom: 1px solid var(--theme-color-layer_3);
   padding: var(--theme-spacing-xxs) 0;
 
   &:last-of-type {
-    border-bottom: none;
     margin-bottom: var(--theme-spacing-xs);
   }
   /* make each link full‑width */
