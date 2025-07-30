@@ -278,7 +278,8 @@
   }
 
   @media (max-width: 1024px) {
-    grid-template-columns: repeat(2, 1fr);
+    /* If --columns <= 1, it stays 1. If >1, cap at 2 */
+    grid-template-columns: repeat(min(var(--columns), 2), 1fr);
   }
 
   @media (max-width: 768px) {
