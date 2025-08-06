@@ -130,7 +130,7 @@
         "left": "2rem",
         "right": "2rem"
       },
-      "blockGap": "var(--theme-spacing-display-xxxl)"
+      "blockGap": "var(--theme-spacing-display-xl)"
     },
 
     "elements": {
