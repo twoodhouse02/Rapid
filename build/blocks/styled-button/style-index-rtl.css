@@ -24,11 +24,15 @@
   align-items: center;
   gap: var(--theme-spacing-xxxs);
   line-height: 1.2;
+  transition: 0.2s ease all;
 }
 .wp-block-rapid-styled-button:hover {
   background: linear-gradient(-90deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.1) 100%);
   background-color: var(--theme-color-interactive);
   cursor: pointer;
+}
+.wp-block-rapid-styled-button:active {
+  transform: scale(0.96);
 }
 .wp-block-rapid-styled-button.secondary {
   color: var(--theme-color-interactive);
