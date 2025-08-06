@@ -49,6 +49,7 @@
 }
 .wp-block-rapid-styled-button.small {
   padding: var(--theme-spacing-xxxs) var(--theme-spacing-xxs);
+  font-size: var(--theme-font-size-s);
 }
 .theme-dark .wp-block-rapid-styled-button:not(.primary):hover,
 .wp-block-rapid-styled-button.theme-dark:not(.primary):hover {
