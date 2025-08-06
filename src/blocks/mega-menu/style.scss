@@ -96,6 +96,10 @@
   width: 100%;
   padding: var(--theme-spacing-xxs) 0;
 
+  .wp-block-rapid-mega-menu__menu-container {
+    top: 0;
+  }
+
   .wp-block-rapid-mega-menu {
     width: 100%;
     justify-content: space-between;
