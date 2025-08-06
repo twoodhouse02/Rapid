@@ -41,7 +41,7 @@ export default function Edit({ attributes, setAttributes }) {
             label="Mobile Breakpoint"
             min={0}
             max={1200}
-            onChange={(value) => setAttributes({ breakpoint: value })}
+            onChange={(value) => setAttributes({ breakpoint: Number(value) })}
             suffix={<div style={{ marginRight: "10px" }}>px</div>}
             value={breakpoint}
             help="This value will trigger the responsive behavior of the navigation menu. It is used to determine when the menu should switch to a mobile-friendly layout."

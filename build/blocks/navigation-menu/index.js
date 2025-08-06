@@ -94,7 +94,7 @@ function Edit({
           min: 0,
           max: 1200,
           onChange: value => setAttributes({
-            breakpoint: value
+            breakpoint: Number(value)
           }),
           suffix: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
             style: {
