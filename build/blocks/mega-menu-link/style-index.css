@@ -14,6 +14,8 @@
   padding: var(--theme-spacing-micro) var(--theme-spacing-xxs);
   border-radius: var(--theme-corner_radius_regular);
   transition: 0.3s ease all;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 .wp-block-rapid-mega-menu-link ion-icon {
   color: var(--theme-color-brand_primary);
