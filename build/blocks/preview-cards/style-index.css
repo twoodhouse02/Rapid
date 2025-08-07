@@ -99,6 +99,7 @@
 .wp-block-rapid-preview-cards .preview-card .card-header .title p,
 .wp-block-rapid-preview-cards .preview-card .card-header .title .post-title {
   margin: 0;
+  color: var(--theme-color-text_primary);
 }
 .wp-block-rapid-preview-cards .preview-card:hover {
   box-shadow: 0px 10px 20px 5px var(--theme-color_shadow_cards);
