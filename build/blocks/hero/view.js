@@ -9470,12 +9470,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _assets_js_animation_utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../assets/js/animation-utils */ "./assets/js/animation-utils.js");
 
 
+const isMobile = window.innerWidth < 768;
 (0,motion__WEBPACK_IMPORTED_MODULE_1__.inView)(".animated", element => {
   const children = Array.from(element.querySelector(".wp-block-group")?.children || []);
   (0,motion__WEBPACK_IMPORTED_MODULE_2__.animate)(children, _assets_js_animation_utils__WEBPACK_IMPORTED_MODULE_0__.animationConfig.keyframes, _assets_js_animation_utils__WEBPACK_IMPORTED_MODULE_0__.animationConfig.options);
 }, {
-  margin: "0px",
-  threshold: 0.2
+  margin: isMobile ? "0px" : "-300px 0px -200px 0px"
 });
 })();
 

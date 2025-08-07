@@ -1,5 +1,6 @@
 import { animate, inView } from "motion";
 import { animationConfig } from "../../../assets/js/animation-utils";
+const isMobile = window.innerWidth < 768;
 
 inView(
   ".animated",
@@ -9,5 +10,5 @@ inView(
     );
     animate(children, animationConfig.keyframes, animationConfig.options);
   },
-  { margin: "0px", threshold: 0.2 },
+  { margin: isMobile ? "0px" : "-300px 0px -200px 0px" },
 );
