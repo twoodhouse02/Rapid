@@ -9474,7 +9474,8 @@ __webpack_require__.r(__webpack_exports__);
   const children = Array.from(element.querySelector(".wp-block-group")?.children || []);
   (0,motion__WEBPACK_IMPORTED_MODULE_2__.animate)(children, _assets_js_animation_utils__WEBPACK_IMPORTED_MODULE_0__.animationConfig.keyframes, _assets_js_animation_utils__WEBPACK_IMPORTED_MODULE_0__.animationConfig.options);
 }, {
-  margin: "-300px 0px -200px 0px"
+  margin: "0px",
+  threshold: 0.2
 });
 })();
 

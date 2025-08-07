@@ -9,5 +9,5 @@ inView(
     );
     animate(children, animationConfig.keyframes, animationConfig.options);
   },
-  { margin: "-300px 0px -200px 0px" },
+  { margin: "0px", threshold: 0.2 },
 );
