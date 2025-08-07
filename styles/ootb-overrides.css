@@ -13,6 +13,13 @@
   color: var(--theme-color-brand_secondary) !important;
 }
 
+.has-text-primary-color,
+.theme-dark.has-text-primary-color,
+.theme-dark.has-text-primary-color > a,
+.has-text-primary-color.has-text-color {
+  color: var(--theme-color-text_primary) !important;
+}
+
 .has-text-secondary-color,
 .theme-dark.has-text-secondary-color,
 .theme-dark.has-text-secondary-color > a,
