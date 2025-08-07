@@ -125,6 +125,7 @@
   /* hide all sub‑menus by default */
   .sub-menu {
     display: flex;
+    visibility: visible;
     height: auto;
     max-height: 0;
     overflow: auto;

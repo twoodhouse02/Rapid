@@ -115,6 +115,7 @@
 }
 .menu-mobile .wp-block-rapid-navigation-link .sub-menu {
   display: flex;
+  visibility: visible;
   height: auto;
   max-height: 0;
   overflow: auto;
