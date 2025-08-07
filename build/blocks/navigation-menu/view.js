@@ -15,8 +15,6 @@ function applyMobile(v) {
 applyMobile(mq.matches);
 // on resize
 mq.addListener(e => applyMobile(e.matches));
-
-// your existing hamburger toggle logic
 const toggle = nav.querySelector(".menu-toggle");
 toggle.addEventListener("click", e => {
   e.preventDefault();
