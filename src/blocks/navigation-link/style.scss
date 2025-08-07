@@ -135,6 +135,11 @@
     margin: 0 var(--theme-spacing-xs);
     padding: 0 var(--theme-spacing-xxs);
     transition: 0.2s ease all;
+
+    .wp-block-rapid-navigation-link {
+      margin-bottom: 0;
+    }
+
     button.submenu-toggle {
       background-color: var(--theme-color-layer_1);
     }

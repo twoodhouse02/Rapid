@@ -126,6 +126,9 @@
   padding: 0 var(--theme-spacing-xxs);
   transition: 0.2s ease all;
 }
+.menu-mobile .wp-block-rapid-navigation-link .sub-menu .wp-block-rapid-navigation-link {
+  margin-bottom: 0;
+}
 .menu-mobile .wp-block-rapid-navigation-link .sub-menu button.submenu-toggle {
   background-color: var(--theme-color-layer_1);
 }
