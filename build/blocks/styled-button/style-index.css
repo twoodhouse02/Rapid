@@ -34,17 +34,22 @@
 .wp-block-rapid-styled-button:active {
   transform: scale(0.96);
 }
+.wp-block-rapid-styled-button.primary {
+  border-style: var(--theme-border_style_button_primary);
+}
 .wp-block-rapid-styled-button.secondary {
   color: var(--theme-color-interactive);
   background-color: var(--theme-color-interactive_secondary);
   border-width: var(--theme-border_width_button_secondary);
   border-color: var(--theme-color-button_borders_secondary);
+  border-style: var(--theme-border_style_button_secondary);
 }
 .wp-block-rapid-styled-button.hollow {
   color: var(--theme-color-interactive);
   background-color: transparent;
   border-width: var(--theme-border_width_button_hollow);
   border-color: var(--theme-color-button_borders_hollow);
+  border-style: var(--theme-border_style_button_hollow);
 }
 .wp-block-rapid-styled-button.transparent {
   color: var(--theme-color-interactive);
