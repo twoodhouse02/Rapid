@@ -265,6 +265,7 @@ function count_blocks_recursive($blocks, $namespace)
     return $block_counts;
 }
 
+// Telemetry function to run on post save:
 add_action("save_post", function ($post_id) {
     // Avoid triggering on autosave or revisions
     if (defined("DOING_AUTOSAVE") && DOING_AUTOSAVE) {
@@ -330,7 +331,6 @@ add_action("save_post", function ($post_id) {
 
     // Use "SUPABASE_SERVICE_ROLE_KEY" when in production / pushing to Git:
     $key = SUPABASE_SERVICE_ROLE_KEY;
-
     $response = wp_remote_post($endpoint, [
         "headers" => [
             "Content-Type" => "application/json",
