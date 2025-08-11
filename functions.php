@@ -320,7 +320,7 @@ add_action("save_post", function ($post_id) {
     ];
 
     $project_ref = "xxarcwonnqrsiubwfllk"; // your Supabase ref
-    $table = "block_usage";
+    $table = "client_usage";
     $endpoint = "https://{$project_ref}.supabase.co/rest/v1/{$table}";
 
     if (!defined("SUPABASE_SERVICE_ROLE_KEY")) {
