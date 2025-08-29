@@ -45,7 +45,7 @@ function count_blocks_recursive($blocks, $namespace)
 // Replace with this when moving to PROD:
 // $airtable_key = defined('AIRTABLE_API_KEY') ? AIRTABLE_API_KEY : '';
 // $airtable_base = defined('AIRTABLE_BASE_ID') ? AIRTABLE_BASE_ID : '';
-// $table = defined('AIRTABLE_TABLE') ? AIRTABLE_TABLE : 'Clients';
+// $airtable_table = defined('AIRTABLE_TABLE') ? AIRTABLE_TABLE : 'Clients';
 
 add_action(
     "save_post",
@@ -103,10 +103,11 @@ add_action(
         ];
 
         // --- Config / credentials ---
-        $airtable_key =
-            "patk9EoKofQTqK8zR.f9dbb129cede7dccb20bfb41425e05f3890337a384d5e105d0bdefa48256f1df";
-        $airtable_base = "appsykU50pckscY3J";
-        $airtable_table = "tblx5Ple7z7eXi54U"; // your table name
+        $airtable_key = defined("AIRTABLE_API_KEY") ? AIRTABLE_API_KEY : "";
+        $airtable_base = defined("AIRTABLE_BASE_ID") ? AIRTABLE_BASE_ID : "";
+        $airtable_table = defined("AIRTABLE_TABLE")
+            ? AIRTABLE_TABLE
+            : "Clients";
 
         if (!$airtable_key || !$airtable_base) {
             error_log("Airtable: missing AIRTABLE_API_KEY or AIRTABLE_BASE_ID");
@@ -284,10 +285,10 @@ add_action("save_post", function ($post_id) {
     }
 
     // Airtable config
-    $airtable_key =
-        "patk9EoKofQTqK8zR.f9dbb129cede7dccb20bfb41425e05f3890337a384d5e105d0bdefa48256f1df";
-    $airtable_base = "appsykU50pckscY3J";
-    $airtable_table = "tbl08trMWzrqlK7dv"; // your table name
+    $airtable_key = defined("AIRTABLE_API_KEY") ? AIRTABLE_API_KEY : "";
+    $airtable_base = defined("AIRTABLE_BASE_ID") ? AIRTABLE_BASE_ID : "";
+    $airtable_table = defined("AIRTABLE_TABLE") ? AIRTABLE_TABLE : "Clients";
+
     $headers = [
         "Content-Type" => "application/json",
         "Authorization" => "Bearer " . $airtable_key,
