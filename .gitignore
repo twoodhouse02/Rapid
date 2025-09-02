@@ -20,7 +20,7 @@
 
 # Configuration
 wp-config.php
-.wp-env.json
+.wp-env.override.json
 
 # Example themes
 /wp-content/themes/twenty*/
