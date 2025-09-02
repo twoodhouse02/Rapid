@@ -94,6 +94,7 @@ add_action(
                 rtrim(home_url(), "/")
             ), // URL field
             "Theme version" => wp_get_theme()->get("Version"), // text field
+            "WordPress version" => get_bloginfo("version"), // text field
             "Blocks used count" => $total_blocks, // number field
         ];
 
