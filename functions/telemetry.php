@@ -42,11 +42,6 @@ function count_blocks_recursive($blocks, $namespace)
     return $block_counts;
 }
 
-// Replace with this when moving to PROD:
-// $airtable_key = defined('AIRTABLE_API_KEY') ? AIRTABLE_API_KEY : '';
-// $airtable_base = defined('AIRTABLE_BASE_ID') ? AIRTABLE_BASE_ID : '';
-// $airtable_table = defined('AIRTABLE_TABLE') ? AIRTABLE_TABLE : 'Clients';
-
 add_action(
     "save_post",
     function ($post_id) {
@@ -105,8 +100,8 @@ add_action(
         // --- Config / credentials ---
         $airtable_key = defined("AIRTABLE_API_KEY") ? AIRTABLE_API_KEY : "";
         $airtable_base = defined("AIRTABLE_BASE_ID") ? AIRTABLE_BASE_ID : "";
-        $airtable_table = defined("AIRTABLE_TABLE")
-            ? AIRTABLE_TABLE
+        $airtable_table = defined("AIRTABLE_TABLE_ID_CLIENT_SITES")
+            ? AIRTABLE_TABLE_ID_CLIENT_SITES
             : "Clients";
 
         if (!$airtable_key || !$airtable_base) {
@@ -287,7 +282,9 @@ add_action("save_post", function ($post_id) {
     // Airtable config
     $airtable_key = defined("AIRTABLE_API_KEY") ? AIRTABLE_API_KEY : "";
     $airtable_base = defined("AIRTABLE_BASE_ID") ? AIRTABLE_BASE_ID : "";
-    $airtable_table = defined("AIRTABLE_TABLE") ? AIRTABLE_TABLE : "Clients";
+    $airtable_table = defined("AIRTABLE_TABLE_ID_BLOCK_USAGE")
+        ? AIRTABLE_TABLE_ID_BLOCK_USAGE
+        : "Blocks";
 
     $headers = [
         "Content-Type" => "application/json",
